@@ -1,7 +1,7 @@
 // ===== PAROL TIZIMI =====
 const AUTH_KEY = 'test_authenticated';
 const VALID_CREDENTIALS = {
-    username: 'talim2025',
+    username: 'talim2026',
     password: 'test1221'
 };
 
@@ -5345,4 +5345,5 @@ function updateTimer() {
         String(seconds).padStart(2, '0');
 
     document.getElementById('timer').textContent = formattedTime;
+
 }
