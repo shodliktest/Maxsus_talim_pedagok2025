@@ -9,7 +9,348 @@ const VALID_CREDENTIALS = {
 const QUESTION_POOL_KEY = 'quiz_remaining_indices';
 
 // ===== TEST SAVOLLARI (BU YERGA 450 TA SAVOLINGIZNI TASHLAISZ) =====
-const questionsDataPart2 = [
+
+const questionsData = [
+  {
+    question: "Qanday so'zlar gapdagi boshqa so'zlardan vergul bilan ajratib yoziladi?",
+    options: ["yuklama", "bog'lovchi", "modal so'zlar", "taqlid so'zlar"],
+    correctAnswer: "modal so'zlar"
+  },
+  {
+    question: "Qaysi gapda kelishik qo'shimchasini qo'llash bilan bog'liq xatoga yo'l qo'yilgan?",
+    options: [
+      "Bilimdon o'zining bilimi tufayli ofatlardan omon qoladi.",
+      "O'zining qadrini bilmagan o'zganing qadrini ne bilsin?",
+      "Kechasi Saidiyning hujrasiga Kozimbek bilan muxbir A'zamjon keldi.",
+      "Sohibqironni bunyodkorlik sohasidagi xizmatlaridan el-u yurt minnatdor edi."
+    ],
+    correctAnswer: "Sohibqironni bunyodkorlik sohasidagi xizmatlaridan el-u yurt minnatdor edi."
+  },
+  {
+    question: "Samoning zangorisimon sahnida to'lishmagan qandaydir beshakl oy xira, rangsiz yaltiraydi. Gapda qo'llangan yasama so'zlar vazifasini toping.",
+    options: ["1,2,3", "1,2,4", "1,3,4", "2,3,4"],
+    correctAnswer: "1,2,4"
+  },
+  {
+    question: "Qaysi gapda otlashgan sifat(lar) qo'llanmagan?",
+    options: [
+      "Yaxshidan bog' qoladi, yomondan -- dog'.",
+      "Ilg'orlarga mukofot topshirildi.",
+      "Sinfimizda a'lochi o'quvchilar ko'p.",
+      "Yoshlar olovga yaqinroq, keksalar esa uzoqroq o'tirishdi."
+    ],
+    correctAnswer: "Sinfimizda a'lochi o'quvchilar ko'p."
+  },
+  {
+    question: "-imtir qo'shimchasi yordamida qaysi sifatlarning ozaytirma darajasini hosil qilish mumkin?",
+    options: ["1,2,5", "1,3,4,5", "1,2,3,4,5", "1,2,5,6"],
+    correctAnswer: "1,2,5"
+  },
+  {
+    question: "So'zlovchi, tinglovchi va o'zgaga ishora qiladigan olmosh turini toping.",
+    options: ["kishilik", "so'roq", "ko'rsatish", "belgilash"],
+    correctAnswer: "kishilik"
+  },
+  {
+    question: "Qanday olmoshlar egalik qo'shimchalari bilan turlanmaydi.",
+    options: ["kishilik", "o'zlik", "so'roq", "bo'lishsizlik"],
+    correctAnswer: "bo'lishsizlik"
+  },
+  {
+    question: "Sonning qaysi turi chiqish kelishigi qo'shimchasi bilan qo'llanib, fikrning ahamiyatlilik darajasini ifodalaydigan modal so'z vazifasida qo'llanadi.",
+    options: ["chama son", "dona son", "jamlovchi son", "tartib son"],
+    correctAnswer: "tartib son"
+  },
+  {
+    question: "-ov, -ala, -ovlon qo'shimchalari yordamida sonning qaysi ma'no turi hosil qilinadi.",
+    options: ["chama son", "jamlovchi son", "tartib son", "taqsim son"],
+    correctAnswer: "jamlovchi son"
+  },
+  {
+    question: "Do'mbirachi qadimiy qozoq hayotidan dostonlar kuylamoqda. Ushbu gapda nechta so'z yasovchi qo'shimcha qo'llangan.",
+    options: ["4 ta", "3 ta", "2 ta", "1 ta"],
+    correctAnswer: "3 ta"
+  },
+  {
+    question: "Qaysi gapda nisbiy sifat qo'llangan.",
+    options: [
+      "Uning jussasi kichkina bo'lsa ham, yuzlari jiddiy, boqishlari o'tkir, ovozi esa jarangdor.",
+      "Hovlimizga ko'cha eshikdan kirishda kichkina, g'ishtin uycha bor.",
+      "U oltmishlarga borib qolgan bo'lsa ham, yoshlardek ikki yuzi qip-qizil, serg'ayrat va tavakkalchi odam edi.",
+      "Temur yuksak insoniylikka ega bo'lgan buyuk shaxs edi."
+    ],
+    correctAnswer: "Hovlimizga ko'cha eshikdan kirishda kichkina, g'ishtin uycha bor."
+  },
+  {
+    question: "Qaysi gapda butun miqdorning qismini ifodalovchi son qo'llangan.",
+    options: ["1,2,3,4", "1,2,4", "1,2,3", "1,3,4"],
+    correctAnswer: "1,2,3,4"
+  },
+  {
+    question: "Qaysi gapda son otlashmagan.",
+    options: [
+      "Oltovlon ola bo'lsa, og'zidagin oldirar.",
+      "Ikkala jamoa ham musobaqaga jiddiy tayyorgarlik ko'rgan ekan.",
+      "Shunday qilib, to'rtovlari ham piyoda yo'lga chiqishibdi.",
+      "Ikkinchisi ham uyg'onib ketdi, shekilli, qo'shilishib yig'lashga tushdi."
+    ],
+    correctAnswer: "Ikkala jamoa ham musobaqaga jiddiy tayyorgarlik ko'rgan ekan."
+  },
+  {
+    question: "Jonivorlarni chaqirish va haydash, yurgizish va to'xtatish uchun qo'llanadigan so'zlar qanday nomlanadi.",
+    options: ["undov so'zlar", "modal so'zlar", "taqlid so'zlar", "yuklamalar"],
+    correctAnswer: "undov so'zlar"
+  },
+  {
+    question: "So'zlarni va gaplarni teng va tobe bog'lash uchun xizmat qiluvchi so'zlar qanday nomlanadi.",
+    options: ["bog'lovchi", "ko'makchi", "yuklama", "olmosh"],
+    correctAnswer: "bog'lovchi"
+  },
+  {
+    question: "So'zlarga va gaplarga qo'shimcha ma'no yuklash uchun xizmat qiluvchi yordamchilar qanday nomlanadi.",
+    options: ["bog'lovchi", "ko'makchi", "yuklama", "modal so'z"],
+    correctAnswer: "yuklama"
+  },
+  {
+    question: "O'rin ravishlari qayd etilgan javobni belgilang.",
+    options: [
+      "ichkari, tashqari, olg'a",
+      "ko'cha, bog', guzar",
+      "ichki, tashqi, sirtqi",
+      "ichra, uzra, ora"
+    ],
+    correctAnswer: "ichkari, tashqari, olg'a"
+  },
+  {
+    question: "Qaysi gapda ravish qo'llanmagan.",
+    options: [
+      "Ikki oshna kechki salqin bilan piyoda yo'lga tushishdi.",
+      "Orqasiga qarasa, uzoqdan bir ho'kiz uni to'xtovsiz chaqirib kelyapti.",
+      "Keksa kishilar katta hayotiy tajribaga ega bo'ladilar.",
+      "Abdishukur bu yerdan tezda chiqib ketish payiga tushdi."
+    ],
+    correctAnswer: "Keksa kishilar katta hayotiy tajribaga ega bo'ladilar."
+  },
+  {
+    question: "O'xshatish, inkor, ayiruv, kuchaytirish kabi ma'nolar qanday so'zlar orqali ifodalanadi.",
+    options: ["ko'makchi", "bog'lovchi", "yuklama", "modal so'zlar"],
+    correctAnswer: "yuklama"
+  },
+  {
+    question: "Qaysi gapda hol vazifasida qo'llangan holatga taqlid so'z berilgan.",
+    options: [
+      "Dupur-dupur ot keldi, Ko'chaga qarang, kim keldi.",
+      "Omon g'azabi oshib, dag'-dag' qaltiray boshladi.",
+      "To'rtta savag'ich bilan tap-tap urib, par singari qilib titibdi.",
+      "Osmonda yombi oltinday yaraqlagan oy, yakkam-dukkam milt-milt yulduzlar uyg'oq edi."
+    ],
+    correctAnswer: "Omon g'azabi oshib, dag'-dag' qaltiray boshladi."
+  },
+  {
+    question: "Qaysi gapda aniqlovchi vazifasida qo'llangan tovushga taqlid so'z berilgan.",
+    options: [
+      "Yetti qaroqchi yulduzi tik kelganda g'o'ng'ir-g'o'ng'ir ovozdan uyg'onib ketdim.",
+      "Vujudini tutgan qalt-qalt titroqni bosib hazilomuz qichqirdi.",
+      "Allakim ship-ship qadam bosib, ayvon labiga kelayotganday bo'lardi.",
+      "Boshidagi toj yal-yal yonarmish."
+    ],
+    correctAnswer: "Yetti qaroqchi yulduzi tik kelganda g'o'ng'ir-g'o'ng'ir ovozdan uyg'onib ketdim."
+  },
+  {
+    question: "Qaysi gapda modal so'z qo'llangan.",
+    options: [
+      "Bo'ron bo'lish ehtimoli bor, qizim.",
+      "Istamning chamasi to'g'ri chiqdi.",
+      "Uning 'ko'cha bolasi' ekanligini aftidan bilib olish qiyin emas edi.",
+      "To'g'ri, yo'llarda mashaqqatlar ko'p."
+    ],
+    correctAnswer: "To'g'ri, yo'llarda mashaqqatlar ko'p."
+  },
+  {
+    question: "Qaysi gapda buyruq-xitobni ifodalovchi undov so'z qo'llangan.",
+    options: [
+      "Men yetim o'sganman, oh u yetimlik.",
+      "Qo'y, yig'lama ey baxshi.",
+      "Iya, bularni nima qilasan?",
+      "O! Ho'kiz yo'q, og'il ko'cha tomondan teshilgan."
+    ],
+    correctAnswer: "Qo'y, yig'lama ey baxshi."
+  },
+  {
+    question: "Qaysi javobda alohida olingan so'zlar berilgan.",
+    options: ["hamda, uchun, nahot", "shoyad, obbo, gumbur", "daftar, eski, beshta", "men, shu, yalpi"],
+    correctAnswer: "shoyad, obbo, gumbur"
+  },
+  {
+    question: "Moslashuvli so'z birikmasi berilgan javobni toping.",
+    options: ["o'rik sharbati", "tarix darsi", "rasm daftari", "kitob do'koni"],
+    correctAnswer: "o'rik sharbati"
+  },
+  {
+    question: "Qaysi qo'shimcha yordamida umumlashtirish, kuchaytirish, hurmat kabi uslubiy ma'nolarni ifodalash mumkin.",
+    options: ["-cha", "-lar", "-xon", "-gina"],
+    correctAnswer: "-lar"
+  },
+  {
+    question: "Shaxs, narsa, belgi, harakat kabilarni jamlab ifodalaydigan olmosh qaysi gapda qo'llangan.",
+    options: [
+      "Bog'imizda uzumning hamma xilidan bor.",
+      "Har kim ekkanini o'radi.",
+      "Shorahim ko'z yoshidan hech nimani ko'rmay allanimalar deb g'udrandi.",
+      "Kim shaxmat to'garagiga qatnashadi."
+    ],
+    correctAnswer: "Bog'imizda uzumning hamma xilidan bor."
+  },
+  {
+    question: "Qaysi gapda olmoshning ma'nosiga ko'ra uch turi qo'llangan.",
+    options: [
+      "Xayolchan g'udranib, o'z-o'zini koyidi.",
+      "Ichkaridan kimlardir chiqib, u turgan tomonga kelaverdi.",
+      "Qayerda bo'shliq paydo bo'lsa, uni kimdir to'ldirishga harakat qiladi.",
+      "Siz hayotda qanday insonlarga havas qilasiz."
+    ],
+    correctAnswer: "Qayerda bo'shliq paydo bo'lsa, uni kimdir to'ldirishga harakat qiladi."
+  },
+  {
+    question: "Qaysi javobda sof ko'makchilar berilgan.",
+    options: [
+      "kabi, uzra, tufayli",
+      "ost, ust, yon",
+      "avval, keyin, so'ng",
+      "bo'ylab, qarab, atab"
+    ],
+    correctAnswer: "kabi, uzra, tufayli"
+  },
+  {
+    question: "Qaysi gapda so'zlarni va gaplarni bir-biriga bog'lash uchun xizmat qilmaydigan yordamchi so'z qo'llangan.",
+    options: [
+      "Yurt farovonligi uchun qayg'uradi.",
+      "Andishali bo'l, biroq shijoatsiz bo'lm.",
+      "Bu yerda na ofat, na kulfat, na g'am.",
+      "O'shanda dadam ham frontda edilar."
+    ],
+    correctAnswer: "O'shanda dadam ham frontda edilar."
+  },
+  {
+    question: "Qaysi gapda balki so'zi bog'lovchi vazifasida qo'llanmagan.",
+    options: [
+      "Mevani gullata bilishgina emas, balki undan mo'l va shirin hosil yetkaza bilish san'atdir.",
+      "Taraqqiyot tasodif emas, balki zaruratdir.",
+      "Hayronman, balki, siz haqdirsiz.",
+      "nafaqat kattalarga, balki kichiklarga ham shunday muomalada bo'lar edi."
+    ],
+    correctAnswer: "Hayronman, balki, siz haqdirsiz."
+  },
+  {
+    question: "Qanday fe'llar holat fe'llari sanaladi.",
+    options: ["1,2,3", "1,2", "1,3", "2,3"],
+    correctAnswer: "2,3"
+  },
+  {
+    question: "O'timli fe'llar berilgan javobni toping.",
+    options: ["o'qimoq, yozmoq", "kulmoq, yig'lamoq", "yurmoq, yugurmoq", "o'tirmoq, turmoq"],
+    correctAnswer: "o'qimoq, yozmoq"
+  },
+  {
+    question: "Bajaruvchining o'z ustida amalga oshadigan harakat-holatini ifodalaydigan fe'l nisbati qanday ataladi.",
+    options: ["aniq nisbat", "birgalik nisbat", "majhul nisbat", "o'zlik nisbat"],
+    correctAnswer: "o'zlik nisbat"
+  },
+  {
+    question: "Har ikki qismi ot turkumiga mansub so'zlar bilan ifodalangan bitishuvli so'z birikmasi berilgan javobni aniqlang.",
+    options: ["nordon anor", "tilla soat", "quyosh nuri", "kimyoviy jarayon"],
+    correctAnswer: "tilla soat"
+  },
+  {
+    question: "Qaysi javobda ot, sifat, fe'l yasovchi shakldosh(omonim) qo'shimchalar qayd etilgan.",
+    options: ["-ik, -iq, -a", "-ma, -qi, -la", "-ay, -oq, -cha", "-ar, -gi, -k"],
+    correctAnswer: "-ik, -iq, -a"
+  },
+  {
+    question: "Qaysi javobda ot va sifat yasovchi shakldosh(omonim) qo'shimchalar juftligi berilmagan.",
+    options: ["qalamdon--qadrdon", "aravakash--mehnatkash", "ekin--erkin", "ko'rik--chirik"],
+    correctAnswer: "aravakash--mehnatkash"
+  },
+  {
+    question: "Sodda tub otlarni toping.",
+    options: ["qirqim, o'rim", "chopiq, tortiq", "yutuq, buyruq", "beshik, o'rik"],
+    correctAnswer: "beshik, o'rik"
+  },
+  {
+    question: "Qaysi gapda fe'lning otga xoslangan shakli qo'llangan.",
+    options: [
+      "Chiroyli yozishni o'rgan.",
+      "Bolalar qorbo'ron o'ynashmoqd.",
+      "Shu payt boshimiz ustida chaqmoq chaqdi.",
+      "Singilcham quymoqni juda yaxshi ko'radi."
+    ],
+    correctAnswer: "Chiroyli yozishni o'rgan."
+  },
+  {
+    question: "Qaysi javobda ravishdosh shakllari berilmagan.",
+    options: ["-ib(-b, -a(-y)", "-gach, -guncha", "-gan, -ar", "-gani, -gancha"],
+    correctAnswer: "-gan, -ar"
+  },
+  {
+    question: "Qaysi gapda olmoq fe'li qo'shma fe'l tarkibida qo'llangan.",
+    options: [
+      "Ma'ruf toshni o'n marta ko'tara oldi.",
+      "Kasalligi tufayli o'n yildan beri ukol olib kelmoqd.",
+      "Kecha Sharifadan xat oldik.",
+      "Shoikrom ukasidan xabar oldi."
+    ],
+    correctAnswer: "Kasalligi tufayli o'n yildan beri ukol olib kelmoqd."
+  },
+  {
+    question: "Qaysi gapda asosida fonetik o'zgarish sodir bo'lgan yasama fe'l(lar) qo'llangan.",
+    options: [
+      "Gapirganda ovozi xuddi ichidan chiqqanday guldurab, jaranglab eshitiladi.",
+      "Ichkarida chaqaloq yig'ladi, beshikning g'ichirlagani ishitildi.",
+      "Yuragim hayajondan gupullab ura boshladi.",
+      "Usta temirni cho'g'ga solib bolg'alaydi, cho'zadi, yassilaydi, yana olovga soladi."
+    ],
+    correctAnswer: "Ichkarida chaqaloq yig'ladi, beshikning g'ichirlagani ishitildi."
+  },
+  {
+    question: "Turli gap bo'laklari vazifasida kelish uchun xoslangan fe'l shakllari bu...",
+    options: ["vazifa shakllari", "munosabat shakllari", "nisbat shakllari", "bo'lishsizlik shakllari"],
+    correctAnswer: "vazifa shakllari"
+  },
+  {
+    question: "Qaysi nisbat qo'shimchalari bir fe'lga birin-ketin bir necha marotaba qo'shilishi mumkin.",
+    options: ["o'zlik nisbat", "majhul nisbat", "birgalik nisbat", "orttirma nisbat"],
+    correctAnswer: "orttirma nisbat"
+  },
+  {
+    question: "Quyida berilgan yasama fe'llarning nechtasi tarkibida tovush o'zgarishi sodir bo'lgan.",
+    options: ["19 ta", "17 ta", "15 ta", "13 ta"],
+    correctAnswer: "15 ta"
+  },
+  {
+    question: "Bir turdagi shaxs va narsalarning umumiy otini yoki ulardan birining nomini ifodalashiga ko'ra otlar qanday turlarga bo'linadi.",
+    options: [
+      "atoqli va turdosh otlar",
+      "aniq va mavhum otlar",
+      "sanaladigan va sanalmaydigan otlar",
+      "yakka va to'da otlar"
+    ],
+    correctAnswer: "atoqli va turdosh otlar"
+  },
+  {
+    question: "Qaysi javobda tarkibi asos=ot yasovchi=ot yasovchi shaklida bo'lgan yasama ot berilgan.",
+    options: ["temirchilik", "terimchilik", "dehqonchilik", "suvoqchilik"],
+    correctAnswer: "temirchilik"
+  },
+  {
+    question: "Til oldi unlilar berilgan javobni toping.",
+    options: ["a, e, i", "o, a", "o, a, u", "o, a, i"],
+    correctAnswer: "a, e, i"
+  },
+  {
+    question: "Ochiq bo'g'indan birida faqat til undoshi berilgan so'zni toping.",
+    options: ["mamnun", "bahona", "vafodor", "faqat"],
+    correctAnswer: "bahona"
+  },
   {
     question: "Yam-yashil so'zida nechta unli va nechta undosh tovush bor.",
     options: [
@@ -692,4 +1033,5 @@ function updateTimer() {
 
     document.getElementById('timer').textContent = formattedTime;
 }
+
 
