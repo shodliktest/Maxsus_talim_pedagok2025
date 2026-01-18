@@ -6,7 +6,7 @@ const VALID_CREDENTIALS = {
 };
 
 // ===== YANGI: SAVOLLAR TARIXINI SAQLASH KALITI =====
-const QUESTION_POOL_KEY = 'quiz_remaining_indices';
+const QUESTION_POOL_KEY = 'quiLz_remaining_indices';
 
 // ===== TEST SAVOLLARI (BU YERGA 450 TA SAVOLINGIZNI TASHLAISZ) =====
 
@@ -670,6 +670,666 @@ const questionsData = [
     question: "Baqqol amaki pakana, yuzi katta, peshonasi keng, soqoli siyrak, burni puchuq, iyagi kalta odam edi. Mazkur gapning necha o'rnida sifat qo'llangan.",
     options: ["6 ta", "5 ta", "4 ta", "3 ta"],
     correctAnswer: "6 ta"
+  },
+  {
+    question: "Qaysi gapda ikki usulda yasalgan ikki yasama sifat qo'llangan.",
+    options: [
+      "Oldimizda mevali va mevasiz daraxtlari ko'p bo'lgan o'rmon.",
+      "Nodon, kaltafahm odamdan yaxshi gap chiqmaydi.",
+      "Mehnatsevar, zahmatkash insonlar odamlarning ko'rkidir.",
+      "Sofdil va jonkuyar odamlar bilan bu dunyo oboddir."
+    ],
+    correctAnswer: "Mehnatsevar, zahmatkash insonlar odamlarning ko'rkidir."
+  },
+  {
+    question: "Gumon, ishonch, quvonch, tasdiq kabi ma'nolar qanday so'zlar orqali ifodalanadi.",
+    options: ["ko'makchi", "bog'lovchi", "yuklama", "modal so'zlar"],
+    correctAnswer: "modal so'zlar"
+  },
+  {
+    question: "Qaysi kelishik shaklidagi so'zlar to'ldiruvchi vazifasida qo'llanadi.",
+    options: ["qaratqich", "tushum", "jo'nalish", "o'rin-payt"],
+    correctAnswer: "jo'nalish"
+  },
+  {
+    question: "Shu sevinch ikkovlariga ham kuch-g'ayrat, dadillik baxsh etgandek bo'ldi. Gapda qo'llangan yasama mavhum otlar miqdorini aniqlang.",
+    options: ["1 ta", "2 ta", "3 ta", "4 ta"],
+    correctAnswer: "2 ta"
+  },
+  {
+    question: "Bo'lishsizlik olmoshlari haqida aytilgan qaysi fikr to'g'ri emas.",
+    options: [
+      "So'roq olmoshlari oldidan hech so'zining qo'llanishi natijasida bo'lishsizlik olmoshlari hosil bo'ladi.",
+      "Hech so'zini bir, narsa, vaqt, jon, kishi, kimsa, banda kabi so'zlar bilan qo'llash natijasida bo'lishsizlik olmoshlari hosil bo'ladi.",
+      "Bo'lishsizlik olmoshlari qatnashgan gapning kesimi tasdiq shaklida bo'ladi.",
+      "Bo'lishsizlik olmoshlari ko'plik qo'shimchasi bilan qo'llanmaydi."
+    ],
+    correctAnswer: "Bo'lishsizlik olmoshlari qatnashgan gapning kesimi tasdiq shaklida bo'ladi."
+  },
+  {
+    question: "To'pdan ajratilgan shaxs, narsa, belgi kabilarni bildirgan olmoshlar qanday ataladi.",
+    options: ["belgilash olmoshlari", "bo'lishsizlik olmoshlari", "o'zlik olmoshi", "ko'rsatish olmoshlari"],
+    correctAnswer: "belgilash olmoshlari"
+  },
+  {
+    question: "Qaysi fe'l fe'lning barcha nisbat shakllarida ham qo'llana oladi.",
+    options: ["o'qimoq", "yodlamoq", "so'ramoq", "kiymoq"],
+    correctAnswer: "kiymoq"
+  },
+  {
+    question: "Qaysi gapda 2 ta fe'lli, 1 ta otli so'z birikmasi qatnashgan.",
+    options: [
+      "Hasan tezda hunarmandchilik sirlarini o'rganib oldi.",
+      "Tog' qishloqlaridan birini kuchli sel bosibdi.",
+      "Humo qushi odamlarga baxt keltirar ekan.",
+      "Zargarov sahrodagi ishlarning miqyosini yaxshi tasvirlab berdi."
+    ],
+    correctAnswer: "Hasan tezda hunarmandchilik sirlarini o'rganib oldi."
+  },
+  {
+    question: "Qaysi qatorda boshqaruv munosabatli fe'lli so'z birikmasi bor?",
+    options: [
+      "tezda gapirmoq, dehqonchasiga ishlamoq",
+      "qiyinchilikni yenggan, kitobni o'qigan",
+      "maqtanganning uyiga, kerilganning to'yiga",
+      "oqar suv, qizargan olma"
+    ],
+    correctAnswer: "qiyinchilikni yenggan, kitobni o'qigan"
+  },
+  {
+    question: "Qaysi qatorda ko'makchi vositasida bog'langan boshqaruvli otli so'z birikmasi bor?",
+    options: ["kitob haqida suhbat", "hafta ichida", "eng oliy baxt", "qunt bilan tinglamoq"],
+    correctAnswer: "kitob haqida suhbat"
+  },
+  {
+    question: "Mashina uchun ehtiyot qismlar birikmasidagi hokim so'zni aniqlang.",
+    options: ["qismlar", "ehtiyot", "mashina uchun", "ehtiyot qismlar"],
+    correctAnswer: "qismlar"
+  },
+  {
+    question: "Quyida berilgan gapda nechta so'z mavjud? Tebranib yonayotgan sham zo'r mo'jizaday hammaning diqqatini jalb qilgandi.",
+    options: ["9 ta", "8 ta", "7 ta", "6 ta"],
+    correctAnswer: "9 ta"
+  },
+  {
+    question: "Qaysi qatorda berilgan so'z birikmalarini gapga aylantirish mumkin?",
+    options: [
+      "qiziqarli mashg'ulot, oydin kecha, maqola o'qimoq",
+      "berilgan topshiriq, o'qishli asar, g'azal yodlamoq",
+      "qattiq sovuq, shirin qovun, chiroyli gul",
+      "samarali ishlamoq, ko'chat o'tqazish, barqaror tinchlik"
+    ],
+    correctAnswer: "qattiq sovuq, shirin qovun, chiroyli gul"
+  },
+  {
+    question: "Muzaffarning lo'ppi yuzidagi achinish alomati xushnud tabassum bilan almashdi. Ushbu gapda otli so'z birikmalari soni nechta?",
+    options: ["5 ta", "6 ta", "4 ta", "7 ta"],
+    correctAnswer: "5 ta"
+  },
+  {
+    question: "Qaysi gapda moslashuv va boshqaruv aloqasi mavjud?",
+    options: [
+      "Umidsizlik uyin buzsang, umidingga yetarsan.",
+      "O'zingni er bilsang, o'zgani sher bil.",
+      "Biz rostgo'ylik va halollikni hamisha ulug'laymiz.",
+      "Yillar mana shu xilda osoyishta o'tar edi."
+    ],
+    correctAnswer: "Umidsizlik uyin buzsang, umidingga yetarsan."
+  },
+  {
+    question: "Kelishik qo'shimchalari yordamida birikkan so'z birikmalari qaysi javobda berilgan?",
+    options: [
+      "Moviy osmon, Zuxro yulduz",
+      "Tog' cho'qqisi, kitob o'qimoq",
+      "yoqimli kuy, dala yumushlari",
+      "a'lochi o'quvchilar, kitobsevarlar uyushmasi"
+    ],
+    correctAnswer: "a'lochi o'quvchilar, kitobsevarlar uyushmasi"
+  },
+  {
+    question: "O'zbek tili qaysi til oilasiga mansub?",
+    options: [
+      "Xind -- evropa tillari oilasi.",
+      "Oltoy tillar oilasi",
+      "Fin -- ugor tillar oilasi",
+      "Som-xom tillar oilasi"
+    ],
+    correctAnswer: "Oltoy tillar oilasi"
+  },
+  {
+    question: "Qaysi qatordagi gapda ega olmosh bilan ifodalangan?",
+    options: [
+      "Undan yoqimli va shirin xid kelardi.",
+      "Iste'dodli adib ko'p nasriy asarlar yozdi.",
+      "Ularning munozarasi yangi buyruq kelishi bilan yakunlandi.",
+      "U biz bilan ketishi lozim."
+    ],
+    correctAnswer: "U biz bilan ketishi lozim."
+  },
+  {
+    question: "Belgisiz qaratqich aniqlovchili so'z birikmalari qaysi javobda berilgan?",
+    options: [
+      "Shaffof suv, nafis gullar",
+      "Oy shu'lasi, institut binosi",
+      "navbahor kezlari, oydin kechalar",
+      "g'ayrat bilan ishlamoq"
+    ],
+    correctAnswer: "Oy shu'lasi, institut binosi"
+  },
+  {
+    question: "Faqat ergashtiruvchi bog'lovchilardan iborat qatorni aniqlang.",
+    options: [
+      "-kim, agar, chunki, basharti, shuning uchun",
+      "shuning uchun, va, lekin",
+      "-mi, -yu, -ku, -da",
+      "sari, -dek, -gacha, toki"
+    ],
+    correctAnswer: "-kim, agar, chunki, basharti, shuning uchun"
+  },
+  {
+    question: "Qo'shma gap berilgan javobni toping.",
+    options: [
+      "Biz kitobni o'qib, muxokama qildik.",
+      "Kun botib, qorong'ulik cho'kdi",
+      "Atrof yorishdi, biz yo'lga otlandik",
+      "Men ishdan charchab keldim va miriqib dam oldim"
+    ],
+    correctAnswer: "Men ishdan charchab keldim va miriqib dam oldim"
+  },
+  {
+    question: "Teng bog'lovchili qo'shma gapni aniqlang.",
+    options: [
+      "Ma'rifatli jamiyatda sog'lom aql-idrok, sog'lom fikr va adolat ustivorlik qiladi.",
+      "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi.",
+      "Azimboy shunday zulm o'tkazdiki, xalqning sabr kosasi to'ldi.",
+      "Mingboshi uchun Miryoqubdan boshqa chin ko'ngildan kuyadigan odam yo'qligini u yaxshi bilardi."
+    ],
+    correctAnswer: "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi."
+  },
+  {
+    question: "Zidlov bog'lovchili gap berilgan qatorni aniqlang.",
+    options: [
+      "O'ktam mevalarni saralaydi, xidlaydi, biroq egisi kelmaydi.",
+      "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi.",
+      "Goh Kimsan akamga ko'z solaman, goh oyimga qarayman.",
+      "Nazarimda, u negadir jilmayayotganga o'xshaydi."
+    ],
+    correctAnswer: "O'ktam mevalarni saralaydi, xidlaydi, biroq egisi kelmaydi."
+  },
+  {
+    question: "Biriktiruv bog'lovchili qo'shma gapni toping.",
+    options: [
+      "O'ktam xovlida yurib ro'zg'origa razm soldi.",
+      "Nodonlik va xurofot xukmron bo'ldimi, jaxolat avj oladi.",
+      "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi.",
+      "Gox yuradi, gox to'xtab dam oladi."
+    ],
+    correctAnswer: "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi."
+  },
+  {
+    question: "Nisbiy so'zli gapni aniqlang.",
+    options: [
+      "Nima eksang, shuni o'rasan",
+      "Intizom buzildimi, ishda unum bo'lmaydi.",
+      "Astrobod xavosi qiziq: gox yomg'ir yogadi, gox quyosh chiqadi",
+      "Farzand guldir, ona bir bo'ston"
+    ],
+    correctAnswer: "Farzand guldir, ona bir bo'ston"
+  },
+  {
+    question: "Tobe gap tarkibida keladigan bog'lovchilar qaysi qatorda?",
+    options: [
+      "Shuning uchun, shu bois, oqibatda, -ki, -kim.",
+      "Agar, chunki, shuning uchun.",
+      "Agar, agarda, chunki, go'yo, bamisoli, zero, deb, toki, zotan.",
+      "Shu bois, natijada, chunki, agar, deb"
+    ],
+    correctAnswer: "Agar, agarda, chunki, go'yo, bamisoli, zero, deb, toki, zotan."
+  },
+  {
+    question: "To'ldiruvchili so'z birikmalarini aniqlang.",
+    options: [
+      "Kitobni o'qimoq, ukasiga bermoq, onasi uchun olmoq.",
+      "Uchta o'quvchi, tunuka tom, istiqlol odimlari",
+      "Uyga qaytmoq, qishloqda yashamoq.",
+      "Xududiy bo'lim, oltin soat, maktab bog'i."
+    ],
+    correctAnswer: "Kitobni o'qimoq, ukasiga bermoq, onasi uchun olmoq."
+  },
+  {
+    question: "Dangasa bahona izlaydi, chunki mehnat unga yoqmaydi. Berilgan gapning turini aniqlang.",
+    options: [
+      "Maqsad tobe gapli qo'shma gap.",
+      "Sabab tobe gapli qo'shma gap.",
+      "Teng bog'lovchili qo'shma gap.",
+      "Oxang yordamida bog'langan qo'shma gap."
+    ],
+    correctAnswer: "Sabab tobe gapli qo'shma gap."
+  },
+  {
+    question: "Maqsad tobe gapli qo'shma gapni toping.",
+    options: [
+      "Ukam o'qisin deb, 'Oygul bilan Baxtiyor' kitobchasini oldim.",
+      "O'rtoqlarim kelishdi deb, ko'chaga chiqdim.",
+      "Baxtim borki, ko'zimga har narsa go'zal",
+      "Sinfimizda xamma axil, inoq."
+    ],
+    correctAnswer: "Ukam o'qisin deb, 'Oygul bilan Baxtiyor' kitobchasini oldim."
+  },
+  {
+    question: "Qo'shma gapni aniqlang.",
+    options: [
+      "Azimboy shunday zulm o'tkazdiki, oqibatda xalqning sabr-kosasi to'ldi.",
+      "Azimboy xalqning sabr-kosasini to'ldiradigan zulm o'tkazdi.",
+      "Sinf raxbarimiz qizlarga ham, yigitlarga ham ishonardi.",
+      "Botirjon ham, Xakimjon ham a'lochi."
+    ],
+    correctAnswer: "Azimboy shunday zulm o'tkazdiki, oqibatda xalqning sabr-kosasi to'ldi."
+  },
+  {
+    question: "Tushirib qoldirilgan bog'lovchini nuqtalar o'rniga qo'ying: ... shu ko'rganlarini hikoya qilib bersa, ular ishonmasliklari mumkin.",
+    options: ["Garchi.", "Agar", "Modomiki", "Balki"],
+    correctAnswer: "Modomiki"
+  },
+  {
+    question: "Birin-ketin sodir bo'ladigan ish-harakatlarni bildiruvchi, biror narsaning tavsifini beruvchi qo'shma gaplar yozuvda ... bilan ajratiladi.",
+    options: ["Vergul", "Nuqtali vergul", "Tire", "Ikki nuqta"],
+    correctAnswer: "Nuqtali vergul"
+  },
+  {
+    question: "Osmon ko'm-ko'k, havo esa toza, sof; go'yo uni dengiz shamoli supurgan, dengiz to'lqinlari yuvgan. Yuqoridagi gap turini aniqlang.",
+    options: [
+      "Murakkab sodda gap",
+      "Bog'langan qo'shma gap",
+      "Teng bog'lovchili qo'shma gap",
+      "Murakkab qo'shma gap"
+    ],
+    correctAnswer: "Murakkab sodda gap"
+  },
+  {
+    question: "Ega tobe gapli qo'shma gapni toping.",
+    options: [
+      "Kimki bardosh bersa, kurashsa, u baxtga etadi.",
+      "Yutug'imiz shundaki, xar bir ishni o'z vaqtida bajardik.",
+      "Qachon so'rasangiz, darrov javob beradi.",
+      "Hali kamchiliklarimiz ko'p, bundan ko'z yumib bo'lmaydi."
+    ],
+    correctAnswer: "Yutug'imiz shundaki, xar bir ishni o'z vaqtida bajardik."
+  },
+  {
+    question: "Harakat nomi bilan ifodalangan ega qaysi qatorda berilgan?",
+    options: [
+      "Oyni etak bilan yopib bo'lmaydi.",
+      "Ko'chat ekish oyligi baxorda o'tkaziladi.",
+      "Ilmli ming yashar, ilmsiz bir yashar",
+      "A'lo o'qish -- asosiy maqsadim."
+    ],
+    correctAnswer: "A'lo o'qish -- asosiy maqsadim."
+  },
+  {
+    question: "Teng bog'lovchilar berilgan qatorni toping.",
+    options: [
+      "Sababli, natijada, va, lekin.",
+      "Ammo, biroq, balki, agar",
+      "Va, ham, ammo, lekin.",
+      "yoki, zeroki"
+    ],
+    correctAnswer: "Va, ham, ammo, lekin."
+  },
+  {
+    question: "Uyushiq bo'lakli gap berilgan qatorni aniqlang.",
+    options: [
+      "Birni birov beradi, ko'pni mexnat.",
+      "Butun zamin larzaga keldi.",
+      "Tashqaridan allakimning ovozi eshitildi.",
+      "Saida goh afsuslanib, goh kuyunib, goh kulib gapirib berdi."
+    ],
+    correctAnswer: "Saida goh afsuslanib, goh kuyunib, goh kulib gapirib berdi."
+  },
+  {
+    question: "Qo'shma gap qismlarini bog'lovchi vositalar to'liq ko'rsatilgan qatorni belgilang.",
+    options: [
+      "Teng bog'lovchilar, ergashtiruvchi bog'lovchilar",
+      "Nisbiy so'zlar, oxang",
+      "Bog'lovchi yuklamalar",
+      "Teng bog'lovchilar, ergashtiruvchi bog'lovchilar, nisbiy so'zlar, bog'lovchi yuklamalar, ohang."
+    ],
+    correctAnswer: "Teng bog'lovchilar, ergashtiruvchi bog'lovchilar, nisbiy so'zlar, bog'lovchi yuklamalar, ohang."
+  },
+  {
+    question: "Teng bog'lovchilarga nimalar kiradi?",
+    options: [
+      "Biriktiruv, zidlov, ayiruv bog'lovchilari.",
+      "Ergashtiruv boglovchilari",
+      "Nisbiy so'zlar",
+      "Bog'lovchi yuklamalar"
+    ],
+    correctAnswer: "Biriktiruv, zidlov, ayiruv bog'lovchilari."
+  },
+  {
+    question: "Ayiruv bog'lovchi yordamida bog'langan qo'shma gaplarni toping.",
+    options: [
+      "Inson esa olamaro olamdir.",
+      "Ba'zan oftob ham charaqlayveradi, jala ham quyaveradi.",
+      "Inson yaralibdiki, hamisha olamni anglashga intiladi.",
+      "Jaxolat zo'r keldimi, taraqqiyot bo'lmaydi."
+    ],
+    correctAnswer: "Ba'zan oftob ham charaqlayveradi, jala ham quyaveradi."
+  },
+  {
+    question: "Nisbiy so'zli gap qaysi qatorda berilgan?",
+    options: [
+      "Intizom buzildimi ishda unum bo'lmaydi.",
+      "Qoyaga qancha yaqin yursang, xavf shuncha kam.",
+      "Yo siz keling, yo men boray.",
+      "Gox yomg'ir yog'adi, gox quyosh chiqadi."
+    ],
+    correctAnswer: "Qoyaga qancha yaqin yursang, xavf shuncha kam."
+  },
+  {
+    question: "Aniqlovchili so'z birikmasini toping.",
+    options: [
+      "Uyga qaytmoq, qishloqda yashamoq.",
+      "Kitobni o'qimoq, ukasiga bermoq.",
+      "Uchta uquvchi, tunuka tom, istiqlol odimlari, ukasini ko'rish.",
+      "Huquqiy bilim, oltin soat, katta bino"
+    ],
+    correctAnswer: "Huquqiy bilim, oltin soat, katta bino"
+  },
+  {
+    question: "Qaysi javobda qo'shma gap berilgan.",
+    options: [
+      "Onasi qiziga ham, o'g'liga ham ishonadi.",
+      "Botirjon ham, Raximjon ham a'lochi.",
+      "Azimboy shunday zulm o'tkazdiki, oqibatda xalqning sabr kosasi to'ldi.",
+      "Azimboy xalqning sabr-kosasini to'ldiradigan zulm o'tkazdi."
+    ],
+    correctAnswer: "Azimboy shunday zulm o'tkazdiki, oqibatda xalqning sabr kosasi to'ldi."
+  },
+  {
+    question: "Berilgan gapda tushirilgan tinish belgilarni qo'ying. Faqat bitta iltimos bir bayt o'qiyman shuni yaxshilab eshiting.",
+    options: ["Tire", "Ikki nuqta", "Nuqtali vergul", "Ikki nuqta va vergul"],
+    correctAnswer: "Ikki nuqta va vergul"
+  },
+  {
+    question: "Istiqlol keldi o'zligimizni angladik. Tinish belgini to'g'ri qo'ying.",
+    options: ["Vergul", "Ikki nuqta", "Nuqta", "Tire"],
+    correctAnswer: "Vergul"
+  },
+  {
+    question: "Berilgan qo'shma gapning turini aniqlang. Oqsoqol o'tirdi, kotib unga choy uzatdi va o'zi Xolmurod bergan qog'ozni o'qimoqchi bo'ldi.",
+    options: [
+      "Bog'langan qo'shma gap",
+      "Teng bog'lovchili qo'shma gap",
+      "Sodda gap",
+      "Murakkab qo'shma gap"
+    ],
+    correctAnswer: "Murakkab qo'shma gap"
+  },
+  {
+    question: "Kesim tobe gapli qo'shma gapni toping.",
+    options: [
+      "Eshitdimki, kecha kelibsiz.",
+      "Yaxshi odatingiz shuki, barvaqt turasiz.",
+      "Qachon so'rasangiz, darrov javob beradi.",
+      "Kim testni bir daqiqada echsa, 5 ball oladi."
+    ],
+    correctAnswer: "Eshitdimki, kecha kelibsiz."
+  },
+  {
+    question: "Tabiat bilan tanishtirish metodlari",
+    options: [
+      "Suhbat, ko'rgazmali, ekskursiya",
+      "Ekskursiya, og'zaki nutq, amaliy",
+      "Amaliy, ko'rgazmali suhbat",
+      "Ko'rgazmali, amaliy, og'zaki metod"
+    ],
+    correctAnswer: "Ko'rgazmali, amaliy, og'zaki metod"
+  },
+  {
+    question: "Tabiat bilan tanishtirish ish shakllari.",
+    options: [
+      "Barglar, urug'lar ildiz, meva, sabzavot",
+      "Mashgulot, ekskursiya, sayr",
+      "Belkurak, ketmon, xaskash",
+      "Meva, sabzavot, barg, hayvonlar."
+    ],
+    correctAnswer: "Mashgulot, ekskursiya, sayr"
+  },
+  {
+    question: "Ekskursiyada qaysi metod qo'llaniladi.",
+    options: [
+      "Mashg'ulot, og'zaki.",
+      "Hikoya, suhbat, amaliy",
+      "Sayr, ekskursiya, mehnat",
+      "Kuzatish, og'zaki"
+    ],
+    correctAnswer: "Kuzatish, og'zaki"
+  },
+  {
+    question: "Ekologiya faniga xissa qo'shgan Markaziy Osiyo olimlari",
+    options: [
+      "Al-Fargoniy, Ibn-Sino, Al-Xorazmiy",
+      "Beruniy, Ibn-Sino, Farobiy, Al-Xorazmiy",
+      "Forobiy, Navoiy ,Samarkandiy",
+      "Navoiy, Beruniy, Bobur."
+    ],
+    correctAnswer: "Beruniy, Ibn-Sino, Farobiy, Al-Xorazmiy"
+  },
+  {
+    question: "Uzoq muddatli kuzatishlar qaysi javobda to'g'ri ko'rsatilgan.",
+    options: [
+      "Gallazorni kuzatish, maydonchalardagi o'simliklarni kuzatish , dala maydonlarini kuzatish",
+      "Baqani rivojlanishini kuzatish, o'simlikni kuzatish",
+      "O'simlikni urug'idan urug'igacha bo'lgan jarayonni kuzatish. Baqani rivojlanishini kuzatish, o'simlikni yil fasllaridagi o'zgarishlarini kuzatish",
+      "O'simlikni yil fasllarda o'zgarishini kuzatish"
+    ],
+    correctAnswer: "O'simlikni urug'idan urug'igacha bo'lgan jarayonni kuzatish. Baqani rivojlanishini kuzatish, o'simlikni yil fasllaridagi o'zgarishlarini kuzatish"
+  },
+  {
+    question: "Tabiat bilan tanishtirish dasturini tuzilishi",
+    options: [
+      "Jonli-jonsiz tabiat, o'simlik dunyosi va hayvonot olami, kishilarning tabiatdagi mehnati",
+      "Jonsiz tabiat bilan tanishtirish, ensiklopedik bilim berish",
+      "fasllar bilan tanishtirish ,qushlar olami, o'simliklar dunyosi",
+      "Kishilarning tabiatdagi mehnati, o'simliklar va hayvonot olami"
+    ],
+    correctAnswer: "Jonli-jonsiz tabiat, o'simlik dunyosi va hayvonot olami, kishilarning tabiatdagi mehnati"
+  },
+  {
+    question: "Tabiatshunoslikning bosh yo'nalishi to'g'ri yozilgan qatorni belgilang.",
+    options: [
+      "Juda kichkinani o'rganish. Juda murakkabni o'rganish. Juda katta, kengni o'rganish.",
+      "Juda katta, kengni o'rganish. Juda kichkinani o'rganish. Juda murakkabni o'rganish.",
+      "Juda murakkabni o'rganish. Juda katta, kengni o'rganish. Juda kichkinani o'rganish.",
+      "Juda kichkinani o'rganish. Juda katta, kengni o'rganish. Juda murakkabni o'rganish."
+    ],
+    correctAnswer: "Juda katta, kengni o'rganish. Juda kichkinani o'rganish. Juda murakkabni o'rganish."
+  },
+  {
+    question: "Tabiatshunoslikning maqsadi ......",
+    options: [
+      "Tabiat hodisalarning mohiyatini aniqlashdan iborat",
+      "Tabiat qonuniyatlarni bilishdan iborat",
+      "Tabiat hodisalarning mohiyatini aniqlash, tabiat qonuniyatlarni bilish hamda ulardan amalda foydalanish imkoniyatlarni ochib berishdan iborat",
+      "Tabiat qonuniyatlarni bilish hamda ulardan amalda foydalanish imkoniyatlarni ochib berishdan iborat"
+    ],
+    correctAnswer: "Tabiat hodisalarning mohiyatini aniqlash, tabiat qonuniyatlarni bilish hamda ulardan amalda foydalanish imkoniyatlarni ochib berishdan iborat"
+  },
+  {
+    question: "Tabiatshunoslikda ilmiy tadqiqotlar natijalari nazariya, qonunlar, modellar, gipotezalar va tamoyillar majmuasi bu...",
+    options: ["tabiat qonunlari", "tabiat haqidagi nizom", "tabiyat haqida ma'lumot", "tabiat konsepsiyasi"],
+    correctAnswer: "tabiat konsepsiyasi"
+  },
+  {
+    question: "'Tabishunoslik va uni o'qitish metodikasi' fanning vazifasi",
+    options: [
+      "Amaliy fanlarda empirik kuzatishlar orqali inson tafakkuri doirasidagi bilimlarni o'rganish, aniq xulosalar chiqarish va ilmiy xulosalardan insonlarning ijtimoiy turmush tarzini yaxshilash yo'lida foydalanish.",
+      "Tabiatshunoslik va uni o'qitish metodikasi bo'lg'usi boshlang'ich sinf o'qituvchilariga tarbiyalovchi taiim tizimini tushunib olish, tabiatshunoslikni o'qitish asoslarini, uning uchun xos bo'lgan shakl, metod va uslublarini, o'quvchilaming bilish faoliyatlariga rahbarlik qilishni o'rganib olishlariga yordam qilish kabi amaliy masalalarini o'z ichida.",
+      "yer,quyosh,yulduzlar,suv,havo,tosh,tuproq haqida tushunchalar berish",
+      "Yashab turgan dunyomizda voqelik to'g'risidagi amaliy bilimlarni o'rganish, ushbu voqelikni kuzatish va, bu jarayonda olingan natijalarni ilmiy jihatdan bir tizimga solishdan iborat."
+    ],
+    correctAnswer: "Tabiatshunoslik va uni o'qitish metodikasi bo'lg'usi boshlang'ich sinf o'qituvchilariga tarbiyalovchi taiim tizimini tushunib olish, tabiatshunoslikni o'qitish asoslarini, uning uchun xos bo'lgan shakl, metod va uslublarini, o'quvchilaming bilish faoliyatlariga rahbarlik qilishni o'rganib olishlariga yordam qilish kabi amaliy masalalarini o'z ichida."
+  },
+  {
+    question: "Jonsiz tabiatga kiruvchi jism va narsalarni toping.",
+    options: [
+      "yer,quyosh,yulduzlar,suv, baliq",
+      "yulduzlar,suv,havo,tosh,tuproq, quyon",
+      "yer,quyosh,yulduzlar,suv,havo,tosh,tuproq.",
+      "odam,xayvon,toshlar"
+    ],
+    correctAnswer: "yer,quyosh,yulduzlar,suv,havo,tosh,tuproq."
+  },
+  {
+    question: "Jonli tabiatga kiruvchi jism va narsalarni toping.",
+    options: [
+      "o'simlik,hayvonlar,mikroarganizm,odamlar.",
+      "o'simlik,hayvonlar,mikroarganizm, toshlar",
+      "mikroarganizm,odamlar, qumlar",
+      "odamlar, qumlar, toshlar"
+    ],
+    correctAnswer: "o'simlik,hayvonlar,mikroarganizm,odamlar."
+  },
+  {
+    question: "Jonsiz tabiat o'ziga xos xususiyati bu...",
+    options: [
+      "jonsiz tabiat bir turdan boshqa turga almashina oladi",
+      "jonsiz tabiat deyilishiga sabab, ular oziqlanmaydi, o'smaydi, ko'paymaydi, rivojlanmaydi, Masalan toshni olsak, unga suv ham havo ham kerak emas.",
+      "ular o'sish va rivolanish xususiyatiga ega",
+      "ular o'sadi oziqlanmaydi"
+    ],
+    correctAnswer: "jonsiz tabiat deyilishiga sabab, ular oziqlanmaydi, o'smaydi, ko'paymaydi, rivojlanmaydi, Masalan toshni olsak, unga suv ham havo ham kerak emas."
+  },
+  {
+    question: "Jonli tabiat o'ziga xos xususiyati bu...",
+    options: [
+      "jonli tabiatga kiruvchilar oziqlanadilar, nafas oladilar ,o'sadilar,ko'payadilar,.jonli tabiat vakillari o'simlik va ozuqa bo'lmasa yashay olmaydilar.",
+      "jonli tabiat deyilishiga sabab,ular oziqlanmaydi, o'smaydi, ko'paymaydi, rivojlanmaydi, Masalan toshni olsak,unga suv ham havo ham kerak emas",
+      "jonli tabiat bir turdan boshqa turga almashina oladi",
+      "o'ziga xos xusisiyati ko'p oziqlanadi,ko'paymaydi,rivojlanadi"
+    ],
+    correctAnswer: "jonli tabiatga kiruvchilar oziqlanadilar, nafas oladilar ,o'sadilar,ko'payadilar,.jonli tabiat vakillari o'simlik va ozuqa bo'lmasa yashay olmaydilar."
+  },
+  {
+    question: "'Saydana', 'Mineralogiya', 'Qadimgi avlodlardan qolgan yodgorliklar', 'Hindiston', 'Geodeziya' kabi asarlar muallifi qaysi mutaffakir bo'lgan",
+    options: [
+      "Abu Rayxon Beruniy",
+      "Abu Nasr Farobiy",
+      "Muhammad al Xorazmiy",
+      "Ibn Sino"
+    ],
+    correctAnswer: "Abu Rayxon Beruniy"
+  },
+  {
+    question: "'Yer yuzida chang va tutun bo'lmasa, inson ming yil yashar edi' degan iboraning muallifi kim",
+    options: [
+      "Abu Rayxon Beruniy",
+      "Abu Ali Ibn Sino",
+      "Muhammad al Xorazmiy",
+      "Yusuf xos Xojib 'Qutadg'u bilib'"
+    ],
+    correctAnswer: "Abu Ali Ibn Sino"
+  },
+  {
+    question: "Kasallikni davolashda 'suvni tozalashga oid tavsiyalar' qaysi alloma tomonidan bayon etilgan",
+    options: [
+      "Abu Ali Ibn Sino",
+      "Abu Rayxon Beruniy",
+      "Muhammad al Xorazmiy",
+      "Abu Nosir Farobiy"
+    ],
+    correctAnswer: "Abu Ali Ibn Sino"
+  },
+  {
+    question: "Qaysi alloma o'z qarashlarida 'suvni isrof qilish -- nonni isrof qilishdek gunoh ekanligini, hovuz, quduq, sardoba suvini toza saqlash hamma uchun ham savob, ham farz ekanligini' tushuntirilgan",
+    options: ["Alisher navoiy.", "Ibn Sino", "Al Xorazmiy", "Al Beruniy"],
+    correctAnswer: "Alisher navoiy."
+  },
+  {
+    question: "'Boburnoma'da tabiat haqida nimalar ko'proq bayon etilgan",
+    options: [
+      "Unda yer, suv, havo turli tabiiy hodisalarga tegishli xalq so'zlari ko'plab topiladi. o'lkamiz tarixi, geografiyasi, tabiati, etnografiyasi, madaniyati to'g'risidagi.",
+      "Unda madanlar va dorivor giyohlar haqida ma'lumotlar keltirilgan",
+      "Hayvonlarning emigratsiyasi haqida qaydlar mavjud",
+      "Qushlar haqida ma'lumotlar keltirilgan"
+    ],
+    correctAnswer: "Unda yer, suv, havo turli tabiiy hodisalarga tegishli xalq so'zlari ko'plab topiladi. o'lkamiz tarixi, geografiyasi, tabiati, etnografiyasi, madaniyati to'g'risidagi."
+  },
+  {
+    question: "Quyosh asosan qaysi moddalardan tashkil topgan",
+    options: ["vodorod, geliy.", "azot, natriy", "magniy, rux", "kaliy natriy"],
+    correctAnswer: "vodorod, geliy."
+  },
+  {
+    question: "Quyosh nuri yerga qancha vaqtda yetib keladi",
+    options: [
+      "9-minut 18-sekund",
+      "7-minut 19-sekund",
+      "8-minut 18-sekund.",
+      "10-minut 18-sekunt"
+    ],
+    correctAnswer: "8-minut 18-sekund."
+  },
+  {
+    question: "Galaktika tushunchasi qaysi javobda to'g'ri ko'rsatilgan",
+    options: [
+      "yulduzlararo fazodan iborat sistemadir.",
+      "oy sistemasidan va 150 mlrd yulduz hamda yulduzlararo fazodan iborat sistemadir.",
+      "quyosh sistemasidan va 150 mlrd yulduz hamda yulduzlararo fazodan iborat sistemadir,",
+      "oy yulduzlardan iborat fazodan iborat sistema"
+    ],
+    correctAnswer: "quyosh sistemasidan va 150 mlrd yulduz hamda yulduzlararo fazodan iborat sistemadir,"
+  },
+  {
+    question: "Quyosh sistemasidagi sayyoralar ikki guruhga bo'linadi",
+    options: ["ichki va tashqi.", "ustki va ostki", "oldi va yoni", "katta va kichik"],
+    correctAnswer: "ichki va tashqi."
+  },
+  {
+    question: "Quyoshdan Yergacha bo'lgan masofa o'rta hisobda qancha",
+    options: ["149,6 mln.km.", "123,6 mln.km", "113,9 mln.km", "150 mln.km"],
+    correctAnswer: "149,6 mln.km."
+  },
+  {
+    question: "Yer Quyosh sistemasidagi qanday sayyora",
+    options: [
+      "suv mavjud bo'lmagan sayyora",
+      "hayot mavjud bo'lmagan sayyora",
+      "organik hayot mavjud bo'lgan sayyora.",
+      "havo mavjud bo'magan sayyora"
+    ],
+    correctAnswer: "organik hayot mavjud bo'lgan sayyora."
+  },
+  {
+    question: "Biosfera yerning qanday qobig'i",
+    options: ["hayot qobig'i.", "suv qobig'i", "azon qatlami qobig'i", "litosfera sirtqi qobig'i"],
+    correctAnswer: "hayot qobig'i."
+  },
+  {
+    question: "Quyosh markazida tempuratura necha darajada bo'ladi",
+    options: ["50 mln", "30 mln", "20 mln.", "40 mln"],
+    correctAnswer: "20 mln."
+  },
+  {
+    question: "Qadimgi grek olimlaridan kimlar dunyoning atomlardan tuzilganligi haqida farazni bildirishdi",
+    options: ["Aristotel, Gippokrat", "Gippokrat, Kongle", "Disterveg,Gippokrat", "Demakrit, Epikyur"],
+    correctAnswer: "Demakrit, Epikyur"
+  },
+  {
+    question: "Qadimgi grek olimidan ushbu fikr muallifini toping. 'Sababsiz hech narcha hosil bo'lmaydi va hech narsa izsiz yo'qolib ketmaydi'.",
+    options: ["Demakrit", "Empedokl", "Gippokrat", "Aristotel"],
+    correctAnswer: "Empedokl"
+  },
+  {
+    question: "Qaysi grek olimi anatomiya, botanika, sistematika va hayvonlar embriologiyasini ilmiy asosladi",
+    options: ["Gippokrat", "Empedokl", "Aristotel", "Demakrit"],
+    correctAnswer: "Aristotel"
+  },
+  {
+    question: "Qaysi grek olimi yerning dumaloqligini isbotlaydigan geografik karta tuzdi",
+    options: ["Ptolomey", "Aristotel", "Empedokl", "Gippokrat"],
+    correctAnswer: "Ptolomey"
   }
 ];
 
@@ -1033,5 +1693,6 @@ function updateTimer() {
 
     document.getElementById('timer').textContent = formattedTime;
 }
+
 
 
