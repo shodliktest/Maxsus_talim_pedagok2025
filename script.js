@@ -2165,6 +2165,521 @@ const questionsData = [
       "3 bosqich X-XIV asrlar"
     ],
     correctAnswer: "5 bosqich XVI-XVII asrlar"
+  },
+  {
+    question: "Biotexnologiya, sinergitika, kibernetika kabi fanlar «Tabiatshunoslik» fani rivojlanishining qaysi bosqichiga to'g'ri keladi",
+    options: ["6-bosqich", "5-bosqich", "2-bosqich", "4-bosqich"],
+    correctAnswer: "6-bosqich"
+  },
+  {
+    question: "Yer aylanishining burchak hisobidagi tezligi bir soat vaqt ichida necha gradusga siljiydi",
+    options: ["25 gradus", "15 gradus", "11 gradus", "23 gradus"],
+    correctAnswer: "15 gradus"
+  },
+  {
+    question: "Relef so'zining lug'aviy ma'nosi toping",
+    options: [
+      "(lotincha,relief,lot.relevo) ko'taraman",
+      "(frans,relief,lot.relevo) ko'taraman",
+      "(yunoncha,relief,lot.relevo) ko'taraman",
+      "(inglizcha,relief,lot.relevo) ko'taraman"
+    ],
+    correctAnswer: "(frans,relief,lot.relevo) ko'taraman"
+  },
+  {
+    question: "Zilzila necha balli sodir bo'lganda xom g'ishtli binolar qulaydi.Pishiq g'isht binolarda yoriqlar paydo bo'ladi",
+    options: ["8 ball", "4 ball", "6 ball", "9 ball"],
+    correctAnswer: "8 ball"
+  },
+  {
+    question: "Gidrosfera suv hajmining katta qismi qaysi tabiiy ob'ektlarga to'g'ri keladi",
+    options: [
+      "5 mlrd 390 mln.km.kub okean va dengizlarga",
+      "1 mlrd 370 mln.km.kub okean va dengizlarga",
+      "3mlrd 170 mln.km.kub okean va dengizlarga",
+      "4 mlrd 142 mln.km.kub okean va dengizlarga"
+    ],
+    correctAnswer: "1 mlrd 370 mln.km.kub okean va dengizlarga"
+  },
+  {
+    question: "Gidrosfera suv hajmining eng kichik qismi qaysi tabiiy ob'ektlarga to'g'ri keladi",
+    options: [
+      "2.3 ming km.kub daryolarga",
+      "1,2 ming km.kub daryolarga",
+      "6.1 ming km.kub daryolarga",
+      "4.1 ming km. kub daryo"
+    ],
+    correctAnswer: "1,2 ming km.kub daryolarga"
+  },
+  {
+    question: "Inson muskulining necha foizi suvdan iborat",
+    options: ["73%", "76%", "70%", "75 %"],
+    correctAnswer: "75 %"
+  },
+  {
+    question: "Fotosintez jarayonida suv qanday moddalarga ajraladi.",
+    options: [
+      "vodorod & kislorod",
+      "vodorod & azot",
+      "vodorod & xlorid",
+      "kislorod & azot"
+    ],
+    correctAnswer: "vodorod & kislorod"
+  },
+  {
+    question: "Suvning issiqlik sig'imi yog'ochnikidan necha baravar yuqori",
+    options: ["4barobar", "6 barobar", "5 barobar", "2 baravar"],
+    correctAnswer: "2 baravar"
+  },
+  {
+    question: "Suvning issiqlik sig'imi qumnikidan necha baravar yuqori",
+    options: ["5 baravar", "3 barobar", "6 barobar", "4barobar"],
+    correctAnswer: "5 baravar"
+  },
+  {
+    question: "Tabiatda tarqalgan 107 xil kimyoviy elementlarning nechtasi suv tarkibida uchraydi",
+    options: ["62 ta", "60 ta", "56 ta", "54 ta"],
+    correctAnswer: "62 ta"
+  },
+  {
+    question: "Eng sersuv mahsulot bu tarvuzdir. Tarvuzning necha foiz qismi suvdan iborat bo'ladi.",
+    options: ["95%", "93 %", "89%", "87%"],
+    correctAnswer: "93 %"
+  },
+  {
+    question: "Inson miyasining o'rtacha necha foizi suvdan iborat.",
+    options: ["83 %", "89%", "90 %", "75 %"],
+    correctAnswer: "90 %"
+  },
+  {
+    question: "Inson qonining necha foizi suvdan iborat",
+    options: ["83 %", "82%", "73%", "68 %"],
+    correctAnswer: "83 %"
+  },
+  {
+    question: "Odam tanasidagi suv miqdori 5-8 foizga kamaysa qanday xolat ro'y beradi",
+    options: [
+      "Og'iz quruqshaydi,teri bujmayadi,ong o'tmaslashadi,ko'zga xar hil narsalar ko'rina boshlaydi (10-13 %dan 15-17 % yetsa o'ladi.)",
+      "Og'iz quruqshaydi,teri bujmayadi,ong o'tmaslashadi,ko'zga xar hil narsalar ko'rina boshlaydi, hushdan ketadi (5-8 %dan 14-15 % yetsa o'ladi.)",
+      "Og'iz quruqshaydi,teri bujmayadi, ko'zga xar hil narsalar ko'rina boshlaydi, hushdan ketadi (10-12 %dan 3-9 % yetsa o'ladi.)",
+      "Og'izquruqshaydi, ong o'tmaslashadi,ko'zga xar hil narsalar ko'rina boshlaydi, hushdan ketadi (11-12 %dan 3-10% yetsa o'ladi.)"
+    ],
+    correctAnswer: "Og'iz quruqshaydi,teri bujmayadi,ong o'tmaslashadi,ko'zga xar hil narsalar ko'rina boshlaydi, hushdan ketadi (5-8 %dan 14-15 % yetsa o'ladi.)"
+  },
+  {
+    question: "Gorizont so'zining lug' aviy ma'nosi nima deb ataladi.",
+    options: ["yunoncha tomon", "yunoncha burchak", "italyancha yon", "inglizcha burchak"],
+    correctAnswer: "yunoncha tomon"
+  },
+  {
+    question: "Zilzila o'chog'i nima deb ataladi.",
+    options: ["yer plitasi", "yer g'ovagi", "perisentr", "epitsentr"],
+    correctAnswer: "epitsentr"
+  },
+  {
+    question: "Atmosferada eng ko'p bo'ladigan modda..",
+    options: ["azot", "kislorod", "vodorod", "kaliy"],
+    correctAnswer: "azot"
+  },
+  {
+    question: "Atmosferaning eng pastki qatlami...",
+    options: ["litosfesa", "troposfera", "gidrosfera", "atmosfera"],
+    correctAnswer: "troposfera"
+  },
+  {
+    question: "Farg'ona viloyati qaysi viloyatlar bilan chegaradosh.",
+    options: ["Buxoro,Andijon", "Andijin Farg'ona", "Namangan,Andijon", "Buxoro, Farg'ona"],
+    correctAnswer: "Namangan,Andijon"
+  },
+  {
+    question: "Aydarko'l qaysi viloyatlar xududida joylashgan",
+    options: ["Navoiy,Jizzax", "Navoiy,Andijon", "Andijon,Farg'ona", "Farg'ona,Namangan"],
+    correctAnswer: "Navoiy,Jizzax"
+  },
+  {
+    question: "O'zbekistonda yozda eng yuqori harorat Termizda necha gradus bo'ladi.",
+    options: ["50 C", "32 C", "46 C", "43 C"],
+    correctAnswer: "50 C"
+  },
+  {
+    question: "Fransuz tilidan tarjima qilganda '5 qator' ma'nosini bildiruvchi usul",
+    options: ["Sinkveyn", "Klaster", "Aqliy hujum", "Insert"],
+    correctAnswer: "Sinkveyn"
+  },
+  {
+    question: "Pedagogik jarayonda shaxslararo munosabatlarning keskinlashuvi natijasi sifatida yuzaga keluvchi muammoli jarayon-bu...",
+    options: ["pedagogik konflikt", "pedagogik munozara", "pedagogik odob", "pedagogik usul"],
+    correctAnswer: "pedagogik konflikt"
+  },
+  {
+    question: "«Didaktika» termini yunoncha «didaktikos» degan so'zdan olingan bo'lib, qanday ma'noda tarjima qilinadi?",
+    options: [
+      "Ta'lim berish va o'qitish",
+      "O'qituvchi",
+      "Ta'lim beruvchi va ta'lim oluvchi",
+      "Ta'lim oluvchi"
+    ],
+    correctAnswer: "Ta'lim beruvchi va ta'lim oluvchi"
+  },
+  {
+    question: "«Buyuk didaktika» asarini kim yozgan?",
+    options: ["Ya.A.Komenskiy", "Suqrot", "Arastu", "J.J.Russo"],
+    correctAnswer: "Ya.A.Komenskiy"
+  },
+  {
+    question: "Pedagogika qanday fan?",
+    options: [
+      "Pedagogika ta'lim-tarbiya jarayonining mohiyati, mazmuni, qonuniyatlari, metodlarini o'rganuvchi ijtimoiy, umumkasbiy fan.",
+      "Pedagogika tarbiyaning nazariy asoslarini tadqiq etuvchi ijtimoiy-gumanitar fan",
+      "Pedagogika tarbiya jarayonining qonuniyatlari, prinsiplari, shakl va metodlari haqidagi gumanitar fan.",
+      "Pedagogika ta'lim jarayonining mazmuni, qonuniyatlari, metodlarini o'rganuvchi, ijtimoiy, umumkasbiy fan."
+    ],
+    correctAnswer: "Pedagogika ta'lim-tarbiya jarayonining mohiyati, mazmuni, qonuniyatlari, metodlarini o'rganuvchi ijtimoiy, umumkasbiy fan."
+  },
+  {
+    question: "Tarbiyaning asosiy vazifasi nima?",
+    options: [
+      "Tarbiya yosh avlodni jamiyatimizda qabul qilingan odob-axloq qoidalariga mos keladigan e'tiqodini, axloqiy ko'nikma va malakalarini, extiyoji va intilishlarini tarkib toptirishdan iborat",
+      "Odamlarning dunyo bilan munosabatlarining bir butun sistemasini ta'minlovchi, vosita",
+      "Zarurat, ehtiyojlilik-qandaydir bir vosita, o'zga narsaga javob berish, insonning ruhiy holatini to'g'rilovchi omil.",
+      "Odamning jamiyat a'zosi sifatida o'z-o'zini anglash va tafakkurini, faoljyatining ob'yektivligini biluvchanlik tushunchasidir"
+    ],
+    correctAnswer: "Tarbiya yosh avlodni jamiyatimizda qabul qilingan odob-axloq qoidalariga mos keladigan e'tiqodini, axloqiy ko'nikma va malakalarini, extiyoji va intilishlarini tarkib toptirishdan iborat"
+  },
+  {
+    question: "Shaxs kamolotiga qanday omillar ta'sir etadi?",
+    options: [
+      "biologik omil, ijtimoiy omil va tarbiya ta'sir etadi.",
+      "bola shaxsining rivojlanishiga muhit va tarbiya kabi omillar.",
+      "shaxsning kamol topishida ijtimoiy va biologik omillar ta'sir etadi.",
+      "odamlarning munosabati."
+    ],
+    correctAnswer: "biologik omil, ijtimoiy omil va tarbiya ta'sir etadi."
+  },
+  {
+    question: "Abu Ali Ibn Sinoning ta'lim-tarbiya haqidagi fikrlari.",
+    options: [
+      "Bolaga jamoada ta'lim berish afzalligi.",
+      "Tarbiya yagona jarayon.",
+      "6 yoshdan bolani muallimga topshirish.",
+      "Tarbiya bu najot."
+    ],
+    correctAnswer: "Bolaga jamoada ta'lim berish afzalligi."
+  },
+  {
+    question: "Pedagogik diagnostika nima?",
+    options: [
+      "ta'lim tarbiya jarayonini chuqur taxlil qilish uning samaradorligini to'g'ri baholash ta'lim darajasini aniqlash",
+      "bilish sifatini takomilashtirish",
+      "talimni takomilashtirish",
+      "talimdagi kamchiliklarni bartaraf qilish"
+    ],
+    correctAnswer: "ta'lim tarbiya jarayonini chuqur taxlil qilish uning samaradorligini to'g'ri baholash ta'lim darajasini aniqlash"
+  },
+  {
+    question: "Nuqtalar o'rniga mos javobni qoying. ...... ya'ni elementar o'qish va yozishga o'rgatish bolalarga savod o'rgatish pedagogikadagina emas balki ijtimoiy hayotda ham juda jiddiy qo'yilgan holatdir",
+    options: ["Savod o'rgatish metodikasi", "Nutqni o'stirish metodikasi", "Imlo metodikasi", "O'qitish metodikasi"],
+    correctAnswer: "Savod o'rgatish metodikasi"
+  },
+  {
+    question: "Ta'lim metodlari qanday ma'noni anglatadi?",
+    options: [
+      "o'quvchilarga bilim berishning yo'llari va usullarini ifodalaydi",
+      "o'quvchilarni bilimli qilishni tamoyillarini bildiradi",
+      "ta'limning asosiy tartibi xisoblanadi",
+      "o'qituvchining talabchanligini taminlaydi"
+    ],
+    correctAnswer: "o'quvchilarga bilim berishning yo'llari va usullarini ifodalaydi"
+  },
+  {
+    question: "Malaka nima?",
+    options: [
+      "malaka bilan bir xil ongli xatti xarakatlarning ko'p marta takrorlanishi asosida xosil bo'ladigan avtomatik jarayon",
+      "malaka to'plangan tajribadir",
+      "malaka bir xil xatti xarakatlarning ko'p marta takrorlanishi",
+      "malaka bu odatiy harakatlar"
+    ],
+    correctAnswer: "malaka bilan bir xil ongli xatti xarakatlarning ko'p marta takrorlanishi asosida xosil bo'ladigan avtomatik jarayon"
+  },
+  {
+    question: "Ta'lim olish huquqi 'Ta'lim tog'risida'gi qonunning nechanchi moddasida keltirilgan?",
+    options: ["5 modasida", "23 modasida", "7 modasida", "55 modasida"],
+    correctAnswer: "5 modasida"
+  },
+  {
+    question: "«Texnologiya» so'zi haqida tushuncha?",
+    options: [
+      "«texne» - mahorat, san'at, «logos» - tushuncha ta'limot",
+      "«texne» - mehnat, san'at, «logos» - tushuncha bilim",
+      "«texne» - qobiliyat, san'at, «logos» - tushuncha ta'lim",
+      "«texne» - san'at, «logos» -- tushuncha o'qitish"
+    ],
+    correctAnswer: "«texne» - mahorat, san'at, «logos» - tushuncha ta'limot"
+  },
+  {
+    question: "Pedagogning umumiy madaniyati nimalardan iborat?",
+    options: [
+      "Bilimi, ishonchi, qobiliyati va xulqi",
+      "Ijtimoiy madaniyat",
+      "Kasbiy ahamiyatli madaniyat",
+      "Kasbiy faoliyatda yetukligi"
+    ],
+    correctAnswer: "Bilimi, ishonchi, qobiliyati va xulqi"
+  },
+  {
+    question: "O'qituvchining pedagogik faoliyati turlari qaysilar?",
+    options: [
+      "Konstruktiv, tadqiqotchilik, kommunikativ, tashkilotchilik, gnostic",
+      "Ta'lim beruvchi, tarbiyalovchi, rivojlantiruvchi",
+      "o'quvchi faoliyatini tashkil etish va boshqarish",
+      "Shakllantiruvchi va rivojlantiruvchi"
+    ],
+    correctAnswer: "Konstruktiv, tadqiqotchilik, kommunikativ, tashkilotchilik, gnostic"
+  },
+  {
+    question: "Jamoa so'ziga to'g'ri ta'rif toping",
+    options: [
+      "latincha 'kollektivus' -- yig'ilma, omma, birgalikdagi majlis, birlashma, guruh.",
+      "Lotincha 'projectus'- oldinga tashlangan",
+      "inglizcha qayta ishlash",
+      "lotincha qurish"
+    ],
+    correctAnswer: "latincha 'kollektivus' -- yig'ilma, omma, birgalikdagi majlis, birlashma, guruh."
+  },
+  {
+    question: "Sinf so'ziga to'g'ri ta'rif berilgan qatorni toping.",
+    options: [
+      "yoshi va bilimi jihatidan bir xil bо'lgan muayyan о'quvchilar guruhi",
+      "tarbiyalanuvchilarning yosh, psixologik xususiyatiga kо'ra shakllantirilgan yoki о'rta maxsus va oliy ta'lim muassasalari ta'lim oluvchilarining akademik jamoasi.",
+      "yig'ilma, omma, birgalikdagi majlis, birlashma, guruh.",
+      "ijtimoiy ahamiyatga ega umumiy maqsad asosida bir necha о'quvchilardan tashkil topgan guruh."
+    ],
+    correctAnswer: "yoshi va bilimi jihatidan bir xil bо'lgan muayyan о'quvchilar guruhi"
+  },
+  {
+    question: "Umumiy maqsad yo'lida shaxslarning o'zaro munosabatlari, tashkiliyligi va intilishlari bilan bir-biriga monand turg'un sotsial (ijtimoiy) uyushmani nima deb yuritiladi?",
+    options: ["Jamoa", "guruh", "jamiyat", "konformlilik"],
+    correctAnswer: "Jamoa"
+  },
+  {
+    question: "Og'zaki ta'lim metodlari qaysilar?",
+    options: [
+      "Hikoya, suhbat, ma'ruza",
+      "Hikoya, suhbat, mashq",
+      "Hikoya, mashq",
+      "Ma'ruza, seminar, laboratoriya ishi"
+    ],
+    correctAnswer: "Hikoya, suhbat, ma'ruza"
+  },
+  {
+    question: "O'zbekiston Respublikasining 'Ta'lim to'g'risida'gi qonuniga muvofiq kimlar pedagogik faoliyat bilan shug'ullanish huquqiga egalar?",
+    options: [
+      "tegishli ma'lumoti, kasbiy tayyorgarligi bor va yuksak axloqiy fazilatlarga ega bo'lgan shaxslar",
+      "kasbiy bilim, ko'nikma va malaka, shuningdek, ta'lim muassasalarida ishlash tajribasiga ega shaxslar",
+      "oliy pedagogik ma'lumot hamda 5 yillik pedagogik stajga ega shaxslar",
+      "faoliyat jarayonida ta'lim oluvchilarning yosh va psixologik xususiyatlarini biladigan shaxslar"
+    ],
+    correctAnswer: "tegishli ma'lumoti, kasbiy tayyorgarligi bor va yuksak axloqiy fazilatlarga ega bo'lgan shaxslar"
+  },
+  {
+    question: "Nutq e'tikasi bu...",
+    options: [
+      "sodda va ravon so'zlardan foydalana olish.",
+      "fikrni ravon ifodalash",
+      "mustaqil gaplar.",
+      "juda ham jiddiy so'zlarni qamrab oladi."
+    ],
+    correctAnswer: "sodda va ravon so'zlardan foydalana olish."
+  },
+  {
+    question: "Inson 70% bilimlarni necha yoshgacha o'zlashtiradi.",
+    options: ["7", "6", "10", "9"],
+    correctAnswer: "7"
+  },
+  {
+    question: "'Ta'lim to'g'risidagi qonun' qachon qabul qilingan qayta taxrirdan o'tkazilgani qachon qabul qilingan?",
+    options: ["2020 yil 23 sentabr", "2020 yil, 29 iyul", "2019 yil, 12 avgust", "1993 yil, 11 avgust"],
+    correctAnswer: "2020 yil 23 sentabr"
+  },
+  {
+    question: "'Pedagogika bola tarbiyasining fani demakdir'. Ta'rif kim tomonidan berilgan?",
+    options: ["Abdulla Avloniy", "H.H.niyoziy", "Abduqodir Shakuriy", "Ishoqxon Ibrat"],
+    correctAnswer: "Abdulla Avloniy"
+  },
+  {
+    question: "Pedagokika faning otasi kim",
+    options: ["Yan Amos Komenskiy", "Godnin", "Kuznin", "Aristotel"],
+    correctAnswer: "Yan Amos Komenskiy"
+  },
+  {
+    question: "Innovatsiya pedagogik termin sifatida nechanchi asrda va qayerda paydo bo'lgan",
+    options: [
+      "XX asrning 60-yillarida Garbiy Yevropa va AQSh",
+      "XX asrning 50-yillarida Yaponiyada",
+      "XIX asrning 60-yillarida Germaniyada.",
+      "XIX asrning 80-yillarida Germaniyada"
+    ],
+    correctAnswer: "XX asrning 60-yillarida Garbiy Yevropa va AQSh"
+  },
+  {
+    question: "6 yil bepul haftasiga 6 kun o'qish. 6-aprelda o'quv yili boshlanadi. Ushbu davlat nomini belgilang",
+    options: ["Germaniya", "Yaponiya", "Hindiston", "litviya"],
+    correctAnswer: "Yaponiya"
+  },
+  {
+    question: "Kompetensiya so'zining lug'aviy ma'nosi",
+    options: ["loyiqman, munosibman", "bajaraman, to'g'rilayman", "tashkil etaman", "uyushtiraman"],
+    correctAnswer: "loyiqman, munosibman"
+  },
+  {
+    question: "'Klaster 'so'zining ma'nosi",
+    options: ["bog'lam", "alohida", "yangilik", "o'ziga xoslik"],
+    correctAnswer: "bog'lam"
+  },
+  {
+    question: "'Fan va aql-zakovat' asarining muallifi kim?",
+    options: ["Al-Farobiy", "Al- Farg'oniy", "Abu Ali Ibn Sino", "Ahmad Yugnakiy"],
+    correctAnswer: "Al-Farobiy"
+  },
+  {
+    question: "Loyihaviy ta'lim qancha vaqtdan buyon pedagogikada foydalanib kelinmoqda",
+    options: ["300 yildan ortiq vaqt", "200 yildan ortiq vaqt", "50 yildan ortiq", "2005-yildan beri"],
+    correctAnswer: "300 yildan ortiq vaqt"
+  },
+  {
+    question: "Bir va bir necha oygacha ishlab chiqiladigan ta'lim loyihalari turini ayting",
+    options: ["Uzoq muddatli loyiha", "O'rta muddatli loyiha", "Axborotli loyihalar", "Amaliy loyihalar"],
+    correctAnswer: "Uzoq muddatli loyiha"
+  },
+  {
+    question: "Loyihaga kirishish, loyiha faoliyatini tashkil etish va rejalashtirish -- auditoriya ishini qaysi bosqichini o'z ichiga qamrab oladi",
+    options: [
+      "Tayyorgarlik bosqichi",
+      "Loyihani bajarish bosqichi",
+      "Yakunlovchi bosqich",
+      "qaytuvchi bosqich"
+    ],
+    correctAnswer: "Tayyorgarlik bosqichi"
+  },
+  {
+    question: "......ta'lim sifatini nazorat qilish va samarali boshqarish maqsadida qo'llaniladi. Bunda turli darajadagi testlar, muammoli vaziyatlarni hal qilish (keyslarni yechish) asosida shaxsning kreativlik sifatlari va ijodiy faoliyatni tashkil eta olish ko'nikmalariga egaligi baholanadi. Nuqtalar o'rnini to'ldiring",
+    options: ["Pedagogik kvalimetriya", "pedagogik maxorat", "pedagogik madaniyat", "pedagogik takt"],
+    correctAnswer: "Pedagogik kvalimetriya"
+  },
+  {
+    question: "Sharq uyg'onish davri baholash mezonini belgilang",
+    options: ["barakallo, tasanno, ofarin", "12345", "yaxshi, o'rta a'lo", "'juda yomon', 'yomon', 'o'rta', 'yaxshi', 'a'lo'"],
+    correctAnswer: "barakallo, tasanno, ofarin"
+  },
+  {
+    question: "Nechanchi yildan boshlab besh ballik baholar raqamlarda ya'ni, 1,2,3,4,5 raqamlarda ifoda etish joriy qilingan",
+    options: ["1944-yildan", "1990 yildan", "1950 yildan", "622 yildan"],
+    correctAnswer: "1944-yildan"
+  },
+  {
+    question: "Umumiy o'rta va o'rta maxsus ta'lim muassasalari reytingini aniqlash chora-tadbirlari to'g'risida O'zbekiston Respublikasi Vazirlar Mahkamasining, 345-sonli qarori qachon kuchga kirgan",
+    options: ["04.06.2021", "03.06.2021", "23.09.2020", "09.12.1985"],
+    correctAnswer: "04.06.2021"
+  },
+  {
+    question: ".....bu o'quvchilar tomonidan mazkur fanning muayyan bob yoki bo'limlarining o'zlashtirilganini tekshirish. Nuqtalar o'rnini to'ldiring",
+    options: ["oraliq nazorat", "yakuniy", "joriy", "tashkiliy"],
+    correctAnswer: "oraliq nazorat"
+  },
+  {
+    question: "Optimallashtirish deganda nimani tushunasiz?",
+    options: [
+      "Ko'p sonli imkoniyatlardan eng qulayini tanlab olish",
+      "Ta'limda fanlararo o'qitish nazariyasi",
+      "Ta'lim berib, o'qitish nazariyasi",
+      "Muammoli o'qitish"
+    ],
+    correctAnswer: "Ko'p sonli imkoniyatlardan eng qulayini tanlab olish"
+  },
+  {
+    question: "Pedagogik takt nima?",
+    options: [
+      "o'qituvchi kasbiy mahoratining asosi bo'lib, o'quvchilarga barcha demokratik talablar asosida pedagogik ta'sir o'tkazish, muloqotni insonparvarlik tuyg'ulari asosida o'rnatish o'lchovi, o'quvchilarda mustaqil fikr yuritishni hamda ongli intizomni tarkib toptirish ko'nikmalarini hosil qilish shaklidir.",
+      "har bir ta'lim oluvchi va jamoaning faolligini pedagogik jihatdan ta'minlash uchun zarur bo'lgan malaka va ko'nikmalar.",
+      "har bir ta'lim oluvchiga va jamoaga pedagogik ta'sir o'tkazishni samarali qo'llash uchun zarur bo'lgan malaka va ko'nikmalar majmuasi",
+      "pedagogning yutuqlariga kafolat beradigan aniq ishlab chiqilgan va qat'iy ilmiy loyihalashtirilgan pedagogik harakat."
+    ],
+    correctAnswer: "o'qituvchi kasbiy mahoratining asosi bo'lib, o'quvchilarga barcha demokratik talablar asosida pedagogik ta'sir o'tkazish, muloqotni insonparvarlik tuyg'ulari asosida o'rnatish o'lchovi, o'quvchilarda mustaqil fikr yuritishni hamda ongli intizomni tarkib toptirish ko'nikmalarini hosil qilish shaklidir."
+  },
+  {
+    question: "Pedagogning kommunikativ madaniyati deganda...",
+    options: [
+      "pedagogning o'quvchilar va atrofdagilar bilan qisqa muddatda muloqot o'rnatishga bo'lgan doimiy intilishi.",
+      "pedagogning dunyoga, pedagogik voqelikka va pedagogik jarayonga bo'lgan intellektual va hissiy munosabati.",
+      "pedagogik jarayonni bilish, uni tashkil eta olish.",
+      "o'quvchi va jamoaning faolligini pedagogik jihatdan ta'minlash uchun zarur bo'lgan malaka va ko'nikmalar"
+    ],
+    correctAnswer: "pedagogning o'quvchilar va atrofdagilar bilan qisqa muddatda muloqot o'rnatishga bo'lgan doimiy intilishi."
+  },
+  {
+    question: "Diksiya nima?",
+    options: [
+      "So'zlarni aniq, ravshan talaffuz etish, so'zlash usuli.",
+      "Tovush hajmi, uning chegarasi",
+      "Tovush rangdorligi, yorqinligi, uning yumshoqligi va alohidaligi.",
+      "So'zlayotganda obrazga kirish, ovozni kerakli joyda pastlatish, ohista gapirish."
+    ],
+    correctAnswer: "So'zlarni aniq, ravshan talaffuz etish, so'zlash usuli."
+  },
+  {
+    question: "Pantomimika bu ...",
+    options: [
+      "Oyoqlar, gavda, qo'l orqali fikrni ifodalash",
+      "Yuz ifodasi va harakatlari",
+      "Oyoqlar holati, harakati",
+      "Yuz muskullari"
+    ],
+    correctAnswer: "Oyoqlar, gavda, qo'l orqali fikrni ifodalash"
+  },
+  {
+    question: "O'qituvchining o'quvchilarni boshqarish uslublari berilgan javobni toping.",
+    options: [
+      "avtoritar uslub, demokratik uslub, liberal uslub.",
+      "demokratik uslub, liberal uslub, muloqot -- masofa uslubi.",
+      "demokratik uslub, avtoritar uslub, hazil -- mutoyiba uslubi.",
+      "avtoritar uslub, liberal uslub, muloqot - qo'rqitish uslubi."
+    ],
+    correctAnswer: "avtoritar uslub, demokratik uslub, liberal uslub."
+  },
+  {
+    question: "Pedagogik adabiyotlar va maktab amaliyotida o'quvchilar o'quv faoliyatini tashkil etishning qanday asosiy shakli qabul qilingan?",
+    options: [
+      "ommaviy, guruhli, individual",
+      "tabaqalashgan, individual, ommaviy",
+      "yakka-guruhiy, ommaviy, individual",
+      "integratsiyalashgan, yakka, guruhiy"
+    ],
+    correctAnswer: "ommaviy, guruhli, individual"
+  },
+  {
+    question: "Oliy ta'lim nechta bosqichdan iborat?",
+    options: ["2", "4", "3", "5"],
+    correctAnswer: "3"
+  },
+  {
+    question: "Umumiy o'rta va o'rta maxsus ta'lim bosqichida o'qish muddati necha yil",
+    options: ["11 yil", "4 yil", "9yil", "7 yil"],
+    correctAnswer: "11 yil"
+  },
+  {
+    question: "Aniq maqsad asosida kishi ongini ma'naviy axloqiy qadriyatlarni shakllantirishga qaratilgan tizimli jarayonga nima deyiladi?",
+    options: ["ta'lim", "tarbiya", "ma'lumot", "ijtimoiy muhit"],
+    correctAnswer: "tarbiya"
+  },
+  {
+    question: "Umumiy o'rta va o'rta maxsus ta'lim bosqichi hamda oliy ta'lim bosqichlarining oralig'ida qanday nomdagi ta'lim turini olish mumkin?",
+    options: [
+      "maktabgacha ta'lim",
+      "oliy ta'limdan keyingi ta'lim",
+      "boshlang'ich ta'lim",
+      "professional ta'lim"
+    ],
+    correctAnswer: "professional ta'lim"
   }
 ];
 
@@ -2528,6 +3043,7 @@ function updateTimer() {
 
     document.getElementById('timer').textContent = formattedTime;
 }
+
 
 
 
