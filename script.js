@@ -6,2830 +6,2210 @@ const VALID_CREDENTIALS = {
 };
 
 // ===== YANGI: SAVOLLAR TARIXINI SAQLASH KALITI =====
-const QUESTION_POOL_KEY = 'quiLz_remaining_indices';
+const QUESTION_POOL_KEY = 'quimaerkerz_remaining_indices';
 
 // ===== TEST SAVOLLARI (BU YERGA 450 TA SAVOLINGIZNI TASHLAISZ) =====
 
 const questionsData = [
   {
-    question: "Qanday so'zlar gapdagi boshqa so'zlardan vergul bilan ajratib yoziladi?",
-    options: ["yuklama", "bog'lovchi", "modal so'zlar", "taqlid so'zlar"],
-    correctAnswer: "modal so'zlar"
+    question: "Berilgan jarayonni amalga oshirish uchun qaysi elementar ishlarni va qaysi ketmaketlikda bajarish lozimIigini ko'rsatuvchi buyruq … deb ataladi.",
+    options: ["ko’paytirish", "ayirma", "algoritm", "integral"],
+    correctAnswer: "algoritm"
   },
   {
-    question: "Qaysi gapda kelishik qo'shimchasini qo'llash bilan bog'liq xatoga yo'l qo'yilgan?",
-    options: [
-      "Bilimdon o'zining bilimi tufayli ofatlardan omon qoladi.",
-      "O'zining qadrini bilmagan o'zganing qadrini ne bilsin?",
-      "Kechasi Saidiyning hujrasiga Kozimbek bilan muxbir A'zamjon keldi.",
-      "Sohibqironni bunyodkorlik sohasidagi xizmatlaridan el-u yurt minnatdor edi."
-    ],
-    correctAnswer: "Sohibqironni bunyodkorlik sohasidagi xizmatlaridan el-u yurt minnatdor edi."
+    question: "Tenglamani yeching: (4 · ? − 2) : 5 + 48 : 12 = 45 : 9 + 5",
+    options: ["8", "4", "7", "5"],
+    correctAnswer: "8"
   },
   {
-    question: "Samoning zangorisimon sahnida to'lishmagan qandaydir beshakl oy xira, rangsiz yaltiraydi. Gapda qo'llangan yasama so'zlar vazifasini toping.",
-    options: ["1,2,3", "1,2,4", "1,3,4", "2,3,4"],
-    correctAnswer: "1,2,4"
+    question: "Eng katta ikki xonali natural son bilan eng kichik ikki xonali natural sonning yig’indisini toping.",
+    options: ["90", "99", "100", "109"],
+    correctAnswer: "109"
   },
   {
-    question: "Qaysi gapda otlashgan sifat(lar) qo'llanmagan?",
-    options: [
-      "Yaxshidan bog' qoladi, yomondan -- dog'.",
-      "Ilg'orlarga mukofot topshirildi.",
-      "Sinfimizda a'lochi o'quvchilar ko'p.",
-      "Yoshlar olovga yaqinroq, keksalar esa uzoqroq o'tirishdi."
-    ],
-    correctAnswer: "Sinfimizda a'lochi o'quvchilar ko'p."
+    question: "Bolalar bog’chasiga sovg’a tayyorlash uchun 62 ta banan, 93 ta mandarin olib kelishdi. Har bir sovg’adagi banan va mandarinlar soni teng bo’lsa, bog’cha bolalari sonini toping.",
+    options: ["31", "29", "30", "32"],
+    correctAnswer: "31"
   },
   {
-    question: "-imtir qo'shimchasi yordamida qaysi sifatlarning ozaytirma darajasini hosil qilish mumkin?",
-    options: ["1,2,5", "1,3,4,5", "1,2,3,4,5", "1,2,5,6"],
-    correctAnswer: "1,2,5"
+    question: "Uchburchakning tomonlari 5 см, 4см va 6 см bo’lsa, perimetrini toping.",
+    options: ["17", "12", "15", "14"],
+    correctAnswer: "15"
   },
   {
-    question: "So'zlovchi, tinglovchi va o'zgaga ishora qiladigan olmosh turini toping.",
-    options: ["kishilik", "so'roq", "ko'rsatish", "belgilash"],
-    correctAnswer: "kishilik"
+    question: "6 ta bir xil albom 480 so’m turadi. 12 ta shunday albom necha so’m turadi?",
+    options: ["160", "960", "460", "80"],
+    correctAnswer: "960"
   },
   {
-    question: "Qanday olmoshlar egalik qo'shimchalari bilan turlanmaydi.",
-    options: ["kishilik", "o'zlik", "so'roq", "bo'lishsizlik"],
-    correctAnswer: "bo'lishsizlik"
+    question: "Agar Umarning tomiri bir minutda 60 marta ursa, 4 minutda necha marta uradi?",
+    options: ["220", "200", "240", "201"],
+    correctAnswer: "240"
   },
   {
-    question: "Sonning qaysi turi chiqish kelishigi qo'shimchasi bilan qo'llanib, fikrning ahamiyatlilik darajasini ifodalaydigan modal so'z vazifasida qo'llanadi.",
-    options: ["chama son", "dona son", "jamlovchi son", "tartib son"],
-    correctAnswer: "tartib son"
+    question: "Hisoblang: 6∙8-72:8",
+    options: ["30", "39", "38", "41"],
+    correctAnswer: "39"
   },
   {
-    question: "-ov, -ala, -ovlon qo'shimchalari yordamida sonning qaysi ma'no turi hosil qilinadi.",
-    options: ["chama son", "jamlovchi son", "tartib son", "taqsim son"],
-    correctAnswer: "jamlovchi son"
+    question: "Tenglamani yeching: x + 573 = 681",
+    options: ["200", "105", "108", "102"],
+    correctAnswer: "108"
   },
   {
-    question: "Do'mbirachi qadimiy qozoq hayotidan dostonlar kuylamoqda. Ushbu gapda nechta so'z yasovchi qo'shimcha qo'llangan.",
-    options: ["4 ta", "3 ta", "2 ta", "1 ta"],
-    correctAnswer: "3 ta"
+    question: "Poyezdda 112 ta yo’lovchi bor. Birinchi bekatda 18 kishi tushib, 4 kishi poyezdga chiqdi. Poyezdda nechta yo’lovchi bo’lgan?",
+    options: ["101", "97", "100", "98"],
+    correctAnswer: "98"
   },
   {
-    question: "Qaysi gapda nisbiy sifat qo'llangan.",
-    options: [
-      "Uning jussasi kichkina bo'lsa ham, yuzlari jiddiy, boqishlari o'tkir, ovozi esa jarangdor.",
-      "Hovlimizga ko'cha eshikdan kirishda kichkina, g'ishtin uycha bor.",
-      "U oltmishlarga borib qolgan bo'lsa ham, yoshlardek ikki yuzi qip-qizil, serg'ayrat va tavakkalchi odam edi.",
-      "Temur yuksak insoniylikka ega bo'lgan buyuk shaxs edi."
-    ],
-    correctAnswer: "Hovlimizga ko'cha eshikdan kirishda kichkina, g'ishtin uycha bor."
+    question: "Akmal bilan Madina qiziqarli masalalar yechishdi.  Akmal: “Men Madina yechgan masalalarning yarmini va yana 10 ta masala yechdim”, deb javob berdi. Madina: “Men Akmal nechta masala yechgan bo’lsa, shuncha va yana 20 ta  Akmal nechta masala yechgan?",
+    options: ["40", "60", "80", "100"],
+    correctAnswer: "40"
   },
   {
-    question: "Qaysi gapda butun miqdorning qismini ifodalovchi son qo'llangan.",
-    options: ["1,2,3,4", "1,2,4", "1,2,3", "1,3,4"],
-    correctAnswer: "1,2,3,4"
+    question: "Ikki ketma-ket kelgan sonning yig’indisi 123 ga teng. Ulardan keyingi sonni toping",
+    options: ["62", "63", "60", "61"],
+    correctAnswer: "62"
   },
   {
-    question: "Qaysi gapda son otlashmagan.",
-    options: [
-      "Oltovlon ola bo'lsa, og'zidagin oldirar.",
-      "Ikkala jamoa ham musobaqaga jiddiy tayyorgarlik ko'rgan ekan.",
-      "Shunday qilib, to'rtovlari ham piyoda yo'lga chiqishibdi.",
-      "Ikkinchisi ham uyg'onib ketdi, shekilli, qo'shilishib yig'lashga tushdi."
-    ],
-    correctAnswer: "Ikkala jamoa ham musobaqaga jiddiy tayyorgarlik ko'rgan ekan."
+    question: "Chet eldan kelgan 70 ta turisrlarning 57 tasi ingliz tilini, 29 tasi fransuz tilini biladi. Agar har bir turist kamida 1 ta tilni biladi desak, faqat ingliz tilini biladigan turistlar nechta?",
+    options: ["43", "40", "41", "42"],
+    correctAnswer: "41"
   },
   {
-    question: "Jonivorlarni chaqirish va haydash, yurgizish va to'xtatish uchun qo'llanadigan so'zlar qanday nomlanadi.",
-    options: ["undov so'zlar", "modal so'zlar", "taqlid so'zlar", "yuklamalar"],
-    correctAnswer: "undov so'zlar"
+    question: "Navoiyga “Afrosiyob” poyezdidda tez yetib olish mumkin. Arzon chipta 145 ming so’m turadi, qimmati esa undan 125 ming so’m ortiq. Ikkita qimmat chipta uchun qancha to’lash kerak bo’ladi?",
+    options: ["580", "540", "290", "270"],
+    correctAnswer: "540"
   },
   {
-    question: "So'zlarni va gaplarni teng va tobe bog'lash uchun xizmat qiluvchi so'zlar qanday nomlanadi.",
-    options: ["bog'lovchi", "ko'makchi", "yuklama", "olmosh"],
-    correctAnswer: "bog'lovchi"
+    question: "Eng katta uch xonali sondan eng kichik ikki xonali sonning ayirmasining toping.",
+    options: ["89", "99", "989", "990"],
+    correctAnswer: "989"
   },
   {
-    question: "So'zlarga va gaplarga qo'shimcha ma'no yuklash uchun xizmat qiluvchi yordamchilar qanday nomlanadi.",
-    options: ["bog'lovchi", "ko'makchi", "yuklama", "modal so'z"],
-    correctAnswer: "yuklama"
+    question: "Bog’ga 170 tup oq olma,2 marta ortiq qizil olma,oq va qizil olmalar birgalikda nechta bo’lsa, ulardan 190 tup ortiq nok o’tqazildi. Necha tup nok o’tqazilgan?",
+    options: ["740", "510", "700", "340"],
+    correctAnswer: "700"
   },
   {
-    question: "O'rin ravishlari qayd etilgan javobni belgilang.",
-    options: [
-      "ichkari, tashqari, olg'a",
-      "ko'cha, bog', guzar",
-      "ichki, tashqi, sirtqi",
-      "ichra, uzra, ora"
-    ],
-    correctAnswer: "ichkari, tashqari, olg'a"
+    question: "Otasi 52 yoshda, o’g’li 32 yoshda. Necha yil oldin otasi o’g’lidan 2 marta katta bo’lgan?",
+    options: ["10", "12", "9", "18"],
+    correctAnswer: "12"
   },
   {
-    question: "Qaysi gapda ravish qo'llanmagan.",
-    options: [
-      "Ikki oshna kechki salqin bilan piyoda yo'lga tushishdi.",
-      "Orqasiga qarasa, uzoqdan bir ho'kiz uni to'xtovsiz chaqirib kelyapti.",
-      "Keksa kishilar katta hayotiy tajribaga ega bo'ladilar.",
-      "Abdishukur bu yerdan tezda chiqib ketish payiga tushdi."
-    ],
-    correctAnswer: "Keksa kishilar katta hayotiy tajribaga ega bo'ladilar."
+    question: "Sxemadan foydalanib x ni toping (10408, 8293)",
+    options: ["705", "700", "706", "710"],
+    correctAnswer: "705"
   },
   {
-    question: "O'xshatish, inkor, ayiruv, kuchaytirish kabi ma'nolar qanday so'zlar orqali ifodalanadi.",
-    options: ["ko'makchi", "bog'lovchi", "yuklama", "modal so'zlar"],
-    correctAnswer: "yuklama"
+    question: "Hisoblang: 2/5 + 1/10 =",
+    options: ["1/ 2", "3/ 15", "3/ 50", "5 /20"],
+    correctAnswer: "1/ 2"
   },
   {
-    question: "Qaysi gapda hol vazifasida qo'llangan holatga taqlid so'z berilgan.",
-    options: [
-      "Dupur-dupur ot keldi, Ko'chaga qarang, kim keldi.",
-      "Omon g'azabi oshib, dag'-dag' qaltiray boshladi.",
-      "To'rtta savag'ich bilan tap-tap urib, par singari qilib titibdi.",
-      "Osmonda yombi oltinday yaraqlagan oy, yakkam-dukkam milt-milt yulduzlar uyg'oq edi."
-    ],
-    correctAnswer: "Omon g'azabi oshib, dag'-dag' qaltiray boshladi."
+    question: "O‘quvchilar tafakkurini charxlashga yonaltirilgan masala turi?",
+    options: ["soda", "murakkab", "ikki va undan ortiq usulli masala", "mantiqiy"],
+    correctAnswer: "mantiqiy"
   },
   {
-    question: "Qaysi gapda aniqlovchi vazifasida qo'llangan tovushga taqlid so'z berilgan.",
-    options: [
-      "Yetti qaroqchi yulduzi tik kelganda g'o'ng'ir-g'o'ng'ir ovozdan uyg'onib ketdim.",
-      "Vujudini tutgan qalt-qalt titroqni bosib hazilomuz qichqirdi.",
-      "Allakim ship-ship qadam bosib, ayvon labiga kelayotganday bo'lardi.",
-      "Boshidagi toj yal-yal yonarmish."
-    ],
-    correctAnswer: "Yetti qaroqchi yulduzi tik kelganda g'o'ng'ir-g'o'ng'ir ovozdan uyg'onib ketdim."
+    question: "To‘g‘rivoy va egrivoy doskada yozilgan son haqida fikr bildirmoqda. To‘g‘rivoy: “Bu ikki xonali sonning birlar xona raqami 3 dan kichik va 9 uning qo‘shnisi emas”. Egrivoy: “Bu toq son”. Shu sonni toping.",
+    options: ["13", "14", "11", "12"],
+    correctAnswer: "11"
   },
   {
-    question: "Qaysi gapda modal so'z qo'llangan.",
-    options: [
-      "Bo'ron bo'lish ehtimoli bor, qizim.",
-      "Istamning chamasi to'g'ri chiqdi.",
-      "Uning 'ko'cha bolasi' ekanligini aftidan bilib olish qiyin emas edi.",
-      "To'g'ri, yo'llarda mashaqqatlar ko'p."
-    ],
-    correctAnswer: "To'g'ri, yo'llarda mashaqqatlar ko'p."
+    question: "Butunning bir yoki bir nechta teng ulushlaridan tuzilgan son ______ deyiladi?",
+    options: ["Bir xil maxrajli son deyiladi", "O’nli son deyiladi", "Bir xil suratli son deyiladi", "Kasr deyiladi"],
+    correctAnswer: "Kasr deyiladi"
   },
   {
-    question: "Qaysi gapda buyruq-xitobni ifodalovchi undov so'z qo'llangan.",
-    options: [
-      "Men yetim o'sganman, oh u yetimlik.",
-      "Qo'y, yig'lama ey baxshi.",
-      "Iya, bularni nima qilasan?",
-      "O! Ho'kiz yo'q, og'il ko'cha tomondan teshilgan."
-    ],
-    correctAnswer: "Qo'y, yig'lama ey baxshi."
+    question: "Butunni uning tashkil etuvchi qismlariga ajratishga yo'naltirilgan fikrlash (tafakkur) usuli qanday ataladi.",
+    options: ["sintez", "birlamchi", "analiz", "ikkilik"],
+    correctAnswer: "analiz"
   },
   {
-    question: "Qaysi javobda alohida olingan so'zlar berilgan.",
-    options: ["hamda, uchun, nahot", "shoyad, obbo, gumbur", "daftar, eski, beshta", "men, shu, yalpi"],
-    correctAnswer: "shoyad, obbo, gumbur"
+    question: "Matematika so'zining lug'aviy ma'nosi nima?",
+    options: ["Lotincha \"mathem\" so'zidan olingan bo’lib, \"fikrlash\" demakdir", "Grekcha \"mathema\" so' zidan olingan bo’lib, \"tushunish\" demakdir", "Grekcha \"mathema\" so'zidan olingan bo’lib, \"qiziqish\" demakdir", "Grekcha \"mathema\" so'zidan olingan bo'lib ,\"fanlarni bilish\" demakdir"],
+    correctAnswer: "Grekcha \"mathema\" so' zidan olingan bo’lib, \"tushunish\" demakdir"
   },
   {
-    question: "Moslashuvli so'z birikmasi berilgan javobni toping.",
-    options: ["o'rik sharbati", "tarix darsi", "rasm daftari", "kitob do'koni"],
-    correctAnswer: "o'rik sharbati"
+    question: "Sinfda jami 36 nafar o‘quvchi bo‘lib, qiz bolalar o‘g‘il bolalarga qaraganda ikki marta ko‘p. Sinfda nechta o‘g‘il bola bor?",
+    options: ["20", "12", "18", "24"],
+    correctAnswer: "12"
   },
   {
-    question: "Qaysi qo'shimcha yordamida umumlashtirish, kuchaytirish, hurmat kabi uslubiy ma'nolarni ifodalash mumkin.",
-    options: ["-cha", "-lar", "-xon", "-gina"],
-    correctAnswer: "-lar"
+    question: "Tashkilot printer va kompyuter sotib oldi. Kompyuter printerdan 5 barobar qimmat. Kompyuter va printer birgalikda 5mln 700ming so’m bo’lsa, printerning narxi qancha?",
+    options: ["950 ming", "920 ming", "900 ming", "850 ming"],
+    correctAnswer: "950 ming"
   },
   {
-    question: "Shaxs, narsa, belgi, harakat kabilarni jamlab ifodalaydigan olmosh qaysi gapda qo'llangan.",
-    options: [
-      "Bog'imizda uzumning hamma xilidan bor.",
-      "Har kim ekkanini o'radi.",
-      "Shorahim ko'z yoshidan hech nimani ko'rmay allanimalar deb g'udrandi.",
-      "Kim shaxmat to'garagiga qatnashadi."
-    ],
-    correctAnswer: "Bog'imizda uzumning hamma xilidan bor."
+    question: "Binoning 5-qavatigach bo’lgan masofa, 2-qavatigacha bo’lgan masofadan necha marta uzun?",
+    options: ["6", "5", "4", "3"],
+    correctAnswer: "4"
   },
   {
-    question: "Qaysi gapda olmoshning ma'nosiga ko'ra uch turi qo'llangan.",
-    options: [
-      "Xayolchan g'udranib, o'z-o'zini koyidi.",
-      "Ichkaridan kimlardir chiqib, u turgan tomonga kelaverdi.",
-      "Qayerda bo'shliq paydo bo'lsa, uni kimdir to'ldirishga harakat qiladi.",
-      "Siz hayotda qanday insonlarga havas qilasiz."
-    ],
-    correctAnswer: "Qayerda bo'shliq paydo bo'lsa, uni kimdir to'ldirishga harakat qiladi."
+    question: "Sfera deb nimaga aytiladi?",
+    options: ["Tekislikda berilgan nuqtadan bir xil masofada yotuvchi nuqtalarning geometrik o’rni", "Ikki tomonidan nuqta bilan chegaralangan to’g’ri chiziq bo’lagi", "Fazoda berilgan nuqtadan bir xil masofada yotuvchi nuqtalarning geometrik o’rni", "Bitta umumiy nuqtadan chiquvchi ikkita nur hosil qilgan geometrik shakl"],
+    correctAnswer: "Fazoda berilgan nuqtadan bir xil masofada yotuvchi nuqtalarning geometrik o’rni"
   },
   {
-    question: "Qaysi javobda sof ko'makchilar berilgan.",
-    options: [
-      "kabi, uzra, tufayli",
-      "ost, ust, yon",
-      "avval, keyin, so'ng",
-      "bo'ylab, qarab, atab"
-    ],
-    correctAnswer: "kabi, uzra, tufayli"
+    question: "To’g’ri to’rtburchakning tomonlari mos ravishda 12 va 5 ga teng bo’lsa uning perimetrini toping.",
+    options: ["60", "17", "13", "34"],
+    correctAnswer: "34"
   },
   {
-    question: "Qaysi gapda so'zlarni va gaplarni bir-biriga bog'lash uchun xizmat qilmaydigan yordamchi so'z qo'llangan.",
-    options: [
-      "Yurt farovonligi uchun qayg'uradi.",
-      "Andishali bo'l, biroq shijoatsiz bo'lm.",
-      "Bu yerda na ofat, na kulfat, na g'am.",
-      "O'shanda dadam ham frontda edilar."
-    ],
-    correctAnswer: "O'shanda dadam ham frontda edilar."
+    question: "Agar avtomobil har 100 km masofaga 8 litr benzin sarflasa, 350km masofaga borish uchun qancha benzin zarur bo’ladi?",
+    options: ["28", "25", "27", "26"],
+    correctAnswer: "28"
   },
   {
-    question: "Qaysi gapda balki so'zi bog'lovchi vazifasida qo'llanmagan.",
-    options: [
-      "Mevani gullata bilishgina emas, balki undan mo'l va shirin hosil yetkaza bilish san'atdir.",
-      "Taraqqiyot tasodif emas, balki zaruratdir.",
-      "Hayronman, balki, siz haqdirsiz.",
-      "nafaqat kattalarga, balki kichiklarga ham shunday muomalada bo'lar edi."
-    ],
-    correctAnswer: "Hayronman, balki, siz haqdirsiz."
+    question: "Qovunning massasi 6 kg, handalakning massasi undan 4 kg kam. Qovunning massasi handalaknikidan necha marta ortiq?",
+    options: ["3", "5", "1", "2"],
+    correctAnswer: "3"
   },
   {
-    question: "Qanday fe'llar holat fe'llari sanaladi.",
-    options: ["1,2,3", "1,2", "1,3", "2,3"],
-    correctAnswer: "2,3"
+    question: "Didaktika qadimgi yunoncha so’z bo’lib, … ma’noni anglatadi.",
+    options: ["birlashtiruvchi", "ayiruvchi", "o’rgatuvchi, ta’lim beruvchi", "izlovchi"],
+    correctAnswer: "o’rgatuvchi, ta’lim beruvchi"
   },
   {
-    question: "O'timli fe'llar berilgan javobni toping.",
-    options: ["o'qimoq, yozmoq", "kulmoq, yig'lamoq", "yurmoq, yugurmoq", "o'tirmoq, turmoq"],
-    correctAnswer: "o'qimoq, yozmoq"
+    question: "Butunni uning tashkil etuvchi qismlariga ajratishga yo'naltirilgan fikrlash (tafakkur) usuli ... deb ataladi.",
+    options: ["ikkilik", "sintez", "birlamchi", "analiz"],
+    correctAnswer: "analiz"
   },
   {
-    question: "Bajaruvchining o'z ustida amalga oshadigan harakat-holatini ifodalaydigan fe'l nisbati qanday ataladi.",
-    options: ["aniq nisbat", "birgalik nisbat", "majhul nisbat", "o'zlik nisbat"],
-    correctAnswer: "o'zlik nisbat"
+    question: "Eng katta 4 xonali sonni eng katta 2 xonali songa bo’lsa nechchi hosil bo’ladi?",
+    options: ["101", "99", "11", "100"],
+    correctAnswer: "101"
   },
   {
-    question: "Har ikki qismi ot turkumiga mansub so'zlar bilan ifodalangan bitishuvli so'z birikmasi berilgan javobni aniqlang.",
-    options: ["nordon anor", "tilla soat", "quyosh nuri", "kimyoviy jarayon"],
-    correctAnswer: "tilla soat"
+    question: "Ali va Vali yoshlari yig’indisi 10 ga teng. Lekin 1 yildan so’ng Ali Validan 2 barobar katta bo’ladi. Vali xozirda necha yoshda?",
+    options: ["3", "4", "7", "5"],
+    correctAnswer: "3"
   },
   {
-    question: "Qaysi javobda ot, sifat, fe'l yasovchi shakldosh(omonim) qo'shimchalar qayd etilgan.",
-    options: ["-ik, -iq, -a", "-ma, -qi, -la", "-ay, -oq, -cha", "-ar, -gi, -k"],
-    correctAnswer: "-ik, -iq, -a"
+    question: "4 ta banan va 3 ta apelsin 7200 so’m, 4 ta apelsin va 5 ta limon 8800 so’m, 3 ta banan va 2 ta limon 5000 so’m turadi. 1 ta banan, 1 ta limon va 1 ta apelsin birgalikda qancha turadi?",
+    options: ["7500", "8000", "4200", "3000"],
+    correctAnswer: "3000"
   },
   {
-    question: "Qaysi javobda ot va sifat yasovchi shakldosh(omonim) qo'shimchalar juftligi berilmagan.",
-    options: ["qalamdon--qadrdon", "aravakash--mehnatkash", "ekin--erkin", "ko'rik--chirik"],
-    correctAnswer: "aravakash--mehnatkash"
+    question: "Xususiy xulosalardan umumiy xulosaga olib boruvchi metod …. deyiladi.",
+    options: ["reproduktiv", "induksiya", "algoritm", "deduksiya"],
+    correctAnswer: "induksiya"
   },
   {
-    question: "Sodda tub otlarni toping.",
-    options: ["qirqim, o'rim", "chopiq, tortiq", "yutuq, buyruq", "beshik, o'rik"],
-    correctAnswer: "beshik, o'rik"
+    question: "Aylana deb nimaga aytiladi?",
+    options: ["Bitta umumiy nuqtadan chiquvchi ikkita nur hosil qilgan geometrik shakl", "Tekislikda berilgan nuqtadan bir xil masofada yotuvchi nuqtalarning geometrik o’rni", "Ikki tomonidan nuqta bilan chegaralangan to’g’ri chiziq bo’lagi", "Fazoda berilgan nuqtadan bir xil masofada yotuvchi nuqtalarning geometrik o’rni"],
+    correctAnswer: "Tekislikda berilgan nuqtadan bir xil masofada yotuvchi nuqtalarning geometrik o’rni"
   },
   {
-    question: "Qaysi gapda fe'lning otga xoslangan shakli qo'llangan.",
-    options: [
-      "Chiroyli yozishni o'rgan.",
-      "Bolalar qorbo'ron o'ynashmoqd.",
-      "Shu payt boshimiz ustida chaqmoq chaqdi.",
-      "Singilcham quymoqni juda yaxshi ko'radi."
-    ],
-    correctAnswer: "Chiroyli yozishni o'rgan."
+    question: "Maktab ustaxonasiga 32 dona kulrang karton, undan 14 dona kam oq karton bor edi. Oq kartondan har biriga 6 donadan sarflab albomlar tayyorlandi. Nechta albomlar tayyorlangan?",
+    options: ["18", "2", "6", "3"],
+    correctAnswer: "3"
   },
   {
-    question: "Qaysi javobda ravishdosh shakllari berilmagan.",
-    options: ["-ib(-b, -a(-y)", "-gach, -guncha", "-gan, -ar", "-gani, -gancha"],
-    correctAnswer: "-gan, -ar"
+    question: "Tarvuz narxi 200 so’m va yana yarim tarvuz narxiga teng. Tarvuz qancha turadi?",
+    options: ["400", "380", "350", "410"],
+    correctAnswer: "400"
   },
   {
-    question: "Qaysi gapda olmoq fe'li qo'shma fe'l tarkibida qo'llangan.",
-    options: [
-      "Ma'ruf toshni o'n marta ko'tara oldi.",
-      "Kasalligi tufayli o'n yildan beri ukol olib kelmoqd.",
-      "Kecha Sharifadan xat oldik.",
-      "Shoikrom ukasidan xabar oldi."
-    ],
-    correctAnswer: "Kasalligi tufayli o'n yildan beri ukol olib kelmoqd."
+    question: "Daraxtda 12 ta qush bor. Ovchi ulardan birini urib tushirdi. Daraxtda qolgan qushlarning soni qancha?",
+    options: ["11", "9", "0", "10"],
+    correctAnswer: "0"
   },
   {
-    question: "Qaysi gapda asosida fonetik o'zgarish sodir bo'lgan yasama fe'l(lar) qo'llangan.",
-    options: [
-      "Gapirganda ovozi xuddi ichidan chiqqanday guldurab, jaranglab eshitiladi.",
-      "Ichkarida chaqaloq yig'ladi, beshikning g'ichirlagani ishitildi.",
-      "Yuragim hayajondan gupullab ura boshladi.",
-      "Usta temirni cho'g'ga solib bolg'alaydi, cho'zadi, yassilaydi, yana olovga soladi."
-    ],
-    correctAnswer: "Ichkarida chaqaloq yig'ladi, beshikning g'ichirlagani ishitildi."
+    question: "To’g’ri to’rtburchak qo’shni tomonlari yig’indisi 15 bo’lsa, uning perimetrini toping.",
+    options: ["40", "44", "50", "30"],
+    correctAnswer: "30"
   },
   {
-    question: "Turli gap bo'laklari vazifasida kelish uchun xoslangan fe'l shakllari bu...",
-    options: ["vazifa shakllari", "munosabat shakllari", "nisbat shakllari", "bo'lishsizlik shakllari"],
-    correctAnswer: "vazifa shakllari"
+    question: "Kasrning maxraji nimani bildiradi?",
+    options: ["Chiziq ostiga yozilgan son kasrning maxraji deyilib, butun narsa nechaga teng bo`lishini ifodalaydi", "Kasrning ustiga yozilga kasrning maxraji deyiladi", "Ikkalasi ham kasrning mahraji hisoblanadi", "Chiziq ostiga yozilgan son surati deyiladi"],
+    correctAnswer: "Chiziq ostiga yozilgan son kasrning maxraji deyilib, butun narsa nechaga teng bo`lishini ifodalaydi"
   },
   {
-    question: "Qaysi nisbat qo'shimchalari bir fe'lga birin-ketin bir necha marotaba qo'shilishi mumkin.",
-    options: ["o'zlik nisbat", "majhul nisbat", "birgalik nisbat", "orttirma nisbat"],
-    correctAnswer: "orttirma nisbat"
+    question: "Eng katta 4 xonali sonni eng katta 2 xonali songa bo’lsa bo’lsa nechchi hosil bo’ladi?",
+    options: ["101", "100", "11", "99"],
+    correctAnswer: "101"
   },
   {
-    question: "Quyida berilgan yasama fe'llarning nechtasi tarkibida tovush o'zgarishi sodir bo'lgan.",
-    options: ["19 ta", "17 ta", "15 ta", "13 ta"],
-    correctAnswer: "15 ta"
+    question: "Avtomashina bakida 45 litr benzin bor. Samarqandga borish uchun 4/9 qismi, Navoiyga borish uchun qolgan benzinning 4/5 qismi sarflandi. Avtomobil bakida qancha litr benzin qolgan?",
+    options: ["3", "5", "6", "4"],
+    correctAnswer: "5"
   },
   {
-    question: "Bir turdagi shaxs va narsalarning umumiy otini yoki ulardan birining nomini ifodalashiga ko'ra otlar qanday turlarga bo'linadi.",
-    options: [
-      "atoqli va turdosh otlar",
-      "aniq va mavhum otlar",
-      "sanaladigan va sanalmaydigan otlar",
-      "yakka va to'da otlar"
-    ],
-    correctAnswer: "atoqli va turdosh otlar"
+    question: "Uchburchak tomonlariga ko’ra nechta turga bo’linadi ?",
+    options: ["2", "5", "3", "4"],
+    correctAnswer: "3"
   },
   {
-    question: "Qaysi javobda tarkibi asos=ot yasovchi=ot yasovchi shaklida bo'lgan yasama ot berilgan.",
-    options: ["temirchilik", "terimchilik", "dehqonchilik", "suvoqchilik"],
-    correctAnswer: "temirchilik"
+    question: "Berilgan sonlar ichidan eng kichigini toping.",
+    options: ["4050", "4500", "4005", "5004"],
+    correctAnswer: "4005"
   },
   {
-    question: "Til oldi unlilar berilgan javobni toping.",
-    options: ["a, e, i", "o, a", "o, a, u", "o, a, i"],
-    correctAnswer: "a, e, i"
+    question: "Sonning ikkidan bir qismi 18 bo’lsa, uning uchdan bir qismi nechchi bo’ladi?",
+    options: ["18", "12", "15", "16"],
+    correctAnswer: "12"
   },
   {
-    question: "Ochiq bo'g'indan birida faqat til undoshi berilgan so'zni toping.",
-    options: ["mamnun", "bahona", "vafodor", "faqat"],
-    correctAnswer: "bahona"
+    question: "5dm3cm necha mm?",
+    options: ["530", "53000", "53", "5300"],
+    correctAnswer: "530"
   },
   {
-    question: "Yam-yashil so'zida nechta unli va nechta undosh tovush bor.",
-    options: [
-      "3 ta unli, 3 ta undosh",
-      "5 ta unli, 5 ta undosh",
-      "3 ta unli, 5 ta undosh",
-      "4 ta unli, 4 ta undosh"
-    ],
-    correctAnswer: "3 ta unli, 5 ta undosh"
-  },
-  {
-    question: "Qaysi qatorda lab undoshlari berilgan.",
-    options: ["x, g", "j, k", "b, m", "h, ng"],
-    correctAnswer: "b, m"
-  },
-  {
-    question: "Lab undoshlari ishtirok etgan yasama so'zni toping.",
-    options: ["savlat", "gulzor", "oshiq", "ommabop"],
-    correctAnswer: "ommabop"
-  },
-  {
-    question: "Qaysi so'z tarkibida portlovchi undosh mavjud.",
-    options: ["suvsiz", "sababsiz", "yuzsiz", "foizsiz"],
-    correctAnswer: "sababsiz"
-  },
-  {
-    question: "Qaysi jarangli undosh o'z jarangsiz jufti bilan birga sirg'aluvchi tovushlarga mansub bo'ladi.",
-    options: ["b", "d", "z", "k"],
-    correctAnswer: "z"
-  },
-  {
-    question: "t va h tovushlari qaysi xususiyatlariga ko'ra bir guruhga mansub bo'ladi.",
-    options: [
-      "jarangli va jarangsizligiga ko'ra",
-      "lab yoki tish undoshlariga oidligiga ko'ra",
-      "portlovchi yoki sirg'aluvchiligiga ko'ra",
-      "tilning qayerida paydo bo'lishiga ko'ra"
-    ],
-    correctAnswer: "jarangli va jarangsizligiga ko'ra"
-  },
-  {
-    question: "f undoshi til undoshlarining qaysi turiga mansub.",
-    options: [
-      "til oldi undosh",
-      "lab-tish undoshi",
-      "sayoz til oldi undoshi",
-      "chuqur til orqa undoshi"
-    ],
-    correctAnswer: "lab-tish undoshi"
-  },
-  {
-    question: "Qaysi jarangli undoshlar sirg'aluvchilarga mansub emas.",
-    options: ["k, t", "v, z", "b, n", "j, g'"],
-    correctAnswer: "b, n"
-  },
-  {
-    question: "Berilgan jarangli undoshlardan qaysilari sirg'aluvchilarga mansub.",
-    options: ["k, q", "f, s", "j, b", "r, z"],
-    correctAnswer: "r, z"
-  },
-  {
-    question: "Qaysi so'z talaffuzida jarangsiz tovush o'zidan keyingi jarangli tovushni o'ziga moslashtiradi.",
-    options: ["zarur", "ketdi", "o'qibdi", "maqsad"],
-    correctAnswer: "ketdi"
-  },
-  {
-    question: "Jarangsiz undoshlar ishtirok etmagan yasama so'zni toping.",
-    options: ["bejirim", "gulsiz", "lolazor", "yolg'ondakam"],
-    correctAnswer: "lolazor"
-  },
-  {
-    question: "Portlovchi undoshlar yonma-yon kelgan so'zni toping.",
-    options: ["iqtisod", "nashriyot", "qing'ir", "hamfikr"],
-    correctAnswer: "iqtisod"
-  },
-  {
-    question: "Qaysi yasama so'z tarkibida sirg'aluvchi tovush mavjud.",
-    options: ["kechikmoq", "shoshilmoq", "ulg'aymoq", "changimoq"],
-    correctAnswer: "ulg'aymoq"
-  },
-  {
-    question: "b va k tovushlari qaysi xususiyatlariga ko'ra bir guruhga mansub bo'ladi.",
-    options: [
-      "jarangli yoki jarangsizligiga ko'ra",
-      "lab yoki tish undoshlariga oidligiga ko'ra",
-      "tilning qayerida paydo bo'lishiga ko'ra",
-      "portlovchi yoki sirg'aluvchiligiga ko'ra"
-    ],
-    correctAnswer: "portlovchi yoki sirg'aluvchiligiga ko'ra"
-  },
-  {
-    question: "Metateza hodisasi qaysi qatordagi so'zda kuzatiladi.",
-    options: ["zarar-zaral", "tuproq-turpoq", "yurakka-yurakga", "tuzsiz-tussiz"],
-    correctAnswer: "tuproq-turpoq"
-  },
-  {
-    question: "Faqat jarangsiz undoshlar qatnashgan so'zlar qatorini toping.",
-    options: [
-      "daromad, jamoat, hushyor",
-      "taxta, soat, sukut, toqat",
-      "muhabbat, vafo, sadoqat",
-      "tosh, shikoyat, kitob, mulk"
-    ],
-    correctAnswer: "taxta, soat, sukut, toqat"
-  },
-  {
-    question: "Urg'usi oxirgi bo'g'inga tushmagan so'zlar qatorini toping.",
-    options: [
-      "bog'lar, olma, novcha",
-      "yangicha, qishgacha, o'zgacha",
-      "qishloqcha, yigitcha, uycha",
-      "qazilma, qotishma, burama"
-    ],
-    correctAnswer: "qazilma, qotishma, burama"
-  },
-  {
-    question: "Qaysi javobda tovush o'zgarishlari yuz bergan?",
-    options: ["1, 2, 4", "2, 3, 5", "2, 3", "4, 3, 6"],
-    correctAnswer: "2, 3"
-  },
-  {
-    question: "Qaysi javobda so'z ko'chirish qoidasi to'g'ri ko'rsatilmagan.",
-    options: ["mat-ba-a", "mu-do-faa", "si-ngil", "tran-sport"],
-    correctAnswer: "mat-ba-a"
-  },
-  {
-    question: "Yigirmata so'zida urg'u qaysi bo'g'inga qo'yilgan.",
-    options: ["1 ga", "3 ga", "2 ga", "4 ga"],
-    correctAnswer: "3 ga"
-  },
-  {
-    question: "Qaysi qatordagi so'zlarning ma'nosi urg'u yordamida farqlanadi.",
-    options: [
-      "xiyla, ariya, belcha, beshala",
-      "bolada, qo'lla, axil",
-      "bog'lar, ishlar, qishloqcha",
-      "burun, gajim, uylar"
-    ],
-    correctAnswer: "bog'lar, ishlar, qishloqcha"
-  },
-  {
-    question: "ayir so'ziga quyidagi qaysi qo'shimchalar qo'shilsa tovush tushishi vujudga keladi.",
-    options: ["1,2,4,5", "2,3,4,5", "2,4,5", "1,2,4"],
-    correctAnswer: "1,2,4,5"
-  },
-  {
-    question: "Rotalarni zudlik bilan o'rnidan ko'chirish haqida og'zaki buyruq berildi. Berilgan gap tarkibidagi necha so'zda tovush tushishi hodisasi mavjud.",
-    options: ["2 so'zda", "1 so'zda", "3 so'zda", "4 so'zda"],
-    correctAnswer: "3 so'zda"
-  },
-  {
-    question: "Og'zaki nutqda qaysi so'z tarkibidagi portlovchi tovush ba'zan sirg'aluvchi tovush tarzida talaffuz qilinadi.",
-    options: ["maktab", "taqsim", "boribdi", "xohish"],
-    correctAnswer: "taqsim"
-  },
-  {
-    question: "Qaysi jumlada gap urg'usi muzeyga so'ziga tushgan.",
-    options: [
-      "O'qituvchimiz bizni muzeyga dam olish kuni olib boradi.",
-      "Bizni dam olish kuni muzeyga o'qituvchimiz olib boradi.",
-      "Dam olish kuni o'qituvchimiz bizni muzeyga olib boradi.",
-      "Muzeyga bizni dam olish kuni o'qituvchimiz olib boradi."
-    ],
-    correctAnswer: "Dam olish kuni o'qituvchimiz bizni muzeyga olib boradi."
-  },
-  {
-    question: "Urg'u ma'no farqlash vazifasini bajargan so'zlarni belgilang.",
-    options: ["1, 3, 4, 5", "1, 3, 4", "1, 2, 3, 4, 5", "2, 4"],
-    correctAnswer: "1, 2, 3, 4, 5"
-  },
-  {
-    question: "Qaysi so'zlarning o'zak-negizida tovush almashishi yuz bergan.",
-    options: ["1, 2, 3, 4, 5, 6", "2, 4, 6", "1, 4, 5, 6", "1, 2, 4, 6"],
-    correctAnswer: "1, 4, 5, 6"
-  },
-  {
-    question: "Qaysi so'zlarda urg'u yordamida ma'noni farqlash mumkin.",
-    options: ["1, 2, 3, 4, 5", "3, 4, 5", "1, 3, 5", "1, 3, 4, 5"],
-    correctAnswer: "1, 3, 4, 5"
-  },
-  {
-    question: "Malika opaning ikkala o'g'li shaharda o'qib, ulg'ayib yana bag'riga qaytdi. Berilgan gap tarkibidagi necha so'zda tovush tushishi hodisasi mavjud.",
-    options: ["1 so'zda", "2 so'zda", "3 so'zda", "4 so'zda"],
-    correctAnswer: "4 so'zda"
-  },
-  {
-    question: "Qaysi so'zdagi til oldi undoshi og'zaki nutqda lab-lab undoshi sifatida talaffuz qilinadi.",
-    options: ["shanba", "ichdim", "borib", "taqsim"],
-    correctAnswer: "shanba"
-  },
-  {
-    question: "Qaysi so'zdagi til oldi undoshi og'zaki nutqda boshqa til oldi undoshi sifatida talaffuz qilinadi.",
-    options: ["to'qson", "tubsiz", "tanob", "uchta"],
-    correctAnswer: "uchta"
-  },
-  {
-    question: "Yonma-yon kelgan tovushlarning o'rin almashishi tilshunoslikda qanday ataladi.",
-    options: ["assimilatsiya", "dissimilatsiya", "metateza", "tovush almashishi"],
-    correctAnswer: "metateza"
-  },
-  {
-    question: "So'z tarkibidagi tovushlarning ajratib yoki cho'ziqroq talaffuz qilinishini ko'rsatuvchi ishora qanday ataladi.",
-    options: ["vergul", "tutuq belgisi", "so'z urg'usi", "urg'u"],
-    correctAnswer: "tutuq belgisi"
-  },
-  {
-    question: "Og'zaki nutqning tovush tizimini yozma nutqda qanday berilishini o'rganuvchi tilshunoslik bo'limi qanday nomlanadi.",
-    options: ["orfografiya", "orfoepiya", "grafika", "fonetika"],
-    correctAnswer: "orfografiya"
-  },
-  {
-    question: "Olimlar haddan ziyod saodatga intilish saodatni qo'lga kiritishga to'sqinlik qilishini aytganlar. Ushbu gapda nechta so'z yasovchi qo'shimcha mavjud.",
-    options: ["3 ta", "2 ta", "4 ta", "1 ta"],
-    correctAnswer: "3 ta"
-  },
-  {
-    question: "Morfem tarkibi asos = so'z yasovchi = lug'aviy shakl yasovchi = sintaktik shakl yasovchi qolipidagi so'zni toping.",
-    options: ["tokzorlarda", "ipakchilikdan", "sizlamoq", "turmushimizni"],
-    correctAnswer: "tokzorlarda"
-  },
-  {
-    question: "Qaysi javobda zid ma'noli qo'shimchalar berilmagan.",
-    options: ["-li/-siz", "ser-/-mand", "bo-/be-", "no-/-li"],
-    correctAnswer: "ser-/-mand"
-  },
-  {
-    question: "Qaysi javobda morfemalari ushbu tartib asosida joylashgan so'z berilgan.",
-    options: ["isitkichlarni", "anglamadi", "hamkasblarimga", "isitmalamoq"],
-    correctAnswer: "anglamadi"
-  },
-  {
-    question: "Qaysi javobda tub so'z berilgan.",
-    options: ["ko'chki", "turtki", "tulki", "tepki"],
-    correctAnswer: "tulki"
-  },
-  {
-    question: "Qaysi javobda morfemalarga bo'linmaydigan so'z berilgan.",
-    options: ["yutuq", "huquq", "buyruq", "uzuq"],
-    correctAnswer: "huquq"
-  },
-  {
-    question: "Xatosi o'ziga ayon bo'lgach, gapira olmay g'uldirab javob berdi. Berilgan gapdagi yasama so'zlar miqdorini aniqlang.",
-    options: ["2 ta", "3 ta", "4 ta", "5 ta"],
-    correctAnswer: "4 ta"
-  },
-  {
-    question: "Osmon go'zal oyi, quyoshi bilan, Inson go'zal mardlik, bardoshi bilan. Fazilati, odobi, xulqi bilan, Chin xislati -- noyob qalb mulki bilan. Ushbu gapda nechta ot so'z turkumiga mansub so'zlar mavjud.",
-    options: ["13 ta", "12 ta", "11 ta", "14 ta"],
-    correctAnswer: "12 ta"
-  },
-  {
-    question: "Sen yig'layver, go'zal bo'lasan, Dard chekaver husning ortadi. Senga yarashmaydi tabassum, Qiyofangga og'ir botadi. Ushbu gapda ot so'z turkumiga mansub nechta so'z qatnashgan.",
-    options: ["6 ta", "5 ta", "3 ta", "4 ta"],
-    correctAnswer: "4 ta"
-  },
-  {
-    question: "Yasama mavhum ot qatnashgan gapni toping.",
-    options: [
-      "Aziz shaharda qib qaytdi.",
-      "Kezib-kezib topganlarim sog'inch bo'ldi.",
-      "Toshkentlik mehmonga Registon juda yoqdi.",
-      "Hasad -- yurakning zanglashi."
-    ],
-    correctAnswer: "Kezib-kezib topganlarim sog'inch bo'ldi."
-  },
-  {
-    question: "Bo'gin ko'chirish qoidasi buzilmagan qatorni toping.",
-    options: ["de-ngiz", "den-giz", "ing-liz", "kong-ress"],
-    correctAnswer: "de-ngiz"
-  },
-  {
-    question: "Tutuq belgisi qaysi qatorda unlining undoshdan ajratib talaffuz etilishini talab qiladi.",
-    options: ["ma'no", "ra'no", "a'zo", "san'at"],
-    correctAnswer: "san'at"
-  },
-  {
-    question: "Kishilik olmoshi va o'zlik olmoshi birga qo'llansa, qanday uslubiy ma'no ifodalanadi.",
-    options: ["hurmat", "ta'kid", "kinoya", "inkor"],
-    correctAnswer: "hurmat"
-  },
-  {
-    question: "O'lchov so'z(numerativ)lar haqida bildirilgan qaysi fikr to'g'ri emas.",
-    options: [
-      "O'lchov so'zlar sanoq son bilan o'lchanayotgan narsaning orasida qo'llanadi.",
-      "O'zidan oldingi sanoq son bilan bitta so'roqqa javob bo'lsa-da, bitta sintaktik vazifa bajarmaydi.",
-      "Otning va fe'lning o'lchovini ifodalaydi.",
-      "Ayrim o'lchov so'zlar alohida olinganda narsa(predmet) ma'nosini ifodalaydi."
-    ],
-    correctAnswer: "Otning va fe'lning o'lchovini ifodalaydi."
-  },
-  {
-    question: "So'zlarga va gaplarga qo'shimcha ma'no yuklash uchun xizmat qiluvchi yordamchilar qanday nomlanadi.",
-    options: ["bog'lovchi", "ko'makchi", "yuklama", "modal so'z"],
-    correctAnswer: "yuklama"
-  },
-  {
-    question: "Quyida berilganlardan ham bog'lovchi, ham yuklama vazifasida qo'llanuvchi so'zni aniqlang.",
-    options: ["bilan", "balki", "ham", "deb"],
-    correctAnswer: "ham"
-  },
-  {
-    question: "Qaysi javobda sof modal so'zlar berilgan.",
-    options: [
-      "aftidan, chamasi, taxminan",
-      "umuman, balki, ehtimol",
-      "avvalo, afsuski, albatta",
-      "shubhasiz, to'g'ri, o'z-o'zidan"
-    ],
-    correctAnswer: "avvalo, afsuski, albatta"
-  },
-  {
-    question: "Ravish yasovchi shakldosh(omonim) qo'shimchalar berilgan javobni aniqlang.",
-    options: ["-lab, -larcha", "-ona, -siga", "-lay, -ligicha", "-chasiga, -layin"],
-    correctAnswer: "-lab, -larcha"
-  },
-  {
-    question: "Baqqol amaki pakana, yuzi katta, peshonasi keng, soqoli siyrak, burni puchuq, iyagi kalta odam edi. Mazkur gapning necha o'rnida sifat qo'llangan.",
-    options: ["6 ta", "5 ta", "4 ta", "3 ta"],
-    correctAnswer: "6 ta"
-  },
-  {
-    question: "Qaysi gapda ikki usulda yasalgan ikki yasama sifat qo'llangan.",
-    options: [
-      "Oldimizda mevali va mevasiz daraxtlari ko'p bo'lgan o'rmon.",
-      "Nodon, kaltafahm odamdan yaxshi gap chiqmaydi.",
-      "Mehnatsevar, zahmatkash insonlar odamlarning ko'rkidir.",
-      "Sofdil va jonkuyar odamlar bilan bu dunyo oboddir."
-    ],
-    correctAnswer: "Mehnatsevar, zahmatkash insonlar odamlarning ko'rkidir."
-  },
-  {
-    question: "Gumon, ishonch, quvonch, tasdiq kabi ma'nolar qanday so'zlar orqali ifodalanadi.",
-    options: ["ko'makchi", "bog'lovchi", "yuklama", "modal so'zlar"],
-    correctAnswer: "modal so'zlar"
-  },
-  {
-    question: "Qaysi kelishik shaklidagi so'zlar to'ldiruvchi vazifasida qo'llanadi.",
-    options: ["qaratqich", "tushum", "jo'nalish", "o'rin-payt"],
-    correctAnswer: "jo'nalish"
-  },
-  {
-    question: "Shu sevinch ikkovlariga ham kuch-g'ayrat, dadillik baxsh etgandek bo'ldi. Gapda qo'llangan yasama mavhum otlar miqdorini aniqlang.",
-    options: ["1 ta", "2 ta", "3 ta", "4 ta"],
-    correctAnswer: "2 ta"
-  },
-  {
-    question: "Bo'lishsizlik olmoshlari haqida aytilgan qaysi fikr to'g'ri emas.",
-    options: [
-      "So'roq olmoshlari oldidan hech so'zining qo'llanishi natijasida bo'lishsizlik olmoshlari hosil bo'ladi.",
-      "Hech so'zini bir, narsa, vaqt, jon, kishi, kimsa, banda kabi so'zlar bilan qo'llash natijasida bo'lishsizlik olmoshlari hosil bo'ladi.",
-      "Bo'lishsizlik olmoshlari qatnashgan gapning kesimi tasdiq shaklida bo'ladi.",
-      "Bo'lishsizlik olmoshlari ko'plik qo'shimchasi bilan qo'llanmaydi."
-    ],
-    correctAnswer: "Bo'lishsizlik olmoshlari qatnashgan gapning kesimi tasdiq shaklida bo'ladi."
-  },
-  {
-    question: "To'pdan ajratilgan shaxs, narsa, belgi kabilarni bildirgan olmoshlar qanday ataladi.",
-    options: ["belgilash olmoshlari", "bo'lishsizlik olmoshlari", "o'zlik olmoshi", "ko'rsatish olmoshlari"],
-    correctAnswer: "belgilash olmoshlari"
-  },
-  {
-    question: "Qaysi fe'l fe'lning barcha nisbat shakllarida ham qo'llana oladi.",
-    options: ["o'qimoq", "yodlamoq", "so'ramoq", "kiymoq"],
-    correctAnswer: "kiymoq"
-  },
-  {
-    question: "Qaysi gapda 2 ta fe'lli, 1 ta otli so'z birikmasi qatnashgan.",
-    options: [
-      "Hasan tezda hunarmandchilik sirlarini o'rganib oldi.",
-      "Tog' qishloqlaridan birini kuchli sel bosibdi.",
-      "Humo qushi odamlarga baxt keltirar ekan.",
-      "Zargarov sahrodagi ishlarning miqyosini yaxshi tasvirlab berdi."
-    ],
-    correctAnswer: "Hasan tezda hunarmandchilik sirlarini o'rganib oldi."
-  },
-  {
-    question: "Qaysi qatorda boshqaruv munosabatli fe'lli so'z birikmasi bor?",
-    options: [
-      "tezda gapirmoq, dehqonchasiga ishlamoq",
-      "qiyinchilikni yenggan, kitobni o'qigan",
-      "maqtanganning uyiga, kerilganning to'yiga",
-      "oqar suv, qizargan olma"
-    ],
-    correctAnswer: "qiyinchilikni yenggan, kitobni o'qigan"
-  },
-  {
-    question: "Qaysi qatorda ko'makchi vositasida bog'langan boshqaruvli otli so'z birikmasi bor?",
-    options: ["kitob haqida suhbat", "hafta ichida", "eng oliy baxt", "qunt bilan tinglamoq"],
-    correctAnswer: "kitob haqida suhbat"
-  },
-  {
-    question: "Mashina uchun ehtiyot qismlar birikmasidagi hokim so'zni aniqlang.",
-    options: ["qismlar", "ehtiyot", "mashina uchun", "ehtiyot qismlar"],
-    correctAnswer: "qismlar"
-  },
-  {
-    question: "Quyida berilgan gapda nechta so'z mavjud? Tebranib yonayotgan sham zo'r mo'jizaday hammaning diqqatini jalb qilgandi.",
-    options: ["9 ta", "8 ta", "7 ta", "6 ta"],
-    correctAnswer: "9 ta"
-  },
-  {
-    question: "Qaysi qatorda berilgan so'z birikmalarini gapga aylantirish mumkin?",
-    options: [
-      "qiziqarli mashg'ulot, oydin kecha, maqola o'qimoq",
-      "berilgan topshiriq, o'qishli asar, g'azal yodlamoq",
-      "qattiq sovuq, shirin qovun, chiroyli gul",
-      "samarali ishlamoq, ko'chat o'tqazish, barqaror tinchlik"
-    ],
-    correctAnswer: "qattiq sovuq, shirin qovun, chiroyli gul"
-  },
-  {
-    question: "Muzaffarning lo'ppi yuzidagi achinish alomati xushnud tabassum bilan almashdi. Ushbu gapda otli so'z birikmalari soni nechta?",
-    options: ["5 ta", "6 ta", "4 ta", "7 ta"],
-    correctAnswer: "5 ta"
-  },
-  {
-    question: "Qaysi gapda moslashuv va boshqaruv aloqasi mavjud?",
-    options: [
-      "Umidsizlik uyin buzsang, umidingga yetarsan.",
-      "O'zingni er bilsang, o'zgani sher bil.",
-      "Biz rostgo'ylik va halollikni hamisha ulug'laymiz.",
-      "Yillar mana shu xilda osoyishta o'tar edi."
-    ],
-    correctAnswer: "Umidsizlik uyin buzsang, umidingga yetarsan."
-  },
-  {
-    question: "Kelishik qo'shimchalari yordamida birikkan so'z birikmalari qaysi javobda berilgan?",
-    options: [
-      "Moviy osmon, Zuxro yulduz",
-      "Tog' cho'qqisi, kitob o'qimoq",
-      "yoqimli kuy, dala yumushlari",
-      "a'lochi o'quvchilar, kitobsevarlar uyushmasi"
-    ],
-    correctAnswer: "a'lochi o'quvchilar, kitobsevarlar uyushmasi"
-  },
-  {
-    question: "O'zbek tili qaysi til oilasiga mansub?",
-    options: [
-      "Xind -- evropa tillari oilasi.",
-      "Oltoy tillar oilasi",
-      "Fin -- ugor tillar oilasi",
-      "Som-xom tillar oilasi"
-    ],
-    correctAnswer: "Oltoy tillar oilasi"
-  },
-  {
-    question: "Qaysi qatordagi gapda ega olmosh bilan ifodalangan?",
-    options: [
-      "Undan yoqimli va shirin xid kelardi.",
-      "Iste'dodli adib ko'p nasriy asarlar yozdi.",
-      "Ularning munozarasi yangi buyruq kelishi bilan yakunlandi.",
-      "U biz bilan ketishi lozim."
-    ],
-    correctAnswer: "U biz bilan ketishi lozim."
-  },
-  {
-    question: "Belgisiz qaratqich aniqlovchili so'z birikmalari qaysi javobda berilgan?",
-    options: [
-      "Shaffof suv, nafis gullar",
-      "Oy shu'lasi, institut binosi",
-      "navbahor kezlari, oydin kechalar",
-      "g'ayrat bilan ishlamoq"
-    ],
-    correctAnswer: "Oy shu'lasi, institut binosi"
-  },
-  {
-    question: "Faqat ergashtiruvchi bog'lovchilardan iborat qatorni aniqlang.",
-    options: [
-      "-kim, agar, chunki, basharti, shuning uchun",
-      "shuning uchun, va, lekin",
-      "-mi, -yu, -ku, -da",
-      "sari, -dek, -gacha, toki"
-    ],
-    correctAnswer: "-kim, agar, chunki, basharti, shuning uchun"
-  },
-  {
-    question: "Qo'shma gap berilgan javobni toping.",
-    options: [
-      "Biz kitobni o'qib, muxokama qildik.",
-      "Kun botib, qorong'ulik cho'kdi",
-      "Atrof yorishdi, biz yo'lga otlandik",
-      "Men ishdan charchab keldim va miriqib dam oldim"
-    ],
-    correctAnswer: "Men ishdan charchab keldim va miriqib dam oldim"
-  },
-  {
-    question: "Teng bog'lovchili qo'shma gapni aniqlang.",
-    options: [
-      "Ma'rifatli jamiyatda sog'lom aql-idrok, sog'lom fikr va adolat ustivorlik qiladi.",
-      "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi.",
-      "Azimboy shunday zulm o'tkazdiki, xalqning sabr kosasi to'ldi.",
-      "Mingboshi uchun Miryoqubdan boshqa chin ko'ngildan kuyadigan odam yo'qligini u yaxshi bilardi."
-    ],
-    correctAnswer: "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi."
-  },
-  {
-    question: "Zidlov bog'lovchili gap berilgan qatorni aniqlang.",
-    options: [
-      "O'ktam mevalarni saralaydi, xidlaydi, biroq egisi kelmaydi.",
-      "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi.",
-      "Goh Kimsan akamga ko'z solaman, goh oyimga qarayman.",
-      "Nazarimda, u negadir jilmayayotganga o'xshaydi."
-    ],
-    correctAnswer: "O'ktam mevalarni saralaydi, xidlaydi, biroq egisi kelmaydi."
-  },
-  {
-    question: "Biriktiruv bog'lovchili qo'shma gapni toping.",
-    options: [
-      "O'ktam xovlida yurib ro'zg'origa razm soldi.",
-      "Nodonlik va xurofot xukmron bo'ldimi, jaxolat avj oladi.",
-      "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi.",
-      "Gox yuradi, gox to'xtab dam oladi."
-    ],
-    correctAnswer: "G'ildiraklar ovozsiz shirillaydi va chang ko'tariladi."
-  },
-  {
-    question: "Nisbiy so'zli gapni aniqlang.",
-    options: [
-      "Nima eksang, shuni o'rasan",
-      "Intizom buzildimi, ishda unum bo'lmaydi.",
-      "Astrobod xavosi qiziq: gox yomg'ir yogadi, gox quyosh chiqadi",
-      "Farzand guldir, ona bir bo'ston"
-    ],
-    correctAnswer: "Farzand guldir, ona bir bo'ston"
-  },
-  {
-    question: "Tobe gap tarkibida keladigan bog'lovchilar qaysi qatorda?",
-    options: [
-      "Shuning uchun, shu bois, oqibatda, -ki, -kim.",
-      "Agar, chunki, shuning uchun.",
-      "Agar, agarda, chunki, go'yo, bamisoli, zero, deb, toki, zotan.",
-      "Shu bois, natijada, chunki, agar, deb"
-    ],
-    correctAnswer: "Agar, agarda, chunki, go'yo, bamisoli, zero, deb, toki, zotan."
-  },
-  {
-    question: "To'ldiruvchili so'z birikmalarini aniqlang.",
-    options: [
-      "Kitobni o'qimoq, ukasiga bermoq, onasi uchun olmoq.",
-      "Uchta o'quvchi, tunuka tom, istiqlol odimlari",
-      "Uyga qaytmoq, qishloqda yashamoq.",
-      "Xududiy bo'lim, oltin soat, maktab bog'i."
-    ],
-    correctAnswer: "Kitobni o'qimoq, ukasiga bermoq, onasi uchun olmoq."
-  },
-  {
-    question: "Dangasa bahona izlaydi, chunki mehnat unga yoqmaydi. Berilgan gapning turini aniqlang.",
-    options: [
-      "Maqsad tobe gapli qo'shma gap.",
-      "Sabab tobe gapli qo'shma gap.",
-      "Teng bog'lovchili qo'shma gap.",
-      "Oxang yordamida bog'langan qo'shma gap."
-    ],
-    correctAnswer: "Sabab tobe gapli qo'shma gap."
-  },
-  {
-    question: "Maqsad tobe gapli qo'shma gapni toping.",
-    options: [
-      "Ukam o'qisin deb, 'Oygul bilan Baxtiyor' kitobchasini oldim.",
-      "O'rtoqlarim kelishdi deb, ko'chaga chiqdim.",
-      "Baxtim borki, ko'zimga har narsa go'zal",
-      "Sinfimizda xamma axil, inoq."
-    ],
-    correctAnswer: "Ukam o'qisin deb, 'Oygul bilan Baxtiyor' kitobchasini oldim."
-  },
-  {
-    question: "Qo'shma gapni aniqlang.",
-    options: [
-      "Azimboy shunday zulm o'tkazdiki, oqibatda xalqning sabr-kosasi to'ldi.",
-      "Azimboy xalqning sabr-kosasini to'ldiradigan zulm o'tkazdi.",
-      "Sinf raxbarimiz qizlarga ham, yigitlarga ham ishonardi.",
-      "Botirjon ham, Xakimjon ham a'lochi."
-    ],
-    correctAnswer: "Azimboy shunday zulm o'tkazdiki, oqibatda xalqning sabr-kosasi to'ldi."
-  },
-  {
-    question: "Tushirib qoldirilgan bog'lovchini nuqtalar o'rniga qo'ying: ... shu ko'rganlarini hikoya qilib bersa, ular ishonmasliklari mumkin.",
-    options: ["Garchi.", "Agar", "Modomiki", "Balki"],
-    correctAnswer: "Modomiki"
-  },
-  {
-    question: "Birin-ketin sodir bo'ladigan ish-harakatlarni bildiruvchi, biror narsaning tavsifini beruvchi qo'shma gaplar yozuvda ... bilan ajratiladi.",
-    options: ["Vergul", "Nuqtali vergul", "Tire", "Ikki nuqta"],
-    correctAnswer: "Nuqtali vergul"
-  },
-  {
-    question: "Osmon ko'm-ko'k, havo esa toza, sof; go'yo uni dengiz shamoli supurgan, dengiz to'lqinlari yuvgan. Yuqoridagi gap turini aniqlang.",
-    options: [
-      "Murakkab sodda gap",
-      "Bog'langan qo'shma gap",
-      "Teng bog'lovchili qo'shma gap",
-      "Murakkab qo'shma gap"
-    ],
-    correctAnswer: "Murakkab sodda gap"
-  },
-  {
-    question: "Ega tobe gapli qo'shma gapni toping.",
-    options: [
-      "Kimki bardosh bersa, kurashsa, u baxtga etadi.",
-      "Yutug'imiz shundaki, xar bir ishni o'z vaqtida bajardik.",
-      "Qachon so'rasangiz, darrov javob beradi.",
-      "Hali kamchiliklarimiz ko'p, bundan ko'z yumib bo'lmaydi."
-    ],
-    correctAnswer: "Yutug'imiz shundaki, xar bir ishni o'z vaqtida bajardik."
-  },
-  {
-    question: "Harakat nomi bilan ifodalangan ega qaysi qatorda berilgan?",
-    options: [
-      "Oyni etak bilan yopib bo'lmaydi.",
-      "Ko'chat ekish oyligi baxorda o'tkaziladi.",
-      "Ilmli ming yashar, ilmsiz bir yashar",
-      "A'lo o'qish -- asosiy maqsadim."
-    ],
-    correctAnswer: "A'lo o'qish -- asosiy maqsadim."
-  },
-  {
-    question: "Teng bog'lovchilar berilgan qatorni toping.",
-    options: [
-      "Sababli, natijada, va, lekin.",
-      "Ammo, biroq, balki, agar",
-      "Va, ham, ammo, lekin.",
-      "yoki, zeroki"
-    ],
-    correctAnswer: "Va, ham, ammo, lekin."
-  },
-  {
-    question: "Uyushiq bo'lakli gap berilgan qatorni aniqlang.",
-    options: [
-      "Birni birov beradi, ko'pni mexnat.",
-      "Butun zamin larzaga keldi.",
-      "Tashqaridan allakimning ovozi eshitildi.",
-      "Saida goh afsuslanib, goh kuyunib, goh kulib gapirib berdi."
-    ],
-    correctAnswer: "Saida goh afsuslanib, goh kuyunib, goh kulib gapirib berdi."
-  },
-  {
-    question: "Qo'shma gap qismlarini bog'lovchi vositalar to'liq ko'rsatilgan qatorni belgilang.",
-    options: [
-      "Teng bog'lovchilar, ergashtiruvchi bog'lovchilar",
-      "Nisbiy so'zlar, oxang",
-      "Bog'lovchi yuklamalar",
-      "Teng bog'lovchilar, ergashtiruvchi bog'lovchilar, nisbiy so'zlar, bog'lovchi yuklamalar, ohang."
-    ],
-    correctAnswer: "Teng bog'lovchilar, ergashtiruvchi bog'lovchilar, nisbiy so'zlar, bog'lovchi yuklamalar, ohang."
-  },
-  {
-    question: "Teng bog'lovchilarga nimalar kiradi?",
-    options: [
-      "Biriktiruv, zidlov, ayiruv bog'lovchilari.",
-      "Ergashtiruv boglovchilari",
-      "Nisbiy so'zlar",
-      "Bog'lovchi yuklamalar"
-    ],
-    correctAnswer: "Biriktiruv, zidlov, ayiruv bog'lovchilari."
-  },
-  {
-    question: "Ayiruv bog'lovchi yordamida bog'langan qo'shma gaplarni toping.",
-    options: [
-      "Inson esa olamaro olamdir.",
-      "Ba'zan oftob ham charaqlayveradi, jala ham quyaveradi.",
-      "Inson yaralibdiki, hamisha olamni anglashga intiladi.",
-      "Jaxolat zo'r keldimi, taraqqiyot bo'lmaydi."
-    ],
-    correctAnswer: "Ba'zan oftob ham charaqlayveradi, jala ham quyaveradi."
-  },
-  {
-    question: "Nisbiy so'zli gap qaysi qatorda berilgan?",
-    options: [
-      "Intizom buzildimi ishda unum bo'lmaydi.",
-      "Qoyaga qancha yaqin yursang, xavf shuncha kam.",
-      "Yo siz keling, yo men boray.",
-      "Gox yomg'ir yog'adi, gox quyosh chiqadi."
-    ],
-    correctAnswer: "Qoyaga qancha yaqin yursang, xavf shuncha kam."
-  },
-  {
-    question: "Aniqlovchili so'z birikmasini toping.",
-    options: [
-      "Uyga qaytmoq, qishloqda yashamoq.",
-      "Kitobni o'qimoq, ukasiga bermoq.",
-      "Uchta uquvchi, tunuka tom, istiqlol odimlari, ukasini ko'rish.",
-      "Huquqiy bilim, oltin soat, katta bino"
-    ],
-    correctAnswer: "Huquqiy bilim, oltin soat, katta bino"
-  },
-  {
-    question: "Qaysi javobda qo'shma gap berilgan.",
-    options: [
-      "Onasi qiziga ham, o'g'liga ham ishonadi.",
-      "Botirjon ham, Raximjon ham a'lochi.",
-      "Azimboy shunday zulm o'tkazdiki, oqibatda xalqning sabr kosasi to'ldi.",
-      "Azimboy xalqning sabr-kosasini to'ldiradigan zulm o'tkazdi."
-    ],
-    correctAnswer: "Azimboy shunday zulm o'tkazdiki, oqibatda xalqning sabr kosasi to'ldi."
-  },
-  {
-    question: "Berilgan gapda tushirilgan tinish belgilarni qo'ying. Faqat bitta iltimos bir bayt o'qiyman shuni yaxshilab eshiting.",
-    options: ["Tire", "Ikki nuqta", "Nuqtali vergul", "Ikki nuqta va vergul"],
-    correctAnswer: "Ikki nuqta va vergul"
-  },
-  {
-    question: "Istiqlol keldi o'zligimizni angladik. Tinish belgini to'g'ri qo'ying.",
-    options: ["Vergul", "Ikki nuqta", "Nuqta", "Tire"],
-    correctAnswer: "Vergul"
-  },
-  {
-    question: "Berilgan qo'shma gapning turini aniqlang. Oqsoqol o'tirdi, kotib unga choy uzatdi va o'zi Xolmurod bergan qog'ozni o'qimoqchi bo'ldi.",
-    options: [
-      "Bog'langan qo'shma gap",
-      "Teng bog'lovchili qo'shma gap",
-      "Sodda gap",
-      "Murakkab qo'shma gap"
-    ],
-    correctAnswer: "Murakkab qo'shma gap"
-  },
-  {
-    question: "Kesim tobe gapli qo'shma gapni toping.",
-    options: [
-      "Eshitdimki, kecha kelibsiz.",
-      "Yaxshi odatingiz shuki, barvaqt turasiz.",
-      "Qachon so'rasangiz, darrov javob beradi.",
-      "Kim testni bir daqiqada echsa, 5 ball oladi."
-    ],
-    correctAnswer: "Eshitdimki, kecha kelibsiz."
-  },
-  {
-    question: "Tabiat bilan tanishtirish metodlari",
-    options: [
-      "Suhbat, ko'rgazmali, ekskursiya",
-      "Ekskursiya, og'zaki nutq, amaliy",
-      "Amaliy, ko'rgazmali suhbat",
-      "Ko'rgazmali, amaliy, og'zaki metod"
-    ],
-    correctAnswer: "Ko'rgazmali, amaliy, og'zaki metod"
-  },
-  {
-    question: "Tabiat bilan tanishtirish ish shakllari.",
-    options: [
-      "Barglar, urug'lar ildiz, meva, sabzavot",
-      "Mashgulot, ekskursiya, sayr",
-      "Belkurak, ketmon, xaskash",
-      "Meva, sabzavot, barg, hayvonlar."
-    ],
-    correctAnswer: "Mashgulot, ekskursiya, sayr"
-  },
-  {
-    question: "Ekskursiyada qaysi metod qo'llaniladi.",
-    options: [
-      "Mashg'ulot, og'zaki.",
-      "Hikoya, suhbat, amaliy",
-      "Sayr, ekskursiya, mehnat",
-      "Kuzatish, og'zaki"
-    ],
-    correctAnswer: "Kuzatish, og'zaki"
-  },
-  {
-    question: "Ekologiya faniga xissa qo'shgan Markaziy Osiyo olimlari",
-    options: [
-      "Al-Fargoniy, Ibn-Sino, Al-Xorazmiy",
-      "Beruniy, Ibn-Sino, Farobiy, Al-Xorazmiy",
-      "Forobiy, Navoiy ,Samarkandiy",
-      "Navoiy, Beruniy, Bobur."
-    ],
-    correctAnswer: "Beruniy, Ibn-Sino, Farobiy, Al-Xorazmiy"
-  },
-  {
-    question: "Uzoq muddatli kuzatishlar qaysi javobda to'g'ri ko'rsatilgan.",
-    options: [
-      "Gallazorni kuzatish, maydonchalardagi o'simliklarni kuzatish , dala maydonlarini kuzatish",
-      "Baqani rivojlanishini kuzatish, o'simlikni kuzatish",
-      "O'simlikni urug'idan urug'igacha bo'lgan jarayonni kuzatish. Baqani rivojlanishini kuzatish, o'simlikni yil fasllaridagi o'zgarishlarini kuzatish",
-      "O'simlikni yil fasllarda o'zgarishini kuzatish"
-    ],
-    correctAnswer: "O'simlikni urug'idan urug'igacha bo'lgan jarayonni kuzatish. Baqani rivojlanishini kuzatish, o'simlikni yil fasllaridagi o'zgarishlarini kuzatish"
-  },
-  {
-    question: "Tabiat bilan tanishtirish dasturini tuzilishi",
-    options: [
-      "Jonli-jonsiz tabiat, o'simlik dunyosi va hayvonot olami, kishilarning tabiatdagi mehnati",
-      "Jonsiz tabiat bilan tanishtirish, ensiklopedik bilim berish",
-      "fasllar bilan tanishtirish ,qushlar olami, o'simliklar dunyosi",
-      "Kishilarning tabiatdagi mehnati, o'simliklar va hayvonot olami"
-    ],
-    correctAnswer: "Jonli-jonsiz tabiat, o'simlik dunyosi va hayvonot olami, kishilarning tabiatdagi mehnati"
-  },
-  {
-    question: "Tabiatshunoslikning bosh yo'nalishi to'g'ri yozilgan qatorni belgilang.",
-    options: [
-      "Juda kichkinani o'rganish. Juda murakkabni o'rganish. Juda katta, kengni o'rganish.",
-      "Juda katta, kengni o'rganish. Juda kichkinani o'rganish. Juda murakkabni o'rganish.",
-      "Juda murakkabni o'rganish. Juda katta, kengni o'rganish. Juda kichkinani o'rganish.",
-      "Juda kichkinani o'rganish. Juda katta, kengni o'rganish. Juda murakkabni o'rganish."
-    ],
-    correctAnswer: "Juda katta, kengni o'rganish. Juda kichkinani o'rganish. Juda murakkabni o'rganish."
-  },
-  {
-    question: "Tabiatshunoslikning maqsadi ......",
-    options: [
-      "Tabiat hodisalarning mohiyatini aniqlashdan iborat",
-      "Tabiat qonuniyatlarni bilishdan iborat",
-      "Tabiat hodisalarning mohiyatini aniqlash, tabiat qonuniyatlarni bilish hamda ulardan amalda foydalanish imkoniyatlarni ochib berishdan iborat",
-      "Tabiat qonuniyatlarni bilish hamda ulardan amalda foydalanish imkoniyatlarni ochib berishdan iborat"
-    ],
-    correctAnswer: "Tabiat hodisalarning mohiyatini aniqlash, tabiat qonuniyatlarni bilish hamda ulardan amalda foydalanish imkoniyatlarni ochib berishdan iborat"
-  },
-  {
-    question: "Tabiatshunoslikda ilmiy tadqiqotlar natijalari nazariya, qonunlar, modellar, gipotezalar va tamoyillar majmuasi bu...",
-    options: ["tabiat qonunlari", "tabiat haqidagi nizom", "tabiyat haqida ma'lumot", "tabiat konsepsiyasi"],
-    correctAnswer: "tabiat konsepsiyasi"
-  },
-  {
-    question: "'Tabishunoslik va uni o'qitish metodikasi' fanning vazifasi",
-    options: [
-      "Amaliy fanlarda empirik kuzatishlar orqali inson tafakkuri doirasidagi bilimlarni o'rganish, aniq xulosalar chiqarish va ilmiy xulosalardan insonlarning ijtimoiy turmush tarzini yaxshilash yo'lida foydalanish.",
-      "Tabiatshunoslik va uni o'qitish metodikasi bo'lg'usi boshlang'ich sinf o'qituvchilariga tarbiyalovchi taiim tizimini tushunib olish, tabiatshunoslikni o'qitish asoslarini, uning uchun xos bo'lgan shakl, metod va uslublarini, o'quvchilaming bilish faoliyatlariga rahbarlik qilishni o'rganib olishlariga yordam qilish kabi amaliy masalalarini o'z ichida.",
-      "yer,quyosh,yulduzlar,suv,havo,tosh,tuproq haqida tushunchalar berish",
-      "Yashab turgan dunyomizda voqelik to'g'risidagi amaliy bilimlarni o'rganish, ushbu voqelikni kuzatish va, bu jarayonda olingan natijalarni ilmiy jihatdan bir tizimga solishdan iborat."
-    ],
-    correctAnswer: "Tabiatshunoslik va uni o'qitish metodikasi bo'lg'usi boshlang'ich sinf o'qituvchilariga tarbiyalovchi taiim tizimini tushunib olish, tabiatshunoslikni o'qitish asoslarini, uning uchun xos bo'lgan shakl, metod va uslublarini, o'quvchilaming bilish faoliyatlariga rahbarlik qilishni o'rganib olishlariga yordam qilish kabi amaliy masalalarini o'z ichida."
-  },
-  {
-    question: "Jonsiz tabiatga kiruvchi jism va narsalarni toping.",
-    options: [
-      "yer,quyosh,yulduzlar,suv, baliq",
-      "yulduzlar,suv,havo,tosh,tuproq, quyon",
-      "yer,quyosh,yulduzlar,suv,havo,tosh,tuproq.",
-      "odam,xayvon,toshlar"
-    ],
-    correctAnswer: "yer,quyosh,yulduzlar,suv,havo,tosh,tuproq."
-  },
-  {
-    question: "Jonli tabiatga kiruvchi jism va narsalarni toping.",
-    options: [
-      "o'simlik,hayvonlar,mikroarganizm,odamlar.",
-      "o'simlik,hayvonlar,mikroarganizm, toshlar",
-      "mikroarganizm,odamlar, qumlar",
-      "odamlar, qumlar, toshlar"
-    ],
-    correctAnswer: "o'simlik,hayvonlar,mikroarganizm,odamlar."
-  },
-  {
-    question: "Jonsiz tabiat o'ziga xos xususiyati bu...",
-    options: [
-      "jonsiz tabiat bir turdan boshqa turga almashina oladi",
-      "jonsiz tabiat deyilishiga sabab, ular oziqlanmaydi, o'smaydi, ko'paymaydi, rivojlanmaydi, Masalan toshni olsak, unga suv ham havo ham kerak emas.",
-      "ular o'sish va rivolanish xususiyatiga ega",
-      "ular o'sadi oziqlanmaydi"
-    ],
-    correctAnswer: "jonsiz tabiat deyilishiga sabab, ular oziqlanmaydi, o'smaydi, ko'paymaydi, rivojlanmaydi, Masalan toshni olsak, unga suv ham havo ham kerak emas."
-  },
-  {
-    question: "Jonli tabiat o'ziga xos xususiyati bu...",
-    options: [
-      "jonli tabiatga kiruvchilar oziqlanadilar, nafas oladilar ,o'sadilar,ko'payadilar,.jonli tabiat vakillari o'simlik va ozuqa bo'lmasa yashay olmaydilar.",
-      "jonli tabiat deyilishiga sabab,ular oziqlanmaydi, o'smaydi, ko'paymaydi, rivojlanmaydi, Masalan toshni olsak,unga suv ham havo ham kerak emas",
-      "jonli tabiat bir turdan boshqa turga almashina oladi",
-      "o'ziga xos xusisiyati ko'p oziqlanadi,ko'paymaydi,rivojlanadi"
-    ],
-    correctAnswer: "jonli tabiatga kiruvchilar oziqlanadilar, nafas oladilar ,o'sadilar,ko'payadilar,.jonli tabiat vakillari o'simlik va ozuqa bo'lmasa yashay olmaydilar."
-  },
-  {
-    question: "'Saydana', 'Mineralogiya', 'Qadimgi avlodlardan qolgan yodgorliklar', 'Hindiston', 'Geodeziya' kabi asarlar muallifi qaysi mutaffakir bo'lgan",
-    options: [
-      "Abu Rayxon Beruniy",
-      "Abu Nasr Farobiy",
-      "Muhammad al Xorazmiy",
-      "Ibn Sino"
-    ],
-    correctAnswer: "Abu Rayxon Beruniy"
-  },
-  {
-    question: "'Yer yuzida chang va tutun bo'lmasa, inson ming yil yashar edi' degan iboraning muallifi kim",
-    options: [
-      "Abu Rayxon Beruniy",
-      "Abu Ali Ibn Sino",
-      "Muhammad al Xorazmiy",
-      "Yusuf xos Xojib 'Qutadg'u bilib'"
-    ],
-    correctAnswer: "Abu Ali Ibn Sino"
-  },
-  {
-    question: "Kasallikni davolashda 'suvni tozalashga oid tavsiyalar' qaysi alloma tomonidan bayon etilgan",
-    options: [
-      "Abu Ali Ibn Sino",
-      "Abu Rayxon Beruniy",
-      "Muhammad al Xorazmiy",
-      "Abu Nosir Farobiy"
-    ],
-    correctAnswer: "Abu Ali Ibn Sino"
-  },
-  {
-    question: "Qaysi alloma o'z qarashlarida 'suvni isrof qilish -- nonni isrof qilishdek gunoh ekanligini, hovuz, quduq, sardoba suvini toza saqlash hamma uchun ham savob, ham farz ekanligini' tushuntirilgan",
-    options: ["Alisher navoiy.", "Ibn Sino", "Al Xorazmiy", "Al Beruniy"],
-    correctAnswer: "Alisher navoiy."
-  },
-  {
-    question: "'Boburnoma'da tabiat haqida nimalar ko'proq bayon etilgan",
-    options: [
-      "Unda yer, suv, havo turli tabiiy hodisalarga tegishli xalq so'zlari ko'plab topiladi. o'lkamiz tarixi, geografiyasi, tabiati, etnografiyasi, madaniyati to'g'risidagi.",
-      "Unda madanlar va dorivor giyohlar haqida ma'lumotlar keltirilgan",
-      "Hayvonlarning emigratsiyasi haqida qaydlar mavjud",
-      "Qushlar haqida ma'lumotlar keltirilgan"
-    ],
-    correctAnswer: "Unda yer, suv, havo turli tabiiy hodisalarga tegishli xalq so'zlari ko'plab topiladi. o'lkamiz tarixi, geografiyasi, tabiati, etnografiyasi, madaniyati to'g'risidagi."
-  },
-  {
-    question: "Quyosh asosan qaysi moddalardan tashkil topgan",
-    options: ["vodorod, geliy.", "azot, natriy", "magniy, rux", "kaliy natriy"],
-    correctAnswer: "vodorod, geliy."
-  },
-  {
-    question: "Quyosh nuri yerga qancha vaqtda yetib keladi",
-    options: [
-      "9-minut 18-sekund",
-      "7-minut 19-sekund",
-      "8-minut 18-sekund.",
-      "10-minut 18-sekunt"
-    ],
-    correctAnswer: "8-minut 18-sekund."
-  },
-  {
-    question: "Galaktika tushunchasi qaysi javobda to'g'ri ko'rsatilgan",
-    options: [
-      "yulduzlararo fazodan iborat sistemadir.",
-      "oy sistemasidan va 150 mlrd yulduz hamda yulduzlararo fazodan iborat sistemadir.",
-      "quyosh sistemasidan va 150 mlrd yulduz hamda yulduzlararo fazodan iborat sistemadir,",
-      "oy yulduzlardan iborat fazodan iborat sistema"
-    ],
-    correctAnswer: "quyosh sistemasidan va 150 mlrd yulduz hamda yulduzlararo fazodan iborat sistemadir,"
-  },
-  {
-    question: "Quyosh sistemasidagi sayyoralar ikki guruhga bo'linadi",
-    options: ["ichki va tashqi.", "ustki va ostki", "oldi va yoni", "katta va kichik"],
-    correctAnswer: "ichki va tashqi."
-  },
-  {
-    question: "Quyoshdan Yergacha bo'lgan masofa o'rta hisobda qancha",
-    options: ["149,6 mln.km.", "123,6 mln.km", "113,9 mln.km", "150 mln.km"],
-    correctAnswer: "149,6 mln.km."
-  },
-  {
-    question: "Yer Quyosh sistemasidagi qanday sayyora",
-    options: [
-      "suv mavjud bo'lmagan sayyora",
-      "hayot mavjud bo'lmagan sayyora",
-      "organik hayot mavjud bo'lgan sayyora.",
-      "havo mavjud bo'magan sayyora"
-    ],
-    correctAnswer: "organik hayot mavjud bo'lgan sayyora."
-  },
-  {
-    question: "Biosfera yerning qanday qobig'i",
-    options: ["hayot qobig'i.", "suv qobig'i", "azon qatlami qobig'i", "litosfera sirtqi qobig'i"],
-    correctAnswer: "hayot qobig'i."
-  },
-  {
-    question: "Quyosh markazida tempuratura necha darajada bo'ladi",
-    options: ["50 mln", "30 mln", "20 mln.", "40 mln"],
-    correctAnswer: "20 mln."
-  },
-  {
-    question: "Qadimgi grek olimlaridan kimlar dunyoning atomlardan tuzilganligi haqida farazni bildirishdi",
-    options: ["Aristotel, Gippokrat", "Gippokrat, Kongle", "Disterveg,Gippokrat", "Demakrit, Epikyur"],
-    correctAnswer: "Demakrit, Epikyur"
-  },
-  {
-    question: "Qadimgi grek olimidan ushbu fikr muallifini toping. 'Sababsiz hech narcha hosil bo'lmaydi va hech narsa izsiz yo'qolib ketmaydi'.",
-    options: ["Demakrit", "Empedokl", "Gippokrat", "Aristotel"],
-    correctAnswer: "Empedokl"
-  },
-  {
-    question: "Qaysi grek olimi anatomiya, botanika, sistematika va hayvonlar embriologiyasini ilmiy asosladi",
-    options: ["Gippokrat", "Empedokl", "Aristotel", "Demakrit"],
-    correctAnswer: "Aristotel"
-  },
-  {
-    question: "Qaysi grek olimi yerning dumaloqligini isbotlaydigan geografik karta tuzdi",
-    options: ["Ptolomey", "Aristotel", "Empedokl", "Gippokrat"],
-    correctAnswer: "Ptolomey"
-  },
-  {
-    question: "Yer shari o'z o'qi atrofida qaysi tomonga aylanadi",
-    options: ["Shimoldan janubga", "Janubdan sharqqa", "Janubdan shimolga", "G'arbdan sharqqa"],
-    correctAnswer: "G'arbdan sharqqa"
-  },
-  {
-    question: "Sutka deb nimaga aytiladi",
-    options: [
-      "Yerning gorizontal xarakati",
-      "Vaqtning qaytmas xususiyati",
-      "Yerning o'z o'qi atrofida aylanib chiqish vaqti",
-      "Yerning aylanma harakati"
-    ],
-    correctAnswer: "Yerning o'z o'qi atrofida aylanib chiqish vaqti"
-  },
-  {
-    question: "Yer o'z o'qi atrofida qancha vaqtda bir marta to'liq aylanib chiqadi",
-    options: [
-      "21 soat 36 minut 8 sekund",
-      "13 soat 51 minut 9 sekund",
-      "23 soat 56 minut 4 sekund",
-      "14 soat 30 minut 6 sekunt"
-    ],
-    correctAnswer: "23 soat 56 minut 4 sekund"
-  },
-  {
-    question: "Yer sharida qanday qutblar bor",
-    options: ["Shimoldan janubga", "Janubdan sharqqa", "G'arbiy va sharqiy", "Shimoliy va janubiy"],
-    correctAnswer: "Shimoliy va janubiy"
-  },
-  {
-    question: "Meridian chiziqlar deb nimaga aytiladi",
-    options: [
-      "ikki qutbning parallel chizig'i",
-      "Ikki qutbni birlashtiruvchi chiziqlar",
-      "ikki qutbning birlashmaydigan chizig'i",
-      "ikki qutbning ajraladigan chizig'i"
-    ],
-    correctAnswer: "Ikki qutbni birlashtiruvchi chiziqlar"
-  },
-  {
-    question: "Oy Yer atrofida qaysi tomonga qarab aylanadi",
-    options: ["Shimoldan janubga", "G'arbdan sharqqa", "Janubdan sharqqa", "Sharqdan shimolga"],
-    correctAnswer: "G'arbdan sharqqa"
-  },
-  {
-    question: "Quyosh sistemasidagi yirik osmon jismlari nima deb ataladi",
-    options: ["sayyoralar", "yulduzlar", "sun'iy yo'ldoshlar", "oy"],
-    correctAnswer: "sayyoralar"
-  },
-  {
-    question: "Sayyoralar atrofida doimiy aylanib turadigan osmon jismlari nima deb ataladi",
-    options: ["yulduzlar", "sun'iy yo'ldoshlar", "tabiiy yo'ldoshlar", "sayyoralar"],
-    correctAnswer: "tabiiy yo'ldoshlar"
-  },
-  {
-    question: "Yer sharining kichraytirilgan tasviri ya'ni modeli nima deb ataladi",
-    options: ["rebus", "yulduz", "quyosh", "globus"],
-    correctAnswer: "globus"
-  },
-  {
-    question: "Yer sharining yadrosi asosan qaysi moddalardan tashkil topgan",
-    options: ["Temir, nikel", "Rux, mis", "Temir, uran", "Uran, temir"],
-    correctAnswer: "Temir, nikel"
-  },
-  {
-    question: "To'rt fasl ham o'z vaqtida bo'ladigan iqlim mintaqasi bu..",
-    options: ["Kontinental iqlim", "Issiq iqlim", "Mo'tadil iqlim", "subtropik iqlim"],
-    correctAnswer: "Mo'tadil iqlim"
-  },
-  {
-    question: "Quyosh sistemasida Yer sayyorasi nechanchi o'rinda turadi",
-    options: ["5 o'rinda", "6 o'rinda", "3 o'rinda", "4 o'rinda"],
-    correctAnswer: "3 o'rinda"
-  },
-  {
-    question: "Tekislikning yuzasi dengiz sathidan balandligi 200 m gacha bo'lsa qanday nom bilan ataladi",
-    options: ["Past tekislik", "Yaylov", "Dala", "Chuqurlik"],
-    correctAnswer: "Past tekislik"
-  },
-  {
-    question: "Dengiz sathidan 500 m dan yuqori bo'lgan relef shaklga qaysi relef shakli kiradi",
-    options: ["Yassitog'lik", "Yaylov", "Dala", "Past tekislik"],
-    correctAnswer: "Yassitog'lik"
-  },
-  {
-    question: "Qatorasiga tizilib ketgan tutash tog'lar nima deb ataladi",
-    options: ["Yassitog'lik", "Past tekislik", "tog' tizmasi", "Dala"],
-    correctAnswer: "tog' tizmasi"
-  },
-  {
-    question: "Zilzilaning 1 ball xolati qanday bo'ladi",
-    options: [
-      "Yer tebranishini sezgir asboblar sezadi",
-      "Juda kuchsiz,tinch turgan kishilar ba'zan biladi.",
-      "Kuchsiz,tinch turgan kishilar ko'pchiligi sezishi mumkin",
-      "Kuchli tebranish holati"
-    ],
-    correctAnswer: "Yer tebranishini sezgir asboblar sezadi"
-  },
-  {
-    question: "Zilzilaning 4 ball xolati qanday bo'ladi",
-    options: [
-      "Kuchsiz,tinch turgan kishilar ko'pchiligi sezishi mumkin",
-      "Yer tebranishini sezgir asboblar sezadi",
-      "Kuchli kishilar sezadi",
-      "O'rtacha kuchga ega bo'lib,deyarli hamma sezadi. Deraza oynalari,eshik dirillaydi"
-    ],
-    correctAnswer: "O'rtacha kuchga ega bo'lib,deyarli hamma sezadi. Deraza oynalari,eshik dirillaydi"
-  },
-  {
-    question: "Zilzila necha ball sodir bo'lganda butun binolar qulaydi",
-    options: ["6 ball", "12 ball", "11 ball", "13 ball"],
-    correctAnswer: "11 ball"
-  },
-  {
-    question: "Temperaturaning o'zgarib turishi oqibatida qanday nurash ro'y beradi",
-    options: ["kimyoviy qulash", "biologik portlash", "fizik portlash", "fizik nurash"],
-    correctAnswer: "fizik nurash"
-  },
-  {
-    question: "Qaysi tabiiy omil - geomorfologik agent sifatida tog' jinslariga ta'sir etib, yemirish, uchirish va yotqizish kabi ishlarni bajaradi",
-    options: ["yomg'ir", "qor", "shamol", "quyosh"],
-    correctAnswer: "shamol"
-  },
-  {
-    question: "Nurash jarayoni- o'zining xususiyatiga ko'ra qanday turlarga bo'linadi",
-    options: ["biologic, kimyoviy", "fizik, biologik", "kimyoviy,fizik", "fizik,kimyoviy,organic"],
-    correctAnswer: "fizik,kimyoviy,organic"
-  },
-  {
-    question: "Planetamizdagi suv qobig'ini nima deb aytiladi",
-    options: ["gidrosfera", "litosfera", "troposfera", "atmosfera"],
-    correctAnswer: "gidrosfera"
-  },
-  {
-    question: "Inson tomonidan qazilgan suv yo'li nima deb ataladi.",
-    options: ["kanal", "ariq", "daryo", "soy"],
-    correctAnswer: "kanal"
-  },
-  {
-    question: "Tabiatda bir vaqtning ozida qattiq, suyuq va gaz (bug') holida uchraydigan yagona mineral bu...",
-    options: ["tuproq", "havo", "suv", "yomg'ir"],
-    correctAnswer: "suv"
-  },
-  {
-    question: "Suv boshqa elementlardan asosan nimasi bilan ajralib turadi",
-    options: [
-      "eruvchanlik xususiyati (uglerod kislorod)",
-      "yoqiluvchanlik xususiyati (kislarod)",
-      "uchuvchanlik xususiyati (azot)",
-      "yonish xususiyati(geliy)"
-    ],
-    correctAnswer: "eruvchanlik xususiyati (uglerod kislorod)"
-  },
-  {
-    question: "Bir qancha miqdordagi suv nimaning ta'sirida bug'ga aylanib, yuqoriga, ko'tariladi va to'yinib kondensiyalanib, necha ming km yog'in bo'lib yana yerga tushadi",
-    options: [
-      "oy nuri ta'sirida, yer yuzasidan har yili 120 ming km suv",
-      "quyosh nuri ta'sirida, yer yuzasidan har yili 820 ming km suv",
-      "quyosh nuri ta'sirida, yer yuzasidan har yili 610 ming km suv",
-      "quyosh nuri ta'sirida, yer yuzasidan har yili 520 ming km suv"
-    ],
-    correctAnswer: "quyosh nuri ta'sirida, yer yuzasidan har yili 520 ming km suv"
-  },
-  {
-    question: "Suvning to'xtovsiz aylanishi natijasida ko'l suvlarining suvi qancha vaqtda aylanib yangilanib turadi",
-    options: ["20 yilda bir marta", "5 yilda bir marta", "10 yilda bir marta", "7 yilda bir marta"],
-    correctAnswer: "10 yilda bir marta"
-  },
-  {
-    question: "Suvning to'xtovsiz aylanishi natijasida daryo suvlarining suvi qancha vaqtda aylanib yangilanib turadi.",
-    options: ["9 sutkada", "12 sutkada", "13 sutkada", "15 sutkada"],
-    correctAnswer: "12 sutkada"
-  },
-  {
-    question: "18 yoshdan 50 yoshgacha bo'lgan kishilarning organizmida gavda og'irligining necha foizi suv tashkil qiladi.",
-    options: ["61 %", "66%", "62%", "60%"],
-    correctAnswer: "61 %"
-  },
-  {
-    question: "Odam organizimida suv miqdorining necha foiz (% ) ga kamayishi esa kishini halok qilishga olib keladi",
-    options: ["22-54%", "20-25%", "20-21%", "23-27 %"],
-    correctAnswer: "20-25%"
-  },
-  {
-    question: "Odam organizmi o'z hayotiy jarayonlarini amalga oshirishi uchun sutkasida o'rtacha qancha suvni qabul qiladi va uni o'z to'qimalaridan o'tkazib, chiqarib yuboradi",
-    options: ["2.3litr", "2.6litr", "2.5 litr", "3.5 litr"],
-    correctAnswer: "2.5 litr"
-  },
-  {
-    question: "Integratsiya so'zining ma'nosi nima.",
-    options: ["kesishtirish", "ayrish", "birlashtirish", "o'shish"],
-    correctAnswer: "birlashtirish"
-  },
-  {
-    question: "Qaysi yulduz joyidan siljimaydi.",
-    options: ["yer", "osmon", "quyosh", "oy"],
-    correctAnswer: "quyosh"
-  },
-  {
-    question: "Xaritada baland tog'lar qanday rangda bo'ladi.",
-    options: ["och yashil", "toq sariq", "to'q qizil", "to'q jigarrang"],
-    correctAnswer: "to'q jigarrang"
-  },
-  {
-    question: "O'zbekiston Respublikasi shimoliy qismida qaysi davlat bilan chegardosh",
-    options: ["Qirg'iziston", "Turkmaniston", "Qozog'iston", "Tojikiston"],
-    correctAnswer: "Qozog'iston"
-  },
-  {
-    question: "O'zbekiston Respublikasi sharqiy qismida qaysi davlat bilan chegardosh",
-    options: ["Qoraqolpog'iston", "Qirg'iziston", "O'zbekiston", "Turkmaniston"],
-    correctAnswer: "Qirg'iziston"
-  },
-  {
-    question: "O'zbekiston Respublikasi janubiy-g'arbiy qismida qaysi davlat bilan chegardosh.",
-    options: ["Turkmaniston", "Tojikiston", "Afg'oniston", "Qirg'iziston"],
-    correctAnswer: "Turkmaniston"
-  },
-  {
-    question: "Afg'on shamoli asosan qaysi viloyatda sodir bo'ladi.",
-    options: ["Sirdaryo", "Buxoro", "Surxondaryo", "Navoiy"],
-    correctAnswer: "Surxondaryo"
-  },
-  {
-    question: "Qo'qon shamoli qaysi faslda sodir bo'ladi.",
-    options: ["yoz --kuz", "bahor -kuz", "kuz-qish", "bahor-qish"],
-    correctAnswer: "bahor -kuz"
-  },
-  {
-    question: "Yozda O'zbekistonga, qaysi tomondan shamollar ko'proq esadi",
-    options: ["shimoldan va g'arbdan", "g'arbdan va sharqa", "shimoldan va sharqa", "janubdan sharqqa"],
-    correctAnswer: "shimoldan va g'arbdan"
-  },
-  {
-    question: "O'zbekistonning tekislik qismi bir yilda necha kun yog'inli bo'ladi.",
-    options: ["35-40 kun", "45-50 kun", "48-50 kun", "43-50 km"],
-    correctAnswer: "35-40 kun"
-  },
-  {
-    question: "O'zbekiston janubida quyosh necha soat nur sochib turadi.",
-    options: [
-      "4000-31000soat",
-      "2000-31000 soat",
-      "3000-33000 soat",
-      "3000-3100 soat"
-    ],
-    correctAnswer: "3000-3100 soat"
-  },
-  {
-    question: "Quyosh nuri qaysi faslda tik tushadi.",
-    options: ["yozda", "kuzda", "bahorda", "qishda"],
-    correctAnswer: "yozda"
-  },
-  {
-    question: "Tabiiy ravishda to'plangan suv havzasi nima deb ataladi.",
-    options: ["daryo", "hovuz", "cho'l", "ko'l"],
-    correctAnswer: "ko'l"
-  },
-  {
-    question: "Suv tabiatda necha xil ko'rinishda uchraydi.",
-    options: ["4-xil", "3-xil", "1-xil", "5-xil"],
-    correctAnswer: "3-xil"
-  },
-  {
-    question: "Planetamizni o'rab olgan havo qobig'iga nima deyiladi.",
-    options: ["Biosfera", "Litosfera", "Atmosfera", "Gidrosfera"],
-    correctAnswer: "Atmosfera"
-  },
-  {
-    question: "Atmosferaning qalinligi necha ming km ga yetadi.",
-    options: ["3000 km", "400 km", "500 km", "560 km"],
-    correctAnswer: "3000 km"
-  },
-  {
-    question: "Atmosferaning tarkibida necha foiz kislorod mavjud.",
-    options: ["20.95%", "19.23%", "20.10%", "23.10%"],
-    correctAnswer: "20.95%"
-  },
-  {
-    question: "Atmosferaning tarkibida necha foiz argon gazi mavjud",
-    options: ["0.85%", "0.90%", "0.80%", "0.93%"],
-    correctAnswer: "0.93%"
-  },
-  {
-    question: "Yonuvchi foydali qazilmalarga nimalar kiradi.",
-    options: ["Ko'mir,neft,gaz,torf", "Gaz, ko'mir", "Neft ,gaz", "Ko'mir ,gaz,neft"],
-    correctAnswer: "Ko'mir,neft,gaz,torf"
-  },
-  {
-    question: "Havoning ma'lum vaqt va joydagi holatiga nima deyiladi",
-    options: ["iqlim", "havo aylanishi", "ob-havo", "relyef"],
-    correctAnswer: "ob-havo"
-  },
-  {
-    question: "Amudaryoning uzunligi qancha.",
-    options: ["2500 km", "2400 km", "2700 km", "2300 km"],
-    correctAnswer: "2400 km"
-  },
-  {
-    question: "Eng kichik sayyora",
-    options: ["Merkuriy", "Yupiter", "Neptun", "Uran"],
-    correctAnswer: "Merkuriy"
-  },
-  {
-    question: "Havoda yonib, yorug' iz qoldiradigan osmon jismi nima deb ataladi.",
-    options: ["Yulduz", "Oy", "Meteorit", "Quyosh"],
-    correctAnswer: "Meteorit"
-  },
-  {
-    question: "Fevral oyi 29 kunlik bo'lgan yil nomi nima deyiladi.",
-    options: ["Oddiy yili", "Murakkab yil", "Takroriy yili", "Kabisa yili"],
-    correctAnswer: "Kabisa yili"
-  },
-  {
-    question: "Tabiiy boyliklar necha turga bo'linadi.",
-    options: ["3 ta", "5 ta", "1 ta", "4 ta"],
-    correctAnswer: "3 ta"
-  },
-  {
-    question: "Agar havoda chang va g'ubor, bo'lmaganda edi, inson ming yil umr ko'rgan bo'lar edi», - degan mashhur ibora kimga tegishli?",
-    options: ["Al-Xorazmiy", "Termiziy", "Buxoriy", "Ibn Sino"],
-    correctAnswer: "Ibn Sino"
-  },
-  {
-    question: "Tabiatshunoslik darslariga qo'yiladigan umumiy talablarga qaysila kiradi?",
-    options: [
-      "Ta'lim-tarbiyaviy, didaktik, psixologik, gigiyenik",
-      "Gigiyenik, umumiy, ijtimoiy, falsafiy",
-      "Jismoniy, huquiy, umumiy, didaktik",
-      "Didaktik, ijtimoiy, umumiy, gigiyenik"
-    ],
-    correctAnswer: "Ta'lim-tarbiyaviy, didaktik, psixologik, gigiyenik"
-  },
-  {
-    question: "Jonsiz tabiiy tarqatma materiallarga nimalar kiradi?",
-    options: [
-      "O'simliklar, granit, kvarts",
-      "Hayvonlar, temir, osh tuzi, loy",
-      "Loy, qum, osh tuzi, temir, cho'yan, toshko'mir",
-      "Hayvonlar va o'simliklar"
-    ],
-    correctAnswer: "Loy, qum, osh tuzi, temir, cho'yan, toshko'mir"
-  },
-  {
-    question: "Yer bilan osmonning tutashgan joyi nima",
-    options: ["Ufq", "Tog'lar deyiladi", "Tekisliklar", "Osmon"],
-    correctAnswer: "Ufq"
-  },
-  {
-    question: "Tabiatshunoslik darslarida kuzatish qaysi metodlar guruhiga kiradi?",
-    options: [
-      "Tabiatshunoslikning og'zaki metodi",
-      "Tabiatshunoslikning amaliy metodi",
-      "Tabiatshunoslikning ko'rgazmali metodi",
-      "Tabiatshunoslikning nazariy metodi"
-    ],
-    correctAnswer: "Tabiatshunoslikning ko'rgazmali metodi"
-  },
-  {
-    question: "Ekologiyaning tarifi qaysi qatorda to'g'ri ko'rsatilgan?",
-    options: [
-      "atmosferaning tozaligi",
-      "organizmlarning yashash sharoiti",
-      "tirik organizmlarning yashash sharoiti yoki tashqi muhit bilan o'zaro munosabati tashqi muxitning o'zaro munosabati",
-      "organizimlarning tashqi muhitga ta'siri"
-    ],
-    correctAnswer: "tirik organizmlarning yashash sharoiti yoki tashqi muhit bilan o'zaro munosabati tashqi muxitning o'zaro munosabati"
-  },
-  {
-    question: "....... fikricha inson tabiatning eng go'zal mavjudotidir. Inson tabiatga ergashib, hamma narsani bilib olishi mumkin. Bu kimning fikri?",
-    options: ["Z.M.Bobur", "Ibn Sino", "Ya. A.Komenskiy", "Abu Nasr Farobiy"],
-    correctAnswer: "Ya. A.Komenskiy"
-  },
-  {
-    question: "Ekologiya tushunchasi qaysi so'zdan olingan , nima degan ma'noni bildiradi?",
-    options: [
-      "Lotincha «eko» --- makon va «logos» --- ilm",
-      "Ruscha «eko» --- uy, makon va «logos» --- dars",
-      "Inglizcha «eko» --- borliq, makon va «logos» --- fan",
-      "Yunoncha «eko» --- tabiat, makon va «logos» --- fan"
-    ],
-    correctAnswer: "Yunoncha «eko» --- tabiat, makon va «logos» --- fan"
-  },
-  {
-    question: "Ekologiya so'zining tarifi qaysi qatorda to'g'ri ko'rsatilgan?",
-    options: [
-      "tirik organizmlaming yashash sharoiti yoki tashqi muhit bilan o'zaro munosabati tashqi muhitning o'zaro munosabati",
-      "atmosferaning tozaligi",
-      "organizmlaming yashash sharoiti",
-      "organizimlaming tashqi muhitga ta'siri"
-    ],
-    correctAnswer: "tirik organizmlaming yashash sharoiti yoki tashqi muhit bilan o'zaro munosabati tashqi muhitning o'zaro munosabati"
-  },
-  {
-    question: "'Bilginki daryoning ko'zlari yoshlansa uning boshiga ham kulfat tushgan bo'ladi' bu so'zlar qaysi allomaning fikri?",
-    options: [
-      "Ekologiya tushunchasini fanga birinchi bo'lib kim tomondan kiritilgan.",
-      "Ernest Gekkel",
-      "Aristotel",
-      "Platon",
-      "Al-Xorazmiy",
-      "Muxammad Muso-al Xorazmiy",
-      "Abu Rayxon Beruniy, Abu-Nasr Forobiy, Alisher Navoiy",
-      "Ya.A.Komenskiy",
-      "Ibn Sino"
-    ],
-    correctAnswer: "Ibn Sino"
-  },
-  {
-    question: "Beruniy 'Saydana' deb nomlangan asarida necha-xil dori darmonlarni tavsiflagan?",
-    options: ["1116 ta", "1106 ta", "1016 ta", "1006 ta"],
-    correctAnswer: "1116 ta"
-  },
-  {
-    question: "Qaysi olimning 'Qadimgi avlodlardan qolgan yodgorliklar' va 'Hindiston' asarlarida o'simlik va hayvonlarning tuzilishi hamda ularning tashqi muhit bilan o'zaro aloqasi haqida ham qiziqarli ma'lumotlar keltirilgan?",
-    options: [
-      "Abu Rayhon Beruniy",
-      "Muhammad al Xorazmiy",
-      "Abu Ali Ibn sino",
-      "Abu Nasr Farobiy"
-    ],
-    correctAnswer: "Abu Rayhon Beruniy"
-  },
-  {
-    question: "Qaysi buyuk mutafakkirning yirik qomusiy olim sifatidatanilgan. Uning 450 ta asari mavjud boiib, bizgacha 240 tasi yetib kelgan?.",
-    options: [
-      "Abu Ali Ibn sino",
-      "Muhammad al Xorazmiy",
-      "Abu Rayhon Beruniy",
-      "Abu Nasr Farobiy"
-    ],
-    correctAnswer: "Abu Ali Ibn sino"
-  },
-  {
-    question: "Organizmlarning muhitga moslashishi nima deyiladi?",
-    options: ["Adaptatsiya", "Yevribiont", "Stress", "Gomeostaz"],
-    correctAnswer: "Adaptatsiya"
-  },
-  {
-    question: "O'simliklarning hayotiy shakllari",
-    options: [
-      "Daraxt, buta, chala buta, o't o'simliklar",
-      "Bir yillik, ikki yillik va ko'p yillik",
-      "Chala buta, suv o'simliklari, yaylovlar",
-      "Cho'l, tropik, tundra zonasi o'simliklari"
-    ],
-    correctAnswer: "Daraxt, buta, chala buta, o't o'simliklar"
-  },
-  {
-    question: "O'zbekiston Respublikasi 'Osimliklar dunyosini muhofaza qilish va undan foydalanish to'g'risida' qonuni qachon qabul qilingan?",
-    options: ["1997 yil", "1999 yil", "2001 yil", "2006 yil"],
-    correctAnswer: "1997 yil"
-  },
-  {
-    question: "Ekologik omillar nechta guruhga bo'linadi.",
-    options: ["3 ta", "4 ta", "2 ta", "7 ta"],
-    correctAnswer: "3 ta"
-  },
-  {
-    question: "Antropogen faktorlar bu ...",
-    options: [
-      "kishilarning o'simliklarga, o'simliklar qoplamiga va ular yashab turgan muhit sharoitiga turli shakldagi tasir faktorlari kiradi.",
-      "tirik organizmlarni yashash muhitini o'zgartiradigan yoki u laming o'zlariga tasir etadigan inson faoliyatining ko'rinishi",
-      "jonsiz va jonli tabiatni o'zaro munosabatlari va tasiri",
-      "organizmlarni bir biriga bevosita yoki bilvosita turli xil ta'siri"
-    ],
-    correctAnswer: "kishilarning o'simliklarga, o'simliklar qoplamiga va ular yashab turgan muhit sharoitiga turli shakldagi tasir faktorlari kiradi."
-  },
-  {
-    question: "Og'ir metallarni tuproqqa avtomobil gazlari bilan kelib tushishi tiriklikka qanday salbiy ta'sir qiladi?",
-    options: [
-      "Tuproqni ifloslantiradi",
-      "O'simliklarga tasir qiladi",
-      "Hayvonlarga tasir qiladi",
-      "Tuproqdagi mikroorganizmlami o'ldirib tabiatdagi moddalarni aylanma harakatini to'xtatadi, o'simlik va hayvonlarga tasir qiladi"
-    ],
-    correctAnswer: "Tuproqdagi mikroorganizmlami o'ldirib tabiatdagi moddalarni aylanma harakatini to'xtatadi, o'simlik va hayvonlarga tasir qiladi"
-  },
-  {
-    question: "Atmosfera qatlamlarining to'g'ri tartibini ajrating.",
-    options: [
-      "stratosfera, mezosfera, troposfera, ekzosfera, termosfera",
-      "troposfera, stratosfera, mezosfera, termosfera, ekzosfera",
-      "stratosfera, troposfera, termosfera, ekzosfera",
-      "ekzosfera, termosfera, stratosfera, mezosfera, troposfera"
-    ],
-    correctAnswer: "troposfera, stratosfera, mezosfera, termosfera, ekzosfera"
-  },
-  {
-    question: "Uzun kun o'simliklari qayerda uchraydi?",
-    options: ["Ekvator", "Shimoliy rayonlarda", "O'rtacha kenglikda rayonlarda", "Janubiy rayonlarda"],
-    correctAnswer: "Ekvator"
-  },
-  {
-    question: "Ya.A.Komenskiy 'Onalar maktabi' da nechta fandan ma'lumot olishni tavsiya etgan?",
-    options: ["18 ta", "17 ta", "12 ta", "13 ta"],
-    correctAnswer: "18 ta"
-  },
-  {
-    question: ".....--- tabiat jismlari va hodisalarning tabiiy sharoitlarda maqsadga yo'nalgan va bevosita shu hodisalarni borishiga aralashmagan holda sezgilan bilan qabul qilib olishdir",
-    options: ["kuzatish", "taqqoslash", "qiyoslash", "solishtirish"],
-    correctAnswer: "kuzatish"
-  },
-  {
-    question: "Kuzatishlar davomiyligi va xarakteri bo'yicha qanday turlari bo'lishi mumkin?",
-    options: [
-      "qisqa muddatli va uzoq muddatli",
-      "harakatli va harakatsiz",
-      "uzlukli va uzluksiz",
-      "solishtirma va qiyosiy"
-    ],
-    correctAnswer: "qisqa muddatli va uzoq muddatli"
-  },
-  {
-    question: "O'simlik va hayvonlami o'sishi hamda rivojlanishi, tabiatdagi mavsumiy o'zgarishlar haqidagi bilimlarning jamg'arilishi uchun kuzatishning ancha murakkabroq turi --- ...dan foydalaniladi?",
-    options: ["uzoq muddatli", "harakatli va harakatsiz", "uzlukli va uzluksiz", "solishtirma va qiyosiy"],
-    correctAnswer: "uzoq muddatli"
-  },
-  {
-    question: "Qanday kuzatishlar mazmuniga ko'ra murakkab bo'lganligi sababli, maktabgacha ta'limda o'rta hamda katta guruxlarda olib boriladi?",
-    options: [
-      "Solishtirma va uzoq muddatli",
-      "Harakatli va harakatsiz",
-      "Uzlukli va uzluksiz",
-      "solishtirma va qiyosiy"
-    ],
-    correctAnswer: "Solishtirma va uzoq muddatli"
-  },
-  {
-    question: "Kuzatishning bu turi bolalarda tabiat hodisalarini analiz qilish, ayrim ma'lumotlarni qiyoslash, soddaroq xulosalar chiqarish ko'nikmalarining hosil bolishiga yordam beradi",
-    options: [
-      "Solishtirma va uzoq muddatli",
-      "Harakatli va harakatsiz",
-      "Uzlukli va uzluksiz",
-      "solishtirma va qiyosiy"
-    ],
-    correctAnswer: "Solishtirma va uzoq muddatli"
-  },
-  {
-    question: "Tarqatma materiallardan foydalanib kuzatish qaysimetodga kiradi?",
-    options: ["ko'rgazmali metod", "hikoya,mehnat", "amaliy metod", "suhbat, rasm"],
-    correctAnswer: "ko'rgazmali metod"
-  },
-  {
-    question: "O'yin, mehnat, kundalik kuzatish qaysi metodga kiradi?",
-    options: ["amaliy metod", "oddiy tajribalar", "ko'rgazmali metod", "suhbatli, og'zaki nutq"],
-    correctAnswer: "amaliy metod"
-  },
-  {
-    question: "Ekskursiya turlari",
-    options: [
-      "tabiatshunoslik va qishloq xo'jalik",
-      "hayvonot bogiga, mevazorga",
-      "Dalaga, paxta maydonlariga",
-      "qishloq xo'jaligi va dala maydonlariga"
-    ],
-    correctAnswer: "tabiatshunoslik va qishloq xo'jalik"
-  },
-  {
-    question: "Predmetli o'yinlarga qaysilar kiradi?",
-    options: [
-      "domino, loto, zoologiya, botanika",
-      "stol bosma o'yinlari, zoologiya lotosi.",
-      "chumchuq va avtomobil, tovuq jo 'jalari bilan",
-      "ajoyib xaltacha, uy hayvonlari solingan rasmlar"
-    ],
-    correctAnswer: "domino, loto, zoologiya, botanika"
-  },
-  {
-    question: "Stol bosma o'yinlari qaysilar?",
-    options: [
-      "zoologiya lotosi, botanika lotosi, yilning turli fasli, mevalar, o'simliklar",
-      "Domino, predmetli rasm, turli xil ildizlar",
-      "tabiat materiallaridan turli narsalar yasash",
-      "zoologiya lotosi, hayvonlar rasmi, o'simliklar rasmi"
-    ],
-    correctAnswer: "zoologiya lotosi, botanika lotosi, yilning turli fasli, mevalar, o'simliklar"
-  },
-  {
-    question: "Ekskursiyada qaysi metod qo'llaniladi?",
-    options: [
-      "kuzatish, og'zaki",
-      "mashgulot, og'zaki",
-      "hikoya, suhbat, amaliy.",
-      "sayr, ekskursiya, mehnat"
-    ],
-    correctAnswer: "kuzatish, og'zaki"
-  },
-  {
-    question: "Yer maydonchasiga tavsiya etilgan gullar qaysilar?",
-    options: [
-      "gulbeor, qo'qongul, astra, romashka, piyongul, gulsapsar, lola",
-      "astra, atirgul, piyongul, gvozdika, gladiolus, gulbiyorqo'qongul, lola",
-      "atirgul, gulbiyor, lola, astra, gulbiyor",
-      "romashka, atirgul, gulbiyor, lola, astra"
-    ],
-    correctAnswer: "gulbeor, qo'qongul, astra, romashka, piyongul, gulsapsar, lola"
-  },
-  {
-    question: "Qisqa muddatli kuzatushga qaysilar kiradi?",
-    options: [
-      "qor yog'ishi, yomg'ir yog'ishi, kamalakni kuzatish",
-      "qushlar va gullami kuzatish",
-      "erta bahorgi gullami va kuzgi qushlami kuzatish qoryog' ish, yomg'ir yog'ishi, erta bahorgi gullarni kuzatish.",
-      "yomg'ir yog'ishi, hashorotlarni, qushlarni kuzatish"
-    ],
-    correctAnswer: "qor yog'ishi, yomg'ir yog'ishi, kamalakni kuzatish"
-  },
-  {
-    question: "Yerning ichki qismidagi erigan suyuq jisimlar hamda turli gazlarni yoriqlar orqali yeryuzaga otilib chiqishga nima deyiladi.",
-    options: ["ko'lmak", "botqoqlik", "vulqon", "chuqurlik"],
-    correctAnswer: "vulqon"
-  },
-  {
-    question: "Qaysi modda eng ko'p issiqlik qabul qiluvchi hisoblanadi.",
-    options: ["vulqon", "suv", "olov", "quruqlik"],
-    correctAnswer: "suv"
-  },
-  {
-    question: "Quruqlikda suv havzasini hosil qilgan va dengiz bilan bevosita tutashmagan chuqurliklariga nima deb ataladi.",
-    options: ["daryo", "soy", "ko'l", "dengiz"],
-    correctAnswer: "ko'l"
-  },
-  {
-    question: "Tabiiy chuqurlikda xarakat qiladigan suv oqimiga nima deyiladi.",
-    options: ["ko'lmak", "soy", "dengiz", "daryo"],
-    correctAnswer: "daryo"
-  },
-  {
-    question: "O'zbekistonda qor tog'larda necha kun saqlanib turadi.",
-    options: ["85-100 kun", "90-100 kun", "95-100 kun", "75-100 kun"],
-    correctAnswer: "90-100 kun"
-  },
-  {
-    question: "O'zbekistonga yog'inlar asosan qaysi okeandan keladi.",
-    options: ["Atlantika", "Hind", "Tinch", "Shimoliy"],
-    correctAnswer: "Atlantika"
-  },
-  {
-    question: "O'zbekistonda eng kam yillik yog'in miqdori qaysi xududlarda yog'adi",
-    options: [
-      "Ustyurt, Norin daryo, Qizilqum",
-      "Ustyurt, Quyi Amudaryo, Qizilqum",
-      "Qizilqum, Norin daryo, Ustyurt",
-      "Ustyurt, Norin"
-    ],
-    correctAnswer: "Ustyurt, Norin daryo, Qizilqum"
-  },
-  {
-    question: "Oyning massasi yernikidan necha marta kam.",
-    options: ["80.4 marta", "81,3 marta", "52.1 marta", "63.1 marta"],
-    correctAnswer: "81,3 marta"
-  },
-  {
-    question: "Eng katta sayyora qaysi.",
-    options: ["yupiter", "neptun", "uran", "merkuriy"],
-    correctAnswer: "yupiter"
-  },
-  {
-    question: "Sirdaryoning uzunligi qancha.",
-    options: ["1122km", "2312km", "2412 km", "2212 km"],
-    correctAnswer: "2212 km"
-  },
-  {
-    question: "Ibn Sino qaysi ijtimoiy-falsafiy asarida tabiatga mehr-muruvvatli bo'lgan yoshlarni tarbiyalash kerak degan fikrlarni ilgari surgan?",
-    options: ["Kitob bash shifo", "Tib qonunlari", "Kitob ul-qulanch", "Donishnoma"],
-    correctAnswer: "Donishnoma"
-  },
-  {
-    question: "Tabiatshunoslikni o'qitishda bolalarni har tomonlama tarbiyalashning mazmuni va metodlarini ochib beruvchi pedagogik fan nima deb nomlanadi?",
-    options: [
-      "Tabiatshunoslikning zamonaviy konseptsiyasi",
-      "Tabiatshunoslik asoslari",
-      "Tabiatshunoslik",
-      "Tabiatshunoslik o'qitish metodikasi"
-    ],
-    correctAnswer: "Tabiatshunoslik o'qitish metodikasi"
-  },
-  {
-    question: "Tabiatshunoslikda ko'rgazmali o'quv qurollari necha turga bo'linadi?",
-    options: [
-      "tabiiy jismlar va suratlar",
-      "sathli, hajmli, tabiiy",
-      "sathli va hajmli",
-      "sahifali va hajmli"
-    ],
-    correctAnswer: "tabiiy jismlar va suratlar"
-  },
-  {
-    question: "Tabiatshunoslik darslarida muammoli vaziyatda masalani hal qilishning birinchi bosqichi nimadan iborat?",
-    options: [
-      "masalani to'g'ri anglab olishdan iborat",
-      "masala shartini yechishdan iborat",
-      "masalaga yaqindan yondoshishdan iborat",
-      "masala shartini, uni yechish uchun nima ma'lumligini aniqlashdan iborat"
-    ],
-    correctAnswer: "masala shartini, uni yechish uchun nima ma'lumligini aniqlashdan iborat"
-  },
-  {
-    question: "Tabiatshunoslik darslarida hikoyaga qo'yiladigan talablarning ketma-ketligini to'g'ri belgilang:",
-    options: [
-      "ravonlik, ketma-ketlik, izchillik, taqqoslash, tasvirlash",
-      "tasvirlash, rovonlik, ketma-ketlik taqqoslash, izchillik",
-      "tasvirlash, taqqoslash, izchillik rovonlik, ketma-ketlik,",
-      "tasvirlash, taqqoslash, rovonlik, ketma-ketlik, izchillik"
-    ],
-    correctAnswer: "ravonlik, ketma-ketlik, izchillik, taqqoslash, tasvirlash"
-  },
-  {
-    question: "O'quvchilarning jonli tabiat burchagidagi mehnat turlari nimalardan iborat?",
-    options: [
-      "gullarni sug'orish va barglarini artish",
-      "gullarni sug'orish va barglarini artish, hayvonlarni boqish va toza joyda saqlash",
-      "hayvonlarni boqish va toza joyda saqlash",
-      "maktab uchastkasida ishlash, hayvonlarni boqish va toza joyda saqlash"
-    ],
-    correctAnswer: "gullarni sug'orish va barglarini artish, hayvonlarni boqish va toza joyda saqlash"
-  },
-  {
-    question: "Tabiatshunoslik va atrofimizdagi olam predmeti qanday fanlarga zamin yaratadi?",
-    options: ["Astronomiya , geometriya", "Kimyo, algebra", "Georgafiya, lingvistika", "Botanika, geografiya"],
-    correctAnswer: "Botanika, geografiya"
-  },
-  {
-    question: "Dunyoda shunday ko'l borki, 'bu ko'lning suviga ruchka yoki qalamni botirib bemalol qog'ozga yozsa ham bo'ladi. Bu yozuvni esa keyin hech qachon o'chirib bo'lmaydi'. Ushbu ko'l qaysi davlatda.",
-    options: ["Misrda", "Amerikada", "Afrikada", "Jazoirda"],
-    correctAnswer: "Jazoirda"
-  },
-  {
-    question: "Dunyoda «Tabiatshunoslik» fanining rivojlanishiga turtki bo'lgan asarlar",
-    options: [
-      "Yevklidning «Boshlanish»i va Ptolomeyning «Buyuk qurilish» asarlari;",
-      "Sofiya Kovalevskaya, Mariya Kyuri tabiatshunoslikka oid asarlari;",
-      "Abu Ali ibn Sino va Zahiriddin Muhammad Bobur tabiat va uning tirik mavjudotlariga doir asarlari",
-      "Abu Nasr Farobiy 'Fozil odamlar shahri' asari"
-    ],
-    correctAnswer: "Yevklidning «Boshlanish»i va Ptolomeyning «Buyuk qurilish» asarlari;"
-  },
-  {
-    question: "Talabalarni tabiatshunoslik muammolariga bag'ishlangan maqolalar, adabiyotlarga taqriz, annotatsiya yozishga o'rgatish bu....",
-    options: ["fanning asosiy maqsadi", "fanning asosiy vazifasi.", "fanning asosiy prinsiplari", "fanning asosiy predmeti"],
-    correctAnswer: "fanning asosiy vazifasi."
-  },
-  {
-    question: "Yerlarni o'zlashtirishda 'Birinchi yili undan hech narsa olmasinlar, ikkinchi yili raiyat o'z roziligi bilan berganni olsinlar, uchinchi yili esa qonun-qoidaga muvofiq xiroj yig'ilsin' deb aytilgan g'oya muallifi kim va asari nomi.",
-    options: [
-      "Abu Ali Ibn Sino 'Hindiston'",
-      "Al Beruniy 'Kobul devoni'",
-      "Soxibqiron Amir Temur 'Temur tuziklari'.",
-      "Yusuf xos Xojib 'Qutadg'u bilib'"
-    ],
-    correctAnswer: "Soxibqiron Amir Temur 'Temur tuziklari'."
-  },
-  {
-    question: "Quyosh atmosferasi qaysi qatlamalardan iborat",
-    options: [
-      "xromosfera, quyosh toji",
-      "quyosh toji",
-      "fotosfera, xromosfera, quyosh toji",
-      "fotosfera"
-    ],
-    correctAnswer: "fotosfera, xromosfera, quyosh toji"
-  },
-  {
-    question: "Ichki guruh sayyoralarga qaysi sayyoralar kiradi",
-    options: [
-      "Yer, Uran, Pluton",
-      "Merkuriy,Venera, Yer, Mars.",
-      "Mars, Neptun,Oy",
-      "Neptun,Yer, Venera"
-    ],
-    correctAnswer: "Merkuriy,Venera, Yer, Mars."
-  },
-  {
-    question: "Yerning geosferalari qaysi javobda ko'rsatilgan",
-    options: [
-      "suv qatlami-gidrosfera, qattiq qatlam-litosfera",
-      "troposfera-xavo qatlami, suv qatlami-gidrosfera, qattiq qatlam-litosfera",
-      "yerning tirik organizmlari",
-      "havo qatlami-atmasfera, suv qatlami-gidrosfera, qattiq qatlam-litosfera"
-    ],
-    correctAnswer: "havo qatlami-atmasfera, suv qatlami-gidrosfera, qattiq qatlam-litosfera"
-  },
-  {
-    question: "«Tabiatshunoslik» fani rivojlanishi 1 bosqichi qaysi davrlarni o'z ichiga oladi",
-    options: [
-      "2-bosqich eramizgacha bo'lgan 5-6 asrlargacha",
-      "1-bosqich eramizgacha bo'lgan 8-6 asrlargacha",
-      "3-bosqich eramizgacha bo'lgan 4-6 asrlargacha",
-      "2-bosqich eramizgacha bo'lgan 8-5 asrgacha"
-    ],
-    correctAnswer: "1-bosqich eramizgacha bo'lgan 8-6 asrlargacha"
-  },
-  {
-    question: "Qadimgi grek olimlaridan Pifagor va Eratosfen tabiatshunoslik bo'yicha kashfiyotlaridan nimalarni aniqladi",
-    options: [
-      "Eratosfen esa yerning radiusini aniqladi",
-      "Aristotel g'arb va sharqning tomonlarini belgiladi",
-      "Pifagor dunyoning sharsimon ekanligini, Eratosfen esa yerning radiusini aniqladi",
-      "Empedokl janubiy va shimoliy tomonini aniqladi"
-    ],
-    correctAnswer: "Pifagor dunyoning sharsimon ekanligini, Eratosfen esa yerning radiusini aniqladi"
-  },
-  {
-    question: "Tabiatshunoslikning nechta bosh yo'nalishi bor",
-    options: ["5ta", "7ta", "3ta", "6ta"],
-    correctAnswer: "3ta"
-  },
-  {
-    question: "«Tabiatshunoslik» fani rivojlanishi 3-bosqichi qaysi davrlarni o'z ichiga oladi",
-    options: ["9-11 asr", "5-7 asr", "8-12 asr", "4-6 asr"],
-    correctAnswer: "8-12 asr"
-  },
-  {
-    question: "«Tabiatshunoslik» fani rivojlanishining qaysi bosqichda 'tabiatni o'rganuvchilar' atamasi kirib keldi",
-    options: [
-      "5 bosqich 16-15 asrlar",
-      "2 bosqich 14-16 asrlar",
-      "4 bosqich 15-18 asrlar",
-      "3 bosqich 19-20 asrlar"
-    ],
-    correctAnswer: "4 bosqich 15-18 asrlar"
-  },
-  {
-    question: "«Tabiatshunoslik» fani rivojlanishining qaysi bosqichida hujayra kashf qilindi",
-    options: [
-      "4 bosqich XV-XVIII asrlar",
-      "5 bosqich XIX asrlar",
-      "5 bosqich XVI-XVII asrlar",
-      "3 bosqich X-XIV asrlar"
-    ],
-    correctAnswer: "5 bosqich XVI-XVII asrlar"
-  },
-  {
-    question: "Biotexnologiya, sinergitika, kibernetika kabi fanlar «Tabiatshunoslik» fani rivojlanishining qaysi bosqichiga to'g'ri keladi",
-    options: ["6-bosqich", "5-bosqich", "2-bosqich", "4-bosqich"],
-    correctAnswer: "6-bosqich"
-  },
-  {
-    question: "Yer aylanishining burchak hisobidagi tezligi bir soat vaqt ichida necha gradusga siljiydi",
-    options: ["25 gradus", "15 gradus", "11 gradus", "23 gradus"],
-    correctAnswer: "15 gradus"
-  },
-  {
-    question: "Relef so'zining lug'aviy ma'nosi toping",
-    options: [
-      "(lotincha,relief,lot.relevo) ko'taraman",
-      "(frans,relief,lot.relevo) ko'taraman",
-      "(yunoncha,relief,lot.relevo) ko'taraman",
-      "(inglizcha,relief,lot.relevo) ko'taraman"
-    ],
-    correctAnswer: "(frans,relief,lot.relevo) ko'taraman"
-  },
-  {
-    question: "Zilzila necha balli sodir bo'lganda xom g'ishtli binolar qulaydi.Pishiq g'isht binolarda yoriqlar paydo bo'ladi",
-    options: ["8 ball", "4 ball", "6 ball", "9 ball"],
-    correctAnswer: "8 ball"
-  },
-  {
-    question: "Gidrosfera suv hajmining katta qismi qaysi tabiiy ob'ektlarga to'g'ri keladi",
-    options: [
-      "5 mlrd 390 mln.km.kub okean va dengizlarga",
-      "1 mlrd 370 mln.km.kub okean va dengizlarga",
-      "3mlrd 170 mln.km.kub okean va dengizlarga",
-      "4 mlrd 142 mln.km.kub okean va dengizlarga"
-    ],
-    correctAnswer: "1 mlrd 370 mln.km.kub okean va dengizlarga"
-  },
-  {
-    question: "Gidrosfera suv hajmining eng kichik qismi qaysi tabiiy ob'ektlarga to'g'ri keladi",
-    options: [
-      "2.3 ming km.kub daryolarga",
-      "1,2 ming km.kub daryolarga",
-      "6.1 ming km.kub daryolarga",
-      "4.1 ming km. kub daryo"
-    ],
-    correctAnswer: "1,2 ming km.kub daryolarga"
-  },
-  {
-    question: "Inson muskulining necha foizi suvdan iborat",
-    options: ["73%", "76%", "70%", "75 %"],
-    correctAnswer: "75 %"
-  },
-  {
-    question: "Fotosintez jarayonida suv qanday moddalarga ajraladi.",
-    options: [
-      "vodorod & kislorod",
-      "vodorod & azot",
-      "vodorod & xlorid",
-      "kislorod & azot"
-    ],
-    correctAnswer: "vodorod & kislorod"
-  },
-  {
-    question: "Suvning issiqlik sig'imi yog'ochnikidan necha baravar yuqori",
-    options: ["4barobar", "6 barobar", "5 barobar", "2 baravar"],
-    correctAnswer: "2 baravar"
-  },
-  {
-    question: "Suvning issiqlik sig'imi qumnikidan necha baravar yuqori",
-    options: ["5 baravar", "3 barobar", "6 barobar", "4barobar"],
-    correctAnswer: "5 baravar"
-  },
-  {
-    question: "Tabiatda tarqalgan 107 xil kimyoviy elementlarning nechtasi suv tarkibida uchraydi",
-    options: ["62 ta", "60 ta", "56 ta", "54 ta"],
-    correctAnswer: "62 ta"
-  },
-  {
-    question: "Eng sersuv mahsulot bu tarvuzdir. Tarvuzning necha foiz qismi suvdan iborat bo'ladi.",
-    options: ["95%", "93 %", "89%", "87%"],
-    correctAnswer: "93 %"
-  },
-  {
-    question: "Inson miyasining o'rtacha necha foizi suvdan iborat.",
-    options: ["83 %", "89%", "90 %", "75 %"],
-    correctAnswer: "90 %"
-  },
-  {
-    question: "Inson qonining necha foizi suvdan iborat",
-    options: ["83 %", "82%", "73%", "68 %"],
-    correctAnswer: "83 %"
-  },
-  {
-    question: "Odam tanasidagi suv miqdori 5-8 foizga kamaysa qanday xolat ro'y beradi",
-    options: [
-      "Og'iz quruqshaydi,teri bujmayadi,ong o'tmaslashadi,ko'zga xar hil narsalar ko'rina boshlaydi (10-13 %dan 15-17 % yetsa o'ladi.)",
-      "Og'iz quruqshaydi,teri bujmayadi,ong o'tmaslashadi,ko'zga xar hil narsalar ko'rina boshlaydi, hushdan ketadi (5-8 %dan 14-15 % yetsa o'ladi.)",
-      "Og'iz quruqshaydi,teri bujmayadi, ko'zga xar hil narsalar ko'rina boshlaydi, hushdan ketadi (10-12 %dan 3-9 % yetsa o'ladi.)",
-      "Og'izquruqshaydi, ong o'tmaslashadi,ko'zga xar hil narsalar ko'rina boshlaydi, hushdan ketadi (11-12 %dan 3-10% yetsa o'ladi.)"
-    ],
-    correctAnswer: "Og'iz quruqshaydi,teri bujmayadi,ong o'tmaslashadi,ko'zga xar hil narsalar ko'rina boshlaydi, hushdan ketadi (5-8 %dan 14-15 % yetsa o'ladi.)"
-  },
-  {
-    question: "Gorizont so'zining lug' aviy ma'nosi nima deb ataladi.",
-    options: ["yunoncha tomon", "yunoncha burchak", "italyancha yon", "inglizcha burchak"],
-    correctAnswer: "yunoncha tomon"
-  },
-  {
-    question: "Zilzila o'chog'i nima deb ataladi.",
-    options: ["yer plitasi", "yer g'ovagi", "perisentr", "epitsentr"],
-    correctAnswer: "epitsentr"
-  },
-  {
-    question: "Atmosferada eng ko'p bo'ladigan modda..",
-    options: ["azot", "kislorod", "vodorod", "kaliy"],
-    correctAnswer: "azot"
-  },
-  {
-    question: "Atmosferaning eng pastki qatlami...",
-    options: ["litosfesa", "troposfera", "gidrosfera", "atmosfera"],
-    correctAnswer: "troposfera"
-  },
-  {
-    question: "Farg'ona viloyati qaysi viloyatlar bilan chegaradosh.",
-    options: ["Buxoro,Andijon", "Andijin Farg'ona", "Namangan,Andijon", "Buxoro, Farg'ona"],
-    correctAnswer: "Namangan,Andijon"
-  },
-  {
-    question: "Aydarko'l qaysi viloyatlar xududida joylashgan",
-    options: ["Navoiy,Jizzax", "Navoiy,Andijon", "Andijon,Farg'ona", "Farg'ona,Namangan"],
-    correctAnswer: "Navoiy,Jizzax"
-  },
-  {
-    question: "O'zbekistonda yozda eng yuqori harorat Termizda necha gradus bo'ladi.",
-    options: ["50 C", "32 C", "46 C", "43 C"],
-    correctAnswer: "50 C"
-  },
-  {
-    question: "Fransuz tilidan tarjima qilganda '5 qator' ma'nosini bildiruvchi usul",
-    options: ["Sinkveyn", "Klaster", "Aqliy hujum", "Insert"],
-    correctAnswer: "Sinkveyn"
-  },
-  {
-    question: "Pedagogik jarayonda shaxslararo munosabatlarning keskinlashuvi natijasi sifatida yuzaga keluvchi muammoli jarayon-bu...",
-    options: ["pedagogik konflikt", "pedagogik munozara", "pedagogik odob", "pedagogik usul"],
-    correctAnswer: "pedagogik konflikt"
-  },
-  {
-    question: "«Didaktika» termini yunoncha «didaktikos» degan so'zdan olingan bo'lib, qanday ma'noda tarjima qilinadi?",
-    options: [
-      "Ta'lim berish va o'qitish",
-      "O'qituvchi",
-      "Ta'lim beruvchi va ta'lim oluvchi",
-      "Ta'lim oluvchi"
-    ],
-    correctAnswer: "Ta'lim beruvchi va ta'lim oluvchi"
-  },
-  {
-    question: "«Buyuk didaktika» asarini kim yozgan?",
-    options: ["Ya.A.Komenskiy", "Suqrot", "Arastu", "J.J.Russo"],
-    correctAnswer: "Ya.A.Komenskiy"
-  },
-  {
-    question: "Pedagogika qanday fan?",
-    options: [
-      "Pedagogika ta'lim-tarbiya jarayonining mohiyati, mazmuni, qonuniyatlari, metodlarini o'rganuvchi ijtimoiy, umumkasbiy fan.",
-      "Pedagogika tarbiyaning nazariy asoslarini tadqiq etuvchi ijtimoiy-gumanitar fan",
-      "Pedagogika tarbiya jarayonining qonuniyatlari, prinsiplari, shakl va metodlari haqidagi gumanitar fan.",
-      "Pedagogika ta'lim jarayonining mazmuni, qonuniyatlari, metodlarini o'rganuvchi, ijtimoiy, umumkasbiy fan."
-    ],
-    correctAnswer: "Pedagogika ta'lim-tarbiya jarayonining mohiyati, mazmuni, qonuniyatlari, metodlarini o'rganuvchi ijtimoiy, umumkasbiy fan."
-  },
-  {
-    question: "Tarbiyaning asosiy vazifasi nima?",
-    options: [
-      "Tarbiya yosh avlodni jamiyatimizda qabul qilingan odob-axloq qoidalariga mos keladigan e'tiqodini, axloqiy ko'nikma va malakalarini, extiyoji va intilishlarini tarkib toptirishdan iborat",
-      "Odamlarning dunyo bilan munosabatlarining bir butun sistemasini ta'minlovchi, vosita",
-      "Zarurat, ehtiyojlilik-qandaydir bir vosita, o'zga narsaga javob berish, insonning ruhiy holatini to'g'rilovchi omil.",
-      "Odamning jamiyat a'zosi sifatida o'z-o'zini anglash va tafakkurini, faoljyatining ob'yektivligini biluvchanlik tushunchasidir"
-    ],
-    correctAnswer: "Tarbiya yosh avlodni jamiyatimizda qabul qilingan odob-axloq qoidalariga mos keladigan e'tiqodini, axloqiy ko'nikma va malakalarini, extiyoji va intilishlarini tarkib toptirishdan iborat"
-  },
-  {
-    question: "Shaxs kamolotiga qanday omillar ta'sir etadi?",
-    options: [
-      "biologik omil, ijtimoiy omil va tarbiya ta'sir etadi.",
-      "bola shaxsining rivojlanishiga muhit va tarbiya kabi omillar.",
-      "shaxsning kamol topishida ijtimoiy va biologik omillar ta'sir etadi.",
-      "odamlarning munosabati."
-    ],
-    correctAnswer: "biologik omil, ijtimoiy omil va tarbiya ta'sir etadi."
-  },
-  {
-    question: "Abu Ali Ibn Sinoning ta'lim-tarbiya haqidagi fikrlari.",
-    options: [
-      "Bolaga jamoada ta'lim berish afzalligi.",
-      "Tarbiya yagona jarayon.",
-      "6 yoshdan bolani muallimga topshirish.",
-      "Tarbiya bu najot."
-    ],
-    correctAnswer: "Bolaga jamoada ta'lim berish afzalligi."
-  },
-  {
-    question: "Pedagogik diagnostika nima?",
-    options: [
-      "ta'lim tarbiya jarayonini chuqur taxlil qilish uning samaradorligini to'g'ri baholash ta'lim darajasini aniqlash",
-      "bilish sifatini takomilashtirish",
-      "talimni takomilashtirish",
-      "talimdagi kamchiliklarni bartaraf qilish"
-    ],
-    correctAnswer: "ta'lim tarbiya jarayonini chuqur taxlil qilish uning samaradorligini to'g'ri baholash ta'lim darajasini aniqlash"
-  },
-  {
-    question: "Nuqtalar o'rniga mos javobni qoying. ...... ya'ni elementar o'qish va yozishga o'rgatish bolalarga savod o'rgatish pedagogikadagina emas balki ijtimoiy hayotda ham juda jiddiy qo'yilgan holatdir",
-    options: ["Savod o'rgatish metodikasi", "Nutqni o'stirish metodikasi", "Imlo metodikasi", "O'qitish metodikasi"],
-    correctAnswer: "Savod o'rgatish metodikasi"
-  },
-  {
-    question: "Ta'lim metodlari qanday ma'noni anglatadi?",
-    options: [
-      "o'quvchilarga bilim berishning yo'llari va usullarini ifodalaydi",
-      "o'quvchilarni bilimli qilishni tamoyillarini bildiradi",
-      "ta'limning asosiy tartibi xisoblanadi",
-      "o'qituvchining talabchanligini taminlaydi"
-    ],
-    correctAnswer: "o'quvchilarga bilim berishning yo'llari va usullarini ifodalaydi"
-  },
-  {
-    question: "Malaka nima?",
-    options: [
-      "malaka bilan bir xil ongli xatti xarakatlarning ko'p marta takrorlanishi asosida xosil bo'ladigan avtomatik jarayon",
-      "malaka to'plangan tajribadir",
-      "malaka bir xil xatti xarakatlarning ko'p marta takrorlanishi",
-      "malaka bu odatiy harakatlar"
-    ],
-    correctAnswer: "malaka bilan bir xil ongli xatti xarakatlarning ko'p marta takrorlanishi asosida xosil bo'ladigan avtomatik jarayon"
-  },
-  {
-    question: "Ta'lim olish huquqi 'Ta'lim tog'risida'gi qonunning nechanchi moddasida keltirilgan?",
-    options: ["5 modasida", "23 modasida", "7 modasida", "55 modasida"],
-    correctAnswer: "5 modasida"
-  },
-  {
-    question: "«Texnologiya» so'zi haqida tushuncha?",
-    options: [
-      "«texne» - mahorat, san'at, «logos» - tushuncha ta'limot",
-      "«texne» - mehnat, san'at, «logos» - tushuncha bilim",
-      "«texne» - qobiliyat, san'at, «logos» - tushuncha ta'lim",
-      "«texne» - san'at, «logos» -- tushuncha o'qitish"
-    ],
-    correctAnswer: "«texne» - mahorat, san'at, «logos» - tushuncha ta'limot"
-  },
-  {
-    question: "Pedagogning umumiy madaniyati nimalardan iborat?",
-    options: [
-      "Bilimi, ishonchi, qobiliyati va xulqi",
-      "Ijtimoiy madaniyat",
-      "Kasbiy ahamiyatli madaniyat",
-      "Kasbiy faoliyatda yetukligi"
-    ],
-    correctAnswer: "Bilimi, ishonchi, qobiliyati va xulqi"
-  },
-  {
-    question: "O'qituvchining pedagogik faoliyati turlari qaysilar?",
-    options: [
-      "Konstruktiv, tadqiqotchilik, kommunikativ, tashkilotchilik, gnostic",
-      "Ta'lim beruvchi, tarbiyalovchi, rivojlantiruvchi",
-      "o'quvchi faoliyatini tashkil etish va boshqarish",
-      "Shakllantiruvchi va rivojlantiruvchi"
-    ],
-    correctAnswer: "Konstruktiv, tadqiqotchilik, kommunikativ, tashkilotchilik, gnostic"
-  },
-  {
-    question: "Jamoa so'ziga to'g'ri ta'rif toping",
-    options: [
-      "latincha 'kollektivus' -- yig'ilma, omma, birgalikdagi majlis, birlashma, guruh.",
-      "Lotincha 'projectus'- oldinga tashlangan",
-      "inglizcha qayta ishlash",
-      "lotincha qurish"
-    ],
-    correctAnswer: "latincha 'kollektivus' -- yig'ilma, omma, birgalikdagi majlis, birlashma, guruh."
-  },
-  {
-    question: "Sinf so'ziga to'g'ri ta'rif berilgan qatorni toping.",
-    options: [
-      "yoshi va bilimi jihatidan bir xil bо'lgan muayyan о'quvchilar guruhi",
-      "tarbiyalanuvchilarning yosh, psixologik xususiyatiga kо'ra shakllantirilgan yoki о'rta maxsus va oliy ta'lim muassasalari ta'lim oluvchilarining akademik jamoasi.",
-      "yig'ilma, omma, birgalikdagi majlis, birlashma, guruh.",
-      "ijtimoiy ahamiyatga ega umumiy maqsad asosida bir necha о'quvchilardan tashkil topgan guruh."
-    ],
-    correctAnswer: "yoshi va bilimi jihatidan bir xil bо'lgan muayyan о'quvchilar guruhi"
-  },
-  {
-    question: "Umumiy maqsad yo'lida shaxslarning o'zaro munosabatlari, tashkiliyligi va intilishlari bilan bir-biriga monand turg'un sotsial (ijtimoiy) uyushmani nima deb yuritiladi?",
-    options: ["Jamoa", "guruh", "jamiyat", "konformlilik"],
-    correctAnswer: "Jamoa"
-  },
-  {
-    question: "Og'zaki ta'lim metodlari qaysilar?",
-    options: [
-      "Hikoya, suhbat, ma'ruza",
-      "Hikoya, suhbat, mashq",
-      "Hikoya, mashq",
-      "Ma'ruza, seminar, laboratoriya ishi"
-    ],
-    correctAnswer: "Hikoya, suhbat, ma'ruza"
-  },
-  {
-    question: "O'zbekiston Respublikasining 'Ta'lim to'g'risida'gi qonuniga muvofiq kimlar pedagogik faoliyat bilan shug'ullanish huquqiga egalar?",
-    options: [
-      "tegishli ma'lumoti, kasbiy tayyorgarligi bor va yuksak axloqiy fazilatlarga ega bo'lgan shaxslar",
-      "kasbiy bilim, ko'nikma va malaka, shuningdek, ta'lim muassasalarida ishlash tajribasiga ega shaxslar",
-      "oliy pedagogik ma'lumot hamda 5 yillik pedagogik stajga ega shaxslar",
-      "faoliyat jarayonida ta'lim oluvchilarning yosh va psixologik xususiyatlarini biladigan shaxslar"
-    ],
-    correctAnswer: "tegishli ma'lumoti, kasbiy tayyorgarligi bor va yuksak axloqiy fazilatlarga ega bo'lgan shaxslar"
-  },
-  {
-    question: "Nutq e'tikasi bu...",
-    options: [
-      "sodda va ravon so'zlardan foydalana olish.",
-      "fikrni ravon ifodalash",
-      "mustaqil gaplar.",
-      "juda ham jiddiy so'zlarni qamrab oladi."
-    ],
-    correctAnswer: "sodda va ravon so'zlardan foydalana olish."
-  },
-  {
-    question: "Inson 70% bilimlarni necha yoshgacha o'zlashtiradi.",
-    options: ["7", "6", "10", "9"],
+    question: "Kubning hajmi 343 mm3 bo‘lsa, uning tomonini toping.",
+    options: ["11", "7", "9", "3"],
     correctAnswer: "7"
   },
   {
-    question: "'Ta'lim to'g'risidagi qonun' qachon qabul qilingan qayta taxrirdan o'tkazilgani qachon qabul qilingan?",
-    options: ["2020 yil 23 sentabr", "2020 yil, 29 iyul", "2019 yil, 12 avgust", "1993 yil, 11 avgust"],
-    correctAnswer: "2020 yil 23 sentabr"
+    question: "Berilgan sonni rim raqamlarida ifodalang: 183",
+    options: ["LDIX", "CDIII", "CLXXXIII", "XDIII"],
+    correctAnswer: "CLXXXIII"
   },
   {
-    question: "'Pedagogika bola tarbiyasining fani demakdir'. Ta'rif kim tomonidan berilgan?",
-    options: ["Abdulla Avloniy", "H.H.niyoziy", "Abduqodir Shakuriy", "Ishoqxon Ibrat"],
-    correctAnswer: "Abdulla Avloniy"
+    question: "Nodiraning bo’yi Feruzaning bo’yidan 12 sm past, ammo Azizaning bo’yidan 10 sm baland. Feruza Azizadan necha sm baland?",
+    options: ["2sm", "20 sm", "22 sm", "12sm"],
+    correctAnswer: "22 sm"
   },
   {
-    question: "Pedagokika faning otasi kim",
-    options: ["Yan Amos Komenskiy", "Godnin", "Kuznin", "Aristotel"],
-    correctAnswer: "Yan Amos Komenskiy"
+    question: "Asqar 20 yoshida, Sobir uning yoshini yarmiga teng edi. Hozir Asqar 50 yosh bo’lsa Sobir necha yoshda?",
+    options: ["40", "30", "70", "45"],
+    correctAnswer: "40"
   },
   {
-    question: "Innovatsiya pedagogik termin sifatida nechanchi asrda va qayerda paydo bo'lgan",
-    options: [
-      "XX asrning 60-yillarida Garbiy Yevropa va AQSh",
-      "XX asrning 50-yillarida Yaponiyada",
-      "XIX asrning 60-yillarida Germaniyada.",
-      "XIX asrning 80-yillarida Germaniyada"
-    ],
-    correctAnswer: "XX asrning 60-yillarida Garbiy Yevropa va AQSh"
+    question: "Quyidagi qatorlardan qaysi birida uzunlik o’lchov birliklari berilgan?",
+    options: ["Millimetr (mm), Santimetr (cm), Detsimetr (dm), Metr (m), Kilometr (km).", "Gramm (g), Kilogramm (kg), Sentner (s), Tonna (t)", "Sekund, Minut, Soat, Sutka, Hafta, Oy, Yil, Asr", "Litr, Sotix, Gektar"],
+    correctAnswer: "Millimetr (mm), Santimetr (cm), Detsimetr (dm), Metr (m), Kilometr (km)."
   },
   {
-    question: "6 yil bepul haftasiga 6 kun o'qish. 6-aprelda o'quv yili boshlanadi. Ushbu davlat nomini belgilang",
-    options: ["Germaniya", "Yaponiya", "Hindiston", "litviya"],
-    correctAnswer: "Yaponiya"
+    question: "Agar birinchi son 25 ga ortsa, ikkinchi son 15 ga kamaytirilsa yig’indi qanday o’zgaradi",
+    options: ["o’zgarmaydi", "10 ga kamayadi", "10 ga ortadi", "10 foizga ortadi"],
+    correctAnswer: "10 foizga ortadi"
   },
   {
-    question: "Kompetensiya so'zining lug'aviy ma'nosi",
-    options: ["loyiqman, munosibman", "bajaraman, to'g'rilayman", "tashkil etaman", "uyushtiraman"],
-    correctAnswer: "loyiqman, munosibman"
+    question: "Amallarni bajaring. 180 ∙ 30 + 2960 − 5511",
+    options: ["1599", "3257", "2849", "2859"],
+    correctAnswer: "2849"
   },
   {
-    question: "'Klaster 'so'zining ma'nosi",
-    options: ["bog'lam", "alohida", "yangilik", "o'ziga xoslik"],
-    correctAnswer: "bog'lam"
+    question: "7 ga bo’lganda qoldiq 9 bo’lishi mumkinmi?",
+    options: ["mumkin emas", "8 bo’ladi", "7dan katta son bo’ladi", "mumkin"],
+    correctAnswer: "mumkin emas"
   },
   {
-    question: "'Fan va aql-zakovat' asarining muallifi kim?",
-    options: ["Al-Farobiy", "Al- Farg'oniy", "Abu Ali Ibn Sino", "Ahmad Yugnakiy"],
-    correctAnswer: "Al-Farobiy"
+    question: "O’nta tuxum sotib oldim. 2 ta tuxumni to’rt pishirish uchun singlimga berdim. Ikkita tuxumni qovurdim. Ikkita tuxumni yedim. Nechta tuxum qoldi.",
+    options: ["0", "6", "4", "8"],
+    correctAnswer: "6"
   },
   {
-    question: "Loyihaviy ta'lim qancha vaqtdan buyon pedagogikada foydalanib kelinmoqda",
-    options: ["300 yildan ortiq vaqt", "200 yildan ortiq vaqt", "50 yildan ortiq", "2005-yildan beri"],
-    correctAnswer: "300 yildan ortiq vaqt"
+    question: "56 ??? Matematika fanining o'rganadigan obyekti … iboratdir.",
+    options: ["to’g’ri javob berilmagan", "integralni hisoblashdan", "fazoviy shakllar va ular orasidagi miqdoriy munosabatlardan", "sonning kvadratini topishdan"],
+    correctAnswer: "fazoviy shakllar va ular orasidagi miqdoriy munosabatlardan"
   },
   {
-    question: "Bir va bir necha oygacha ishlab chiqiladigan ta'lim loyihalari turini ayting",
-    options: ["Uzoq muddatli loyiha", "O'rta muddatli loyiha", "Axborotli loyihalar", "Amaliy loyihalar"],
+    question: "Mashina 50 km/h tezlik bilan 8 soat yurdi. Mashina shu masofani 5 soatda bosib otish uchun qanday tezlikda yurishi kerak?",
+    options: ["100km/h", "90 km/h", "120km/h", "80km/h"],
+    correctAnswer: "80km/h"
+  },
+  {
+    question: "Umumiy qoidalardan xususiy misollarga va konkret qoidalarga olib boruvchi metod … deyiladi.",
+    options: ["deduksiya", "induksiya", "statsionar", "reproduktiv"],
+    correctAnswer: "deduksiya"
+  },
+  {
+    question: "Uchburchakning asosi 20 ga va asosiga tushirilgan balandligi 15 ga teng. Uning yuzini toping.",
+    options: ["200", "150", "160", "140"],
+    correctAnswer: "150"
+  },
+  {
+    question: "Algoritm bu - …",
+    options: ["Berilgan masalani yechish uchun bajarilishi lozim bo’lgan amallar to’plami", "Berilgan masalani yechish uchun bajarilishi lozim bo’lgan amallarning qat’iy ketmaketligi", "Berilgan masalani yechishda foydalaniladigan amallar ketma-ketligi majmui", "Berilgan masalani yechishda foydalaniladigan amallar to’plami"],
+    correctAnswer: "Berilgan masalani yechish uchun bajarilishi lozim bo’lgan amallarning qat’iy ketmaketligi"
+  },
+  {
+    question: "Fermadagi quyonlar soni 159 ta bo‘lib, ular fermadagi qo‘ylar sonidan 23 taga ortiq, lekin sigirlar sonidan 23 taga kam. Fermadagi jami uy hayvonlari soni topilsin.",
+    options: ["477", "450", "182", "464"],
+    correctAnswer: "477"
+  },
+  {
+    question: "Berilgan ifodaning qiymatini toping. 42 · (18 + 82) : (8745 – 8724)",
+    options: ["420", "201", "200", "190"],
+    correctAnswer: "200"
+  },
+  {
+    question: "Hisoblang: 3/4 + 1/2 =",
+    options: ["4/ 6", "1", "4 /5", "5 /4"],
+    correctAnswer: "5 /4"
+  },
+  {
+    question: "Santimetr va millimetrda ifodalang: 12 dm 5cm 7 mm=",
+    options: ["1257 cm", "125 cm 7mm", "1257mm", "12 dm 57 cm"],
+    correctAnswer: "125 cm 7mm"
+  },
+  {
+    question: "Samolyotda 84 ta o‘rindiq bor. 59 ta yo‘lovchi chiqdi. Bo‘sh o‘rindiqlar soni yo‘lovchilar sonidan nechta kam?",
+    options: ["34", "35", "30", "25"],
+    correctAnswer: "34"
+  },
+  {
+    question: "Aylana markazida o’tuvchi vatar … deyiladi.",
+    options: ["Kesma", "Nur", "Radius", "Diametr"],
+    correctAnswer: "Diametr"
+  },
+  {
+    question: "To’g’ri to’rtburchakning tomonlari mos ravishda 6 va 8 ga teng bo’lsa uning dioganalining uzunligining toping.",
+    options: ["28", "5", "10", "48"],
+    correctAnswer: "10"
+  },
+  {
+    question: "Eng katta 2 xonali tub son nechchi?",
+    options: ["99", "97", "91", "93"],
+    correctAnswer: "97"
+  },
+  {
+    question: "Akmal bilan Madina qiziqarli masalalar yechishdi. Bolalardan ular nechta masala yechganligi so’ralganda, Akmal: “Men Madina yechgan masalalarning yarmini va yana 10 ta Madina: “Men Akmal  shuncha va yana 20 ta Ular jami nechta masala yechganlar?",
+    options: ["80", "60", "40", "100"],
+    correctAnswer: "100"
+  },
+  {
+    question: "Uchburchak deb nimaga aytiladi?",
+    options: ["Tekislikda berilgan uchta nuqtani ketma-ket tutashtirishdan hosil qilingan geometrik shakl", "Bitta umumiy nuqtadan chiquvchi ikkita nur hosil qilgan geometrik shakl", "Ikki tomonidan nuqta bilan chegaralangan to’g’", "Bir to’g’ri chiziqda yotmagan uchta nuqtani ketma-ket tutashtirishdan hosil qilingan geometrik sha"],
+    correctAnswer: "Bir to’g’ri chiziqda yotmagan uchta nuqtani ketma-ket tutashtirishdan hosil qilingan geometrik sha"
+  },
+  {
+    question: "Tekislikning aylana bilan chegaralangan qismi … deyiladi.",
+    options: ["Doira", "Radius", "Diametr", "Sfera"],
+    correctAnswer: "Doira"
+  },
+  {
+    question: "To’g’ri tenglik hosil bo’lishi bo’lishi uchun x o’rniga qanday sonni qo’yish kerak: 12-6:3+2·x=20",
+    options: ["8", "4", "5", "6"],
+    correctAnswer: "5"
+  },
+  {
+    question: "\"Metodika\" grekcha so'z bo'lib, … ma'nosini anglatadi.",
+    options: ["uchburchak", "kvadrat", "yo’l", "bir"],
+    correctAnswer: "yo’l"
+  },
+  {
+    question: "Noma`lum bo`luvchi qanday topiladi?",
+    options: ["Ko`paytuvchi bo`linuvchiga bo`linadi", "Bo`linuvchi bo`linmaga bo`linadi.", "Bo`linuvchi bo`linmaga ko`paytirib topiladi", "Bo`luvchi bolinuvchiga kopaytiriladi"],
+    correctAnswer: "Bo`linuvchi bo`linmaga bo`linadi."
+  },
+  {
+    question: "“7 – 4 = ?” ifodaning matematik ma’nosi qanday?",
+    options: ["Son o’qida 7 sonidan 4 birlik chapga ko’chirilsa qanday natija hosil bo’ladi?", "Son o’qida 4 sonidan 7 birlik chapga ko’chirilsa qanday natija hosil bo’ladi?", "Son o’qida 4 sonidan 7 birlik o’ngga ko’chirilsa qanday nati", "Son o’qida 7 sonidan 4 birlik o’ngga ko’chirilsa qanday natija hosil bo’ladi?"],
+    correctAnswer: "Son o’qida 7 sonidan 4 birlik chapga ko’chirilsa qanday natija hosil bo’ladi?"
+  },
+  {
+    question: "Chet eldan kelgan 70 ta turisrlarning 57 tasi ingliz tilini, 29 tasi fransuz tilini biladi. Agar har bir turist kamida 1 ta tilni biladi desak, 2 ta tilni biladigan turistlar nechta?",
+    options: ["15", "14", "16", "17"],
+    correctAnswer: "16"
+  },
+  {
+    question: "Kitobning sahifalari tartiblab chiqildi. Birinchi sahifa 1 va 2 sonlari bilan, ikkinchi sahifa esa 3 va 4 sonlari bilan va hokazo. 200 betlik kitob taxminan ochilganda siz ko‘rib turgan betlar yig‘indisi quyidagilardan qaysi biri bo‘lishi mumkin?",
+    options: ["110", "90", "73", "42"],
+    correctAnswer: "73"
+  },
+  {
+    question: "Ilyos bog‘dan 24 ta olma uzdi. Ashraf esa undan 17 ta ko‘p olma uzdi. Aka-ukalar bog‘dan jami nechta olma uzgan?",
+    options: ["63", "64", "41", "65"],
+    correctAnswer: "65"
+  },
+  {
+    question: "Tenglamani yeching: 20∙x+45=85",
+    options: ["2", "1", "0", "3"],
+    correctAnswer: "2"
+  },
+  {
+    question: "Chet eldan kelgan 70 ta turisrlarning 57 tasi ingliz tilini, 29 tasi fransuz tilini biladi. Agar har bir turist kamida 1 ta tilni biladi desak, faqat fransuz tilini biladigan turistlar nechta?",
+    options: ["12", "15", "13", "14"],
+    correctAnswer: "13"
+  },
+  {
+    question: "Ali doskaga ikki xonali son yozdi. Vali esa shu sondan 16 ga kattaroq sonni yozdi. Agar Ali yozgan son ketma-ket yozilsa, 1100 dan kichik son hosil bo‘ladi. Vali yozgan sonni toping.",
+    options: ["28", "27", "26", "25"],
+    correctAnswer: "26"
+  },
+  {
+    question: "Agar mototsiklchi 30 km/h tezlik bilan yursa, u 3 h da qancha masofani bosib o’tadi?",
+    options: ["90", "30", "120", "60"],
+    correctAnswer: "90"
+  },
+  {
+    question: "Uchburchakning asosi 16 ga va asosiga tushirilgan balandligi 12 ga teng. Uning yuzini toping.",
+    options: ["96", "60", "52", "86"],
+    correctAnswer: "96"
+  },
+  {
+    question: "724 sonida nechta yuzlik mavjud?",
+    options: ["24", "7", "4", "72"],
+    correctAnswer: "7"
+  },
+  {
+    question: "220 metr matodan 25 ta bir xil xalat va bir nechta bir xil ko’ylak tikildi. Xalatga 4 m, ko’ylakka undan 1 m kam mato ishlatilda. Nechta ko’ylak tikilgan?",
+    options: ["41", "50", "25", "40"],
+    correctAnswer: "40"
+  },
+  {
+    question: "Bitta olma bitta nokdan 5 g og‘irroq. Agar pallali tarozining bir pallasiga 49 ta olma ikkinchi pallasiga esa 49 ta nok va X g og‘irlikdagi tosh qo‘yilsa, tarozi muvozanatda bo‘ladi. X topilsin.",
+    options: ["250", "245", "225", "300"],
+    correctAnswer: "245"
+  },
+  {
+    question: "Tenglamani yeching: ? ∙ 144 − 25 ∙ 4 = 132",
+    options: ["4", "3", "5", "2"],
+    correctAnswer: "3"
+  },
+  {
+    question: "To‘g‘ri chiziqda bir nechta nuqta belgilandi. Keyin har ikki nuqta orasiga bitta nuqta qo‘yildi. So‘ng bu yana uch marta takrorlandi. Natijada 81 ta nuqta hosil bo‘ldi. To‘g‘ri chiziqda dastlab nechta nuqta belgilangan edi?",
+    options: ["5", "6", "11", "21"],
+    correctAnswer: "6"
+  },
+  {
+    question: "5 metrli yog‘ochni uzunligi 1 metrlik bo‘laklarga ajratish uchun uning necha joyidan arralash kerak?",
+    options: ["6", "5", "4", "3"],
+    correctAnswer: "4"
+  },
+  {
+    question: "Tomoni 4 cm bo‘lgan kubning hajmi tomoni 2 cm bo‘lgan kubning hajmidan necha marta katta?",
+    options: ["8", "2", "4", "16"],
+    correctAnswer: "8"
+  },
+  {
+    question: "To’rtburchak deb nimaga aytiladi?",
+    options: ["Bir tekislikda yotuvchi ixtiyoriy uchtasi bir to’g’ri chiziqda yotmagan to’rtta nuqtani o’zaro kesis", "Bir tekislikda yotmagan, ixtiyoriy uchtasi bir to’g’ri chiziqda yotmagan to’rtta nuqtani o’za...", "Bir tekislikda yotuvchi to’rtta nuqtani o’zaro kesishmaydigan kesmalar....", "Bir tekislikda yotuvchi, ixtiyoriy uchtasi bir to’g’ri chiziqda yotmagan to’rtta nuqtani...."],
+    correctAnswer: "Bir tekislikda yotuvchi ixtiyoriy uchtasi bir to’g’ri chiziqda yotmagan to’rtta nuqtani o’zaro kesis"
+  },
+  {
+    question: "Zavodda 1 soatda 16 ta mashina ishlab chiqarilsa, 9 soatda nechta mashina ishlab chiqariladi?",
+    options: ["140", "134", "144", "169"],
+    correctAnswer: "144"
+  },
+  {
+    question: "Hisoblang: 3/4 + 5/8 =",
+    options: ["8 /12", "44 /8", "15 /32", "11 /8"],
+    correctAnswer: "11 /8"
+  },
+  {
+    question: "Uchburchakning asosi 6 ga va asosiga tushirilgan balandligi 14 ga teng. Uning yuzini toping.",
+    options: ["32", "26", "48", "42"],
+    correctAnswer: "42"
+  },
+  {
+    question: "Ko’paytma qachon o’zgarmaydi?",
+    options: ["bo’linuvchi va bo’luvchi o’rni almashsa", "bo’linma va bo’linuvchi o’rni almashsa", "qo’shiluvchilar o’rni almashsa", "ko’paytiruvchining o’rnini almashtirsak"],
+    correctAnswer: "ko’paytiruvchining o’rnini almashtirsak"
+  },
+  {
+    question: "Rim raqamlarni bilan Berilgan sonni oddiy ko’rinishda yozing: CDXV",
+    options: ["408", "401", "509", "415"],
+    correctAnswer: "415"
+  },
+  {
+    question: "Mening buvim 75 yoshda. Onam buvimdan 21 yosh kichik. Men esa onamdan 6 marta kichikman. Buvim mendan necha yosh katta?",
+    options: ["60", "66", "64", "65"],
+    correctAnswer: "66"
+  },
+  {
+    question: "Amallarni bajaring. 150 ∙ 22 + 5800 − 2023",
+    options: ["2849", "1599", "7077", "2859"],
+    correctAnswer: "7077"
+  },
+  {
+    question: "Ko’prikning ustuni suv tubidagi loyda suvda va havoda turibdi. Uning uzunligi 130 m suvdagi qismi 33 m loydagi qismi 55 m bo’lsa havodagi qismining uzunligining toping.",
+    options: ["52", "32", "42", "62"],
+    correctAnswer: "42"
+  },
+  {
+    question: "724 sonida nechta o’nlik mavjud?",
+    options: ["724", "720", "20", "72"],
+    correctAnswer: "72"
+  },
+  {
+    question: "Qanday sonni 7 ga bo’lsa ham, 8 ga bo’lganda ham 2 qoldiq qoladi?",
+    options: ["57", "58", "55", "56"],
+    correctAnswer: "58"
+  },
+  {
+    question: "Agar avtobus har bir bekat oralig’i uchun 3 minut vaqt sarflansa, 15-bekatga borish uchun qancha vaqt sarflaydi?",
+    options: ["40", "45", "41", "42"],
+    correctAnswer: "42"
+  },
+  {
+    question: "Ikki sonning yig’indisi 50 ga teng, ular 2:3 nisbatda bo’lsa bu sonlarni toping.",
+    options: ["20, 30", "35, 20", "11, 44", "22, 33"],
+    correctAnswer: "20, 30"
+  },
+  {
+    question: "Santimetr va millimetrda ifodalang: 12 dm 5sm 7 mm=",
+    options: ["1257sm", "12dm 57sm", "125sm 7mm", "1257mm"],
+    correctAnswer: "125sm 7mm"
+  },
+  {
+    question: "O‘quvchilar tafakkurini charxlashga yonaltirilgan masala turi?",
+    options: ["soda", "ikki va undan ortiq usulli masala", "murakkab", "mantiqiy"],
+    correctAnswer: "mantiqiy"
+  },
+  {
+    question: "Aylanadan uning markazigacha bo’lgan masofa … deyiladi.",
+    options: ["Radius", "Diametr", "Markazi", "Vatar"],
+    correctAnswer: "Radius"
+  },
+  {
+    question: "Tenglamani yeching (7521+x)*24:20=9438",
+    options: ["345", "346", "344", "347"],
+    correctAnswer: "344"
+  },
+  {
+    question: "Kubning tomoni 7 cm bo’lsa, uning hajmini toping.",
+    options: ["343", "21", "334", "49"],
+    correctAnswer: "343"
+  },
+  {
+    question: "Mashina 60 km/h tezlik bilan 4 soat yurdi. Mashina shu masofani 3 soatda bosib otish uchun qanday tezlikda yurishi kerak?",
+    options: ["100 km/h", "50 km/h", "120 km/h", "80 km/h"],
+    correctAnswer: "80 km/h"
+  },
+  {
+    question: "Berilgan kasrlardan eng kattasini toping.",
+    options: ["3/15,", "3/10", "1/5,", "5/6,"],
+    correctAnswer: "5/6,"
+  },
+  {
+    question: "13 kishi bir-biri bilan salomlashganda, qo’l berib ko’rishishlar soni qancha bo’ladi?",
+    options: ["86", "78", "84", "82"],
+    correctAnswer: "78"
+  },
+  {
+    question: "Qushlar galasi uchub ketmoqda. Oldinda 1 ta qush, uning orqasida 2 ta qush. Orqada 1 ta qush, uning oldida 2 ta qush. O‘rtada 1 ta qush, uning oldida 1 ta qush, orqasida 1 ta qush. Qushlar galasida nechta qush borligini aniqlang?",
+    options: ["16", "3", "9", "10"],
+    correctAnswer: "3"
+  },
+  {
+    question: "Ali va Vali yoshlari yig’indisi 10 ga teng. Lekin 1 yildan so’ng Ali Validan 2 barobar katta bo’ladi. Ali xozirda necha yoshda?",
+    options: ["5", "7", "8", "6"],
+    correctAnswer: "7"
+  },
+  {
+    question: "O’quvchi 290 betli sarguzasht kitobni o’qib chiqmoqchi. U bir kunda 50 bet kitob o’qiy oladi, lekin har safar voqealarni eslash uchun oxirgi 10 betni qayta o’qib chiqadi. U kitobni necha kunda o’qib tugatadi?",
+    options: ["9 kun", "6 kun", "7 kun", "8 kun"],
+    correctAnswer: "7 kun"
+  },
+  {
+    question: "Bitta guldonga 7 ta gul sig’adi. 181 ta gulni guldonlarga joylansa, nechta guldon kerak bo’ladi va nechta gul ortib qoladi.",
+    options: ["25 ta guldon va 6 ta gul ortib qoladi.", "23 ta guldon va 5 ta gul ortib qoladi.", "24 ta guldon va 6 ta gul ortib qoladi", "25 ta guldon va 5 ta gul ortib qoladi."],
+    correctAnswer: "25 ta guldon va 6 ta gul ortib qoladi."
+  },
+  {
+    question: "Santimetr va millimetrda ifodalang: 17 dm 8 cm 9 mm=",
+    options: ["17 dm 89cm", "178 cm 9mm", "189 mm", "1789 cm"],
+    correctAnswer: "178 cm 9mm"
+  },
+  {
+    question: "Muzeyda 47 ta qoraqalpoq rassomlari va ulardan ikki marta ko’p o’zbek rassomlarining asarlari to’plangan. Agar muzeyda jami 235 ta asar bo’lsa, rus rassomlarining nechta asari joy olgan?",
+    options: ["94", "47", "188", "141"],
+    correctAnswer: "94"
+  },
+  {
+    question: "Hisoblang: 7∙8-40:8",
+    options: ["38", "30", "41", "51"],
+    correctAnswer: "51"
+  },
+  {
+    question: "“4 + 1 = ?” ifodaning matematik ma’nosi qanday?",
+    options: ["Son o’qida 4 sonidan 1 birlik o’ngga ko’chirilsa qanday natija hosil bo’ladi?", "Son o’qida 1 sonidan 4 birlik chapga ko’chirilsa qanday natija hosil bo’ladi?", "Son o’qida 4 sonidan 1 birlik chapga ko’chirilsa qanday natija hosil bo’ladi?", "Son o’qida 1 sonidan 4 birlik o’ngga ko’chirilsa qanday nati"],
+    correctAnswer: "Son o’qida 4 sonidan 1 birlik o’ngga ko’chirilsa qanday natija hosil bo’ladi?"
+  },
+  {
+    question: "Ota ayiq ikki kunda 8 kg asal yeydi. Ona ayiq esa uch kunda 9 kg asal yeydi. Ikkita kichkina ayiqcha uch kunda 3 kg asal yeydi. To‘rtta kichkina ayiqchasi bor ota-ona ayiqlar 30 kun uchun kamida qancha asal g‘amlashi kerak?",
+    options: ["330", "300", "270", "240"],
+    correctAnswer: "270"
+  },
+  {
+    question: "Kitob daftardan 5 marta yoki 1500 so’m qimmat turadi. Daftarning narxi qancha so’m?",
+    options: ["375", "370", "380", "382"],
+    correctAnswer: "375"
+  },
+  {
+    question: "Uchburchakning tomonlari 5 см, 8см va 9 см bo’lsa, uning perimetrini toping.",
+    options: ["17", "25", "22", "24"],
+    correctAnswer: "22"
+  },
+  {
+    question: "Agar elektir hisoblagich 1-yanvar kuni 39503 ni ko’rsatsa va fevral oxirida borib 41213 ni ko’rsatsa, agar 1 kilovatt energiya uchun 300 so’m sarflansa, shu 2 oy davomida elektr toki uchun qancha mablag’ sarflanadi?",
+    options: ["484 000", "390 400", "500 000", "513 000"],
+    correctAnswer: "513 000"
+  },
+  {
+    question: "7 tonnani kilogrammlarda ifodalang.",
+    options: ["7000", "70", "700", "7"],
+    correctAnswer: "7000"
+  },
+  {
+    question: "Uchburchak ichki burchaklari yig’indisi … ga teng. Nuqtalar o’rniga mos keluvchi sonni toping.",
+    options: ["180 gradus", "270 gradus", "360 gradus", "90 gradus"],
+    correctAnswer: "180 gradus"
+  },
+  {
+    question: "Havo harorati ertalab 180 C, tushlikka kelib 320 C va tushda 310 C ni tashkil etdi. O’rtacha haroratni toping.",
+    options: ["260 C", "270 C", "250 C", "280 C"],
+    correctAnswer: "270 C"
+  },
+  {
+    question: "Fazoning sfera bilan chegaralangan qismi … deyiladi.",
+    options: ["Sfera", "Shar", "Doira", "Diametr"],
+    correctAnswer: "Shar"
+  },
+  {
+    question: "Ulushlar deb nimaga aytiladi?",
+    options: ["Hammasi to`g`ri", "Bir ikki uch ulush deyiladi", "yarmi teng bo’laklari", "Butunning teng bo’laklari"],
+    correctAnswer: "Butunning teng bo’laklari"
+  },
+  {
+    question: "Son bilan yozing: Yerdan Oygacha eng yaqin masofa uch yuz ellik olti ming to‘rt yuz to‘qqiz km.",
+    options: ["356 409", "300 56 409", "300 560 409", "460 740"],
+    correctAnswer: "356 409"
+  },
+  {
+    question: "Uch xonali natural sonlar nechta?",
+    options: ["100", "1000", "900", "999"],
+    correctAnswer: "900"
+  },
+  {
+    question: "Sinfda jami 42 nafar o’quvchi bo’lib, qiz bolalar o’g’il bolalarga qaraganda ikki marta ko'p. Sinfda nechta o'g'il bola bor?",
+    options: ["28", "24", "15", "14"],
+    correctAnswer: "14"
+  },
+  {
+    question: "Aylananing ixtiyoriy ikkita nuqtasini tutashtiruvchi kesma … deyiladi.",
+    options: ["Diametr", "Radius", "Vatar", "Markazi"],
+    correctAnswer: "Vatar"
+  },
+  {
+    question: "Tashkilot printer va kompyuter sotib oldi. Kompyuter printerdan 5 barobar qimmat. Kompyuter va printer birgalikda 5mln 700ming so’m bo’lsa, kompyuterning narxi qancha?",
+    options: ["4 mln 500ming", "4 mln 650ming", "4 mln 750ming", "4 mln 800ming"],
+    correctAnswer: "4 mln 750ming"
+  },
+  {
+    question: "Rim raqamlarni bilan Berilgan sonni oddiy ko’rinishda yozing: XCIX",
+    options: ["119", "109", "99", "101"],
+    correctAnswer: "99"
+  },
+  {
+    question: "Ilyos bog‘dan 30 ta olma uzdi. Ashraf esa undan 12 ta ko‘p olma uzdi. Aka-ukalar bog‘dan jami nechta olma uzgan?",
+    options: ["65", "64", "72", "63"],
+    correctAnswer: "72"
+  },
+  {
+    question: "Bir xil tushunchaga kiruvchi narsalar tasvirlangan qatorni toping?",
+    options: ["Kub, shar, to`rtburchak, shkaf", "Daftar, qalam, ruchka, kitob", "Quyon, shar, o`yinchoq, qoshiq, kub", "Palka, qalamdon, shar"],
+    correctAnswer: "Daftar, qalam, ruchka, kitob"
+  },
+  {
+    question: "Uchta tokchada 384 ta kitob bor. Birinchi tokchadagi kitoblar ikkinchi tokchadagidan 2 marta ko’p, uchinchi tokchadagi kitoblar esa ikkinchi tokchadagidan 3 marta ko’p. Har qaysi tokchada nechta kitob bor ?",
+    options: ["128, 64, 192;", "128, 60, 196;", "130, 64, 190;", "126, 62, 198;"],
+    correctAnswer: "128, 64, 192;"
+  },
+  {
+    question: "Ta`lim tizimidagi har bir o`quv fanining mazmuni va o`tilish tartibi, o`quvchilar tomonidan o`zlashtirilishi lozim bo`lgan bilim hamda ko`nikmalar hajmini belgilab beradigan rasmiy hujjat qaysi",
+    options: ["dastur", "o`quv dasturi", "mualliflik o`quv dasturlari", "darslik"],
+    correctAnswer: "o`quv dasturi"
+  },
+  {
+    question: "O‘quvchilar haftaning 3 kunida kollejda nazariy bilim oladi, 3 kunida korxonaning o‘zida, biriktirilgan usta, master rahbarligida ish o‘rnida amaliyot o‘taydi. Bu qaysi davlatda",
+    options: ["Germaniyada", "Koreyada", "Amerikada", "Fransiyada"],
+    correctAnswer: "Germaniyada"
+  },
+  {
+    question: "Ishlab chiqarishdan ajralgan holda ta'lim olish ta'limning qanday shakli hisoblanadi +kunduzgi ta’lim",
+    options: ["dual ta’lim", "kechki ta’lim", "sirtqi ta’lim", "kunduzgi ta’lim"],
+    correctAnswer: "kunduzgi ta’lim"
+  },
+  {
+    question: "Maktabda dars jarayoni asosan necha daqiqa bo’ladi? +45 daqiqa",
+    options: ["45 daqiqa", "80 daqiqa", "90 daqiqa", "40 daqiqa"],
+    correctAnswer: "45 daqiqa"
+  },
+  {
+    question: "2022-yilda o‘quvchilarni kreativ fikrlashlarini baholashga qaratilgan xalqaro baholash dasturi qaysi?",
+    options: ["TALIS", "PISA", "TIMSS", "PIRLS"],
+    correctAnswer: "PISA"
+  },
+  {
+    question: "Standart so‘zining ma’nosi nima",
+    options: ["shakl me`yor =", "muhr tamg`a", "tafovut andoza", "me’yor, namuna, andoza"],
+    correctAnswer: "me’yor, namuna, andoza"
+  },
+  {
+    question: "Pedagog uchun eng zarur nutq madaniyatini belgilang?",
+    options: ["Keng fikrlilik, tinglovchini zeriktirmaydigan muloqot o’rnatish", "Tinglay olish, qo’llab-quvvatlash", "Tanqidiy nuqtai nazar, o’z fikrini himoya qilish", "Nutqning grammatik to’g’riligi, uning leksik boyligi, aniq va ravshan ifodalanganligi"],
+    correctAnswer: "Nutqning grammatik to’g’riligi, uning leksik boyligi, aniq va ravshan ifodalanganligi"
+  },
+  {
+    question: "Pedagogik diagnostika nima?",
+    options: ["talimdagi kamchiliklarni bartaraf qilish", "bilish sifatini takomilashtirish", "ta’lim tarbiya jarayonini chuqur taxlil qilish uning samaradorligini to‘g‘ri baholash ta’lim dar...", "talimni takomilashtirish"],
+    correctAnswer: "ta’lim tarbiya jarayonini chuqur taxlil qilish uning samaradorligini to‘g‘ri baholash ta’lim dar..."
+  },
+  {
+    question: "Pedagogik tizim nimalardan iborat?",
+    options: ["o’quvchilarning bilish faoliyatini rivojlantirish", "gaplarni yozib, saqlab olish, ijodiy yondashuv, bilim berishdan", "tanqidiy-ijodiy yondashuv, o’zaro ta’sirlar", "pedagogik jarayonning obg’ektlari va sub’ektlari, shakl - usullari, ular o’rtasidagi munosabatla..."],
+    correctAnswer: "pedagogik jarayonning obg’ektlari va sub’ektlari, shakl - usullari, ular o’rtasidagi munosabatla..."
+  },
+  {
+    question: "Jamiyatdan, jamoadan ajralib kamol topgan bola baxtsiz bo’lib qoladir\". Bu qaysi allomaning pedagogik qarashi:",
+    options: ["A.Temur", "AAvloniy", "Abu Ali Ibn sino", "Al Xorazmiy"],
+    correctAnswer: "Abu Ali Ibn sino"
+  },
+  {
+    question: "Pedagogika qanday fan?",
+    options: ["Pedagogika ta’lim jarayonining mazmuni, qonuniyatlari, metodlarini o‘rganuvchi....", "Pedagogik tarbiya jarayonining qonuniyatlari, prinsiplari, shakl va metodlari haqidagi gumanitar", "Pedagogika tarbiyaning nazariy asoslarini tadqiq etuvchi ijtimoiy- gumanitar fan", "Pedagogika ta’lim-tarbiya jarayonining mohiyati, mazmuni, qonuniyatlar.. ijtimoiy, umumkasbiy fan."],
+    correctAnswer: "Pedagogika ta’lim-tarbiya jarayonining mohiyati, mazmuni, qonuniyatlar.. ijtimoiy, umumkasbiy fan."
+  },
+  {
+    question: "Bir va bir necha oygacha ishlab chiqiladigan ta`lim loyihalari turini ayting",
+    options: ["Amaliy loyihalar", "Uzoq muddatli loyiha", "Axborotli loyihalar", "O‘rta muddatli loyiha"],
     correctAnswer: "Uzoq muddatli loyiha"
   },
   {
-    question: "Loyihaga kirishish, loyiha faoliyatini tashkil etish va rejalashtirish -- auditoriya ishini qaysi bosqichini o'z ichiga qamrab oladi",
-    options: [
-      "Tayyorgarlik bosqichi",
-      "Loyihani bajarish bosqichi",
-      "Yakunlovchi bosqich",
-      "qaytuvchi bosqich"
-    ],
+    question: ". Kishining doimiy mashg'ulot turi, muayyan ish turini malakali bajarishga imkon beradigan bilim, mahorat tajribani talab etadi.",
+    options: ["Malaka", "Bilim", "Ish faoliyati", "Kasb"],
+    correctAnswer: "Kasb"
+  },
+  {
+    question: "Ta`lim metodlari qanday ma’noni anglatadi?",
+    options: ["o‘quvchilarga bilim berishning yo`llari va usullarini ifodalaydi", "o‘qituvchining talabchanligini taminlaydi", "o‘quvchilarni bilimli qilishni tamoyillarini bildiradi", "ta`limning asosiy tartibi xisoblanadi"],
+    correctAnswer: "o‘quvchilarga bilim berishning yo`llari va usullarini ifodalaydi"
+  },
+  {
+    question: "Umumiy o‘rta va o’rta maxsus ta’lim bosqichi hamda oliy ta’lim bosqichlarining oralig‘ida qanday nomdagi ta’lim turini olish mumkin?",
+    options: ["oliy ta’limdan keyingi ta’lim", "professional ta’lim", "maktabgacha ta’lim", "boshlang‘ich ta’lim"],
+    correctAnswer: "professional ta’lim"
+  },
+  {
+    question: "Kompetensiya so‘zining lug‘aviy ma’nosi",
+    options: ["bajaraman, to‘g‘rilayman", "uyushtiraman", "loyiqman, munosibman", "tashkil etaman"],
+    correctAnswer: "loyiqman, munosibman"
+  },
+  {
+    question: "15 yoshli o‘quvchilarni matematika, o‘qish savodxonligi hamda tabiiy fanlar bo‘yicha ko‘nikmalarini baholaydigan xalqaro baholash dasturi qaysi?",
+    options: ["PIRLS", "TIMSS", "PISA", "EGMA"],
+    correctAnswer: "PISA"
+  },
+  {
+    question: "O‘qituvchining pedagogik faoliyati turlari qaysilar?",
+    options: ["Shakllantiruvchi va rivojlantiruvchi", "Ta’lim beruvchi, tarbiyalovchi, rivojlantiruvchi", "Konstruktiv, tadqiqotchilik, kommunikativ, tashkilotchilik, gnostik", "o‘quvchi faoliyatini tashkil etish va boshqarish"],
+    correctAnswer: "Konstruktiv, tadqiqotchilik, kommunikativ, tashkilotchilik, gnostik"
+  },
+  {
+    question: "4-8-sinf o‘quvchilarini matematika va tabiiy fanlardan bilim darajasini baholaydigan xalqaro baholash dasturi qaysi?",
+    options: ["PISA", "EGMA", "PIRLS", "TIMSS"],
+    correctAnswer: "TIMSS"
+  },
+  {
+    question: "“pedagogika bola tarbiyasining fani demakdir” ta’rif kim tomonidan berilgan?",
+    options: ["H.H.Niyoziy", "Abduqodir Shakuriy", "Abdulla Avloniy", "Ishoqxon Ibrat"],
+    correctAnswer: "Abdulla Avloniy"
+  },
+  {
+    question: "O‘zbekiston 2022-yilda o‘tkazilgan PISA xalqaro baholash dasturining tabiiy-ilmiy savodxonligi sohasi bo‘yicha nechanchi o‘rinni egallagan?",
+    options: ["72", "85", "80", "30"],
+    correctAnswer: "80"
+  },
+  {
+    question: "Qachon “Professional ta’lim tizimini yanada takomillashtirish to‘g‘risida”gi farmon qabul qilindi",
+    options: ["2019-yil, 6-sentyabr", "1997 y 29 avgust", "2021 y 23 oktyabr +", "2020y 23 sentyabr"],
+    correctAnswer: "2019-yil, 6-sentyabr"
+  },
+  {
+    question: "Loyihaga kirishish, loyiha faoliyatini tashkil etish va rejalashtirish – auditoriya ishini qaysi bosqichini o`z ichiga qamrab oladi",
+    options: ["Tayyorgarlik bosqichi", "qaytuvchi bosqich", "Loyihani bajarish bosqichi", "Yakunlovchi bosqich"],
     correctAnswer: "Tayyorgarlik bosqichi"
   },
   {
-    question: "......ta'lim sifatini nazorat qilish va samarali boshqarish maqsadida qo'llaniladi. Bunda turli darajadagi testlar, muammoli vaziyatlarni hal qilish (keyslarni yechish) asosida shaxsning kreativlik sifatlari va ijodiy faoliyatni tashkil eta olish ko'nikmalariga egaligi baholanadi. Nuqtalar o'rnini to'ldiring",
+    question: "Inson 70% bilimlarni necha yoshgacha o’zlashtiradi.",
+    options: ["6", "9", "7", "10"],
+    correctAnswer: "7"
+  },
+  {
+    question: "“Bolalar bilan muomalada bosiq, jiddiy bo‘lish” ushbu fikr muallif kim",
+    options: ["AAvloniy", "Abu Ali Ibn sino", "A.Temur", "Al Xorazmiy"],
+    correctAnswer: "Abu Ali Ibn sino"
+  },
+  {
+    question: "Yan Amos Komenskiy an'anaviy talimni nechanchi asrda tashkil etgan. +17 asrda",
+    options: ["16 asrda", "15 asrda", "17 asrda", "13 asrda"],
+    correctAnswer: "17 asrda"
+  },
+  {
+    question: "Finlandiya maktablarida boshlangich ta’lim necha yil davom etadi",
+    options: ["6 yil", "5 yil", "4 yil", "7 yil"],
+    correctAnswer: "6 yil"
+  },
+  {
+    question: "Noan'anaviy darslarda o‘qituvchining roli qanday o‘zgaradi?",
+    options: ["O‘qituvchi o‘quvchilarga yo‘l-yo‘riq ko‘rsatib, muammolarni yechishda yordam beradi", "O‘qituvchi barcha darslarni faqat nazariy bilimlarga asoslaydi", "O‘qituvchi sinfda faqat nazorat qiladi", "O‘qituvchi faqat ma'lumot beradi, boshqa ishtirok etmaydi"],
+    correctAnswer: "O‘qituvchi o‘quvchilarga yo‘l-yo‘riq ko‘rsatib, muammolarni yechishda yordam beradi"
+  },
+  {
+    question: "O’quvchilarning kasbiy mahoratini takomillashtirish tog’risida fikr bildirgan Evropa olimlari qaysi qatorda to’g’ri ko’rsatilgan.",
+    options: ["Y.A.Komenskiy, Demosfen", "Lokk, Ushiniskiy", "Y.A.Komenskiy, Lokk, Pestalotsi, Destverg, Ushinskiy", "Platon, Sitseron"],
+    correctAnswer: "Y.A.Komenskiy, Lokk, Pestalotsi, Destverg, Ushinskiy"
+  },
+  {
+    question: "«Buyuk didaktika» asarini kim yozgan?",
+    options: ["Arastu", "Ya.A.Komenskiy", "J.J.Russo", "Suqrot"],
+    correctAnswer: "Ya.A.Komenskiy"
+  },
+  {
+    question: "O‘quv dasturini ishlab chiqishda nimalar hisobga olinadi?",
+    options: ["Darslarning vaqt jadvali", "Faqat o‘qituvchining ehtiyojlari", "Faqat maktabning byudjeti", "O‘quvchilarning ta’lim olishga bo‘lgan qiziqishlari va ehtiyojlari"],
+    correctAnswer: "O‘quvchilarning ta’lim olishga bo‘lgan qiziqishlari va ehtiyojlari"
+  },
+  {
+    question: "STEAM” dasturida “M” qisartmasida qaysi fan mazmuni aks etgan",
+    options: ["san'at", "texnologiya", "muhandislik", "matematika"],
+    correctAnswer: "matematika"
+  },
+  {
+    question: "«Tizim» so’zining ma’nosi ko’rsatilgan qatorni belgilang?",
+    options: ["qismlardan tuzilgan, birikkan yaxlit narsa yoki hodisa =", "ijodiy yondashuv", "o’quvchilarning bilish faoliyatini rivojlantirish", "gaplarni yozib, saqlab olish"],
+    correctAnswer: "qismlardan tuzilgan, birikkan yaxlit narsa yoki hodisa ="
+  },
+  {
+    question: "Yetim bolalarni va ota-onasining yoki boshqa qonuniy vakillarining qaramog‘idan mahrum bo‘lgan bolalarni o‘qitish va ularning to‘liq ta’minoti kimning zimmasida bo‘ladi",
+    options: ["Ota onalar tomonidan", "O‘zbekiston Respublikasi Davlat byudjeti mablag‘lari hisobidan", "Tashkilot hisobidan", "Homiylik hisobidan"],
+    correctAnswer: "O‘zbekiston Respublikasi Davlat byudjeti mablag‘lari hisobidan"
+  },
+  {
+    question: "Sinf so‘ziga to‘g‘ri ta’rif berilgan qatorni toping.",
+    options: ["tarbiyalanuvchilarning yosh, psixologik xususiyatiga kо‘ra shakllantirilgan yoki о‘rta maxsus ....", "ijtimoiy ahamiyatga ega umumiy maqsad asosida bir necha о‘quvchilardan tashkil topgan guruh.", "yig‘ilma, omma, birgalikdagi majlis, birlashma, guruh.", "yoshi va bilimi jihatidan bir xil bо‘lgan muayyan о‘quvchilar guruhi"],
+    correctAnswer: "yoshi va bilimi jihatidan bir xil bо‘lgan muayyan о‘quvchilar guruhi"
+  },
+  {
+    question: "Malaka nima?",
+    options: ["malaka to’plangan tajribadir", "malaka bilan bir xil ongli xatti xarakatlarning ko`p marta takrorlanishi asosida xosil bo’ladigan...", "malaka bir xil xatti xarakatlarning ko’p marta takrorlanishi  =", "malaka bu odatiy harakatlar"],
+    correctAnswer: "malaka bilan bir xil ongli xatti xarakatlarning ko`p marta takrorlanishi asosida xosil bo’ladigan..."
+  },
+  {
+    question: "«Didaktika» termini yunoncha «didaktikos» degan so‘zdan olingan bo‘lib, qanday ma'noda tarjima qilinadi?",
+    options: ["Ta’lim oluvchi", "Ta’lim berish va o‘qitish", "Ta’lim beruvchi va ta’lim oluvchi", "O‘qituvchi"],
+    correctAnswer: "Ta’lim berish va o‘qitish"
+  },
+  {
+    question: "Sharq uyg‘onish davri baholash mezonini belgilang",
+    options: ["barakallo, tasanno, ofarin", "yaxshi, o`rta a`lo", "12345", "“juda yomon”, “yomon”, “o‘rta”, “yaxshi”, “a’lo”"],
+    correctAnswer: "barakallo, tasanno, ofarin"
+  },
+  {
+    question: "Yaponiyada bolalar boshlang’ich sinfga necha yoshdan boradilar",
+    options: ["6 yoshdan", "8 yoshdan", "7 yoshdan", "5yoshdan"],
+    correctAnswer: "6 yoshdan"
+  },
+  {
+    question: "Loyihaviy ta`lim qancha vaqtdan buyon pedagogikada foydalanib kelinmoqda",
+    options: ["200 yildan ortiq vaqt", "300 yildan ortiq vaqt", "50 yildan ortiq", "2005-yildan beri"],
+    correctAnswer: "300 yildan ortiq vaqt"
+  },
+  {
+    question: "Nutq nech xil bo'ladi",
+    options: ["4xil", "3xil", "5xil", "2xil"],
+    correctAnswer: "2xil"
+  },
+  {
+    question: "Zardushtiylik axloqining asosi bu…..",
+    options: ["Falsafa, kalom, fikr", "Falsafa ilm", "Ezgu fikr, ezgu kalom va ezgu amal", "ezgu fikr, kalom"],
+    correctAnswer: "Ezgu fikr, ezgu kalom va ezgu amal"
+  },
+  {
+    question: "STEAM texnologiyasi qachondan shakllana boshlagan",
+    options: ["2000 yil", "2005yildan", "1990 yildan", "1998 yildan"],
+    correctAnswer: "1990 yildan"
+  },
+  {
+    question: "O‘quv dasturi va o‘quv rejalari orasidagi farq nima?",
+    options: ["O‘quv reja faqat ma'ruzalar va darslar bilan cheklangan", "O‘quv dasturi uzoq muddatli maqsadlarni ko‘zlaydi, o‘quv reja esa qisqa muddatli", "O‘quv dasturi faqat darsliklardan iborat", "O‘quv dasturi faqat maktab ichidagi faoliyatni o‘z ichiga oladi"],
+    correctAnswer: "O‘quv dasturi uzoq muddatli maqsadlarni ko‘zlaydi, o‘quv reja esa qisqa muddatli"
+  },
+  {
+    question: "Qadimgi Yunonistonda bolalarga bilim berish kimga yuklatilgan",
+    options: ["Choparlarga", "Pedagoglarga", "Vazirlarga", "Faylasuflarga"],
+    correctAnswer: "Faylasuflarga"
+  },
+  {
+    question: "“Ta’lim to‘g‘risidagi qonun” qachon qabul qilingan qayta taxrirdan o`tkazilgani qachon qabul qilingan?",
+    options: ["1993 yil, 11 avgust", "2020 yil, 29 iyul", "2019 yil, 12 avgust =", "2020 yil 23 sentabr"],
+    correctAnswer: "2020 yil 23 sentabr"
+  },
+  {
+    question: "DTS qanday ta’lim turlari uchun joriy etiladi",
+    options: ["umumiy o‘rta, maktabdan tashqari ta’lim, oliy ta’lim =", "Ta`limning barcha bosqichlari uchun", "umumiy o‘rta ta’lim, oliy ta’lim", "maktabgacha, umumiy o‘rta, o‘rta maxsus"],
+    correctAnswer: "Ta`limning barcha bosqichlari uchun"
+  },
+  {
+    question: "Talabalarga muayyan mavzular bo`yicha o`z bilimlari darajasini baholay olish imkonini beradigan grafik organayzer qanday nomlanadi?",
+    options: ["Suhbat", "“Bilaman. Bilishni xohlayman. Bilib oldim” (BBB)", "Zina", "FSMU"],
+    correctAnswer: "“Bilaman. Bilishni xohlayman. Bilib oldim” (BBB)"
+  },
+  {
+    question: "“Ta’lim to’g’risidagi qonun” 2 chi bor qachon qabul qilingan",
+    options: ["1997 yil, 29 avgust", "1993 yil, 11 avgust", "1992 yil, 12 avgust", "1997 yil, 29 iyul"],
+    correctAnswer: "1997 yil, 29 avgust"
+  },
+  {
+    question: "Pedagogning kommunikativ madaniyati deganda…",
+    options: ["o‘quvchi va jamoaning faolligini", "pedagogning o‘quvchilar va atrofdagilar bilan qisqa muddatda muloqot o‘rnatishga bo‘lgan doimiy...", "pedagogik jarayonni bilish, uni tashkil eta olish.", "pedagogning dunyoga, pedagogik voqelikka va pedagogik jarayonga bo‘lgan intellektual va hissiy ..."],
+    correctAnswer: "pedagogning o‘quvchilar va atrofdagilar bilan qisqa muddatda muloqot o‘rnatishga bo‘lgan doimiy..."
+  },
+  {
+    question: "Qanday xalqaro baholash dasturlari mavjud",
+    options: ["TIMSS, TALIS, PIRLS, PISA", "PISA, PIRLS STEAM", "STIM DTS", "IVIC"],
+    correctAnswer: "TIMSS, TALIS, PIRLS, PISA"
+  },
+  {
+    question: "……ta’lim sifatini nazorat qilish va samarali boshqarish maqsadida qo‘llaniladi. Bunda turli darajadagi testlar, muammoli vaziyatlarni hal qilish (keyslarni yechish) asosida shaxsning kreativlik sifatlari va ijodiy faoliyatni tashkil eta olish ko‘nikm..",
     options: ["Pedagogik kvalimetriya", "pedagogik maxorat", "pedagogik madaniyat", "pedagogik takt"],
     correctAnswer: "Pedagogik kvalimetriya"
   },
   {
-    question: "Sharq uyg'onish davri baholash mezonini belgilang",
-    options: ["barakallo, tasanno, ofarin", "12345", "yaxshi, o'rta a'lo", "'juda yomon', 'yomon', 'o'rta', 'yaxshi', 'a'lo'"],
-    correctAnswer: "barakallo, tasanno, ofarin"
+    question: "…..bu o‘quvchilar tomonidan mazkur fanning muayyan bob yoki bo‘limlarining o‘zlashtirilganini tekshirish. Nuqtalar o`rnini to`ldiring",
+    options: ["tashkiliy", "oraliq nazorat", "joriy", "yakuniy"],
+    correctAnswer: "oraliq nazorat"
   },
   {
-    question: "Nechanchi yildan boshlab besh ballik baholar raqamlarda ya'ni, 1,2,3,4,5 raqamlarda ifoda etish joriy qilingan",
-    options: ["1944-yildan", "1990 yildan", "1950 yildan", "622 yildan"],
-    correctAnswer: "1944-yildan"
+    question: "Umumiy maqsad yo‘lida shaxslarning o‘zaro munosabatlari, tashkiliyligi va intilishlari bilan bir-biriga monand turg‘un sotsial (ijtimoiy) uyushmani nima deb yuritiladi?",
+    options: ["Jamoa", "guruh", "jamiyat", "konformlilik"],
+    correctAnswer: "Jamoa"
   },
   {
-    question: "Umumiy o'rta va o'rta maxsus ta'lim muassasalari reytingini aniqlash chora-tadbirlari to'g'risida O'zbekiston Respublikasi Vazirlar Mahkamasining, 345-sonli qarori qachon kuchga kirgan",
+    question: "Oliy ta’lim nechta bosqichdan iborat?",
+    options: ["5", "2", "4", "3"],
+    correctAnswer: "2"
+  },
+  {
+    question: "Imidj so'zining ma'nosi nima.",
+    options: ["Forscha: insonning ichki qiyofasi", "Lotincha: obraz, xarakter, qiyofa", "Gregcha: jozibali, latofatli", "Yunoncha: tashqi ko'rinish, qiyofa"],
+    correctAnswer: "Lotincha: obraz, xarakter, qiyofa"
+  },
+  {
+    question: "Fransuzcha so`zidan olingan bo`lib, mashg`ulotlarda biror-bir mavzu yuzasidan talabalar o`rtasida o`zaro bahs uyushtirish, ularning o`zaro fikr almashishlarini ta’minlashga xizmat qiladigan texnologiya (interfaol metod) qanday nomlanadi?",
+    options: ["so`rov", "“Debat”", "aqliy hujum", "ajurli arra"],
+    correctAnswer: "“Debat”"
+  },
+  {
+    question: "Pedagokika faning otasi kim",
+    options: ["Godnin", "Kuznin", "Yan Amos Komenskiy", "Aristotel"],
+    correctAnswer: "Yan Amos Komenskiy"
+  },
+  {
+    question: "“Fan va aql-zakovat” asarining muallifi kim?",
+    options: ["Ahmad Yugnakiy", "Al- Farg‘oniy", "Abu Ali Ibn Sino", "Al-Farobiy"],
+    correctAnswer: "Al-Farobiy"
+  },
+  {
+    question: "Jamoa so‘ziga to‘g‘ri ta’rif toping",
+    options: ["Lotincha “projectus”- oldinga tashlangan", "lotincha “kollektivus” – yig‘ilma, omma, birgalikdagi majlis, birlashma, guruh.", "lotincha qurish", "inglizcha qayta ishlash"],
+    correctAnswer: "lotincha “kollektivus” – yig‘ilma, omma, birgalikdagi majlis, birlashma, guruh."
+  },
+  {
+    question: "Jismoniy va aqliy sensor yoki ruhiy nuqsonlari bo’lgan shuningdek uzoq vaqt davolanishda bo’lgan bolalar ta’lim tashkilotlarida qanday shaklda ta’lim olish huquqiga ega",
+    options: ["masofaviy", "jamoaviy", "inklyuziv", "eksternat"],
+    correctAnswer: "inklyuziv"
+  },
+  {
+    question: "STEAM dasturi bõyicha õqitish bolada kõproq qaysi qobiliyatni oshishiga yordam beradi",
+    options: ["Ijodkorligi", "qiziquvchanlik", "Chiqishuvchanlik", "STEAM dasturi bolalar uchun emas"],
+    correctAnswer: "Ijodkorligi"
+  },
+  {
+    question: "Ta’lim to‘grisidagi qonunda “Dual ta’lim” nechanchi moddada ko’rsatilgan?",
+    options: ["65 modda", "17 modda", "21 modda", "29 modda"],
+    correctAnswer: "17 modda"
+  },
+  {
+    question: "Maktabga tayyorlanayotgan bola qanday ijtimoiy ko‘nikmalarni rivojlantirishi kerak?",
+    options: ["Boshqalar bilan muloqot qilish, jamoada ishlash", "Faqat o‘z-o‘zini boshqarish", "Faqat shaxsiy faoliyatni rivojlantirish", "Faqat yolg‘iz ishlash"],
+    correctAnswer: "Boshqalar bilan muloqot qilish, jamoada ishlash"
+  },
+  {
+    question: "Umumiy o‘rta ta’lim nechanchi sinflarni o‘z ichiga oladi",
+    options: ["1-8 sinflarni", "1-11-sinflarni", "5-9 sinflarni", "1-9 sinflarni"],
+    correctAnswer: "1-11-sinflarni"
+  },
+  {
+    question: "O‘zbekiston 2022-yilda o‘tkazilgan PISA xalqaro baholash dasturining o‘qish savodxonligi sohasi bo‘yicha nechanchi o‘rinni egallagan?",
+    options: ["80", "85", "72", "30"],
+    correctAnswer: "80"
+  },
+  {
+    question: "Yomon o‘qituvchi haqiqatni aytib berib qo‘ya qoladi, yaxshi o‘qituvchi esa haqiqatni topishiga o‘rgatadi” ushbu fikrni aytgan g‘arblik pedagog kim",
+    options: ["L.Xey", "A. Disterverg", "F.Fexner", "O. Kont"],
+    correctAnswer: "A. Disterverg"
+  },
+  {
+    question: "STEAM” dasturida “T” qisartmasida qaysi fan mazmuni aks etgan",
+    options: ["texnologiya", "san'at", "matematika", "tabiiy fanlar"],
+    correctAnswer: "texnologiya"
+  },
+  {
+    question: "Maktabda ta’lim sifatini ta'minlash uchun mas'ul bo‘lgan tashkilot qanday nomlanadi?",
+    options: ["Ta’lim tizimini nazorat qilish qo‘mitasi", "Maktab direktori", "Maktab kengashi", "Ta’lim inspeksiyasi"],
+    correctAnswer: "Ta’lim inspeksiyasi"
+  },
+  {
+    question: "Sinf-dars tizimi asoschisi…..?",
+    options: ["Yan Amos Komenskiy", "K.D.Ushinskiy", "A.S.Makarenko", "A.Avloniy"],
+    correctAnswer: "Yan Amos Komenskiy"
+  },
+  {
+    question: "6 yil bepul haftasiga 6 kun o‘qish. 6-aprelda o‘quv yili boshlanadi. Ushbu davlat nomini belgilang",
+    options: ["Hindiston", "Litviya", "Yaponiya", "Germaniya"],
+    correctAnswer: "Yaponiya"
+  },
+  {
+    question: "Bolalarni majburiy boshlang’ich ta’limga tayyorlash nechi yoshdan boshlanadi",
+    options: ["6-10 yoshdan", "6-7 yoshdan", "7-8 yoshdan", "6-8 yoshdan"],
+    correctAnswer: "6-7 yoshdan"
+  },
+  {
+    question: "Metod bu……..",
+    options: ["Pedagogik texnalogiyalarning tarkibiy qismi", "Lotinch so’zdan olingan bo’lib “axborot uzatish “  degan ma’noni bildiradi", "Bu yunoncha “yo’l yo’riq usul orqali maqsadga erishishdir”", "Yunoncha axborotni uzatish"],
+    correctAnswer: "Bu yunoncha “yo’l yo’riq usul orqali maqsadga erishishdir”"
+  },
+  {
+    question: "Inglizcha so`zdan olingan bo`lib, berilgan savollarga qisqa, aniq va lo`nda javob qaytarilishini taqozo etadigan metod qanday nomlanadi?",
+    options: ["loyiha", "intervyu", "nilufar guli", "Blits-so`rov”;"],
+    correctAnswer: "Blits-so`rov”;"
+  },
+  {
+    question: "Umumiy o‘rta va o’rta maxsus ta’lim bosqichida o‘qish muddati necha yil",
+    options: ["9yil", "7 yil", "11 yil", "4 yil"],
+    correctAnswer: "11 yil"
+  },
+  {
+    question: "Innovatsiya pedagogik termin sifatida nechanchi asrda va qayerda paydo bo’lgan",
+    options: ["XX asrning 60-yillarida Garbiy Yevropa va AQSh", "XIX asrning 60-yillarida Germaniyada.", "XX asrning 50-yillarida Yaponiyada", "XIX asrning 80-yillarida Germaniyada"],
+    correctAnswer: "XX asrning 60-yillarida Garbiy Yevropa va AQSh"
+  },
+  {
+    question: "O‘qituvchining pedagogik faoliyati turlari - bu ...",
+    options: ["Ta’lim beruvchi, tarbiyalovchi, rivojlantiruvchi", "Shakllantiruvchi va rivojlantiruvchi", "Konstruktiv, tadqiqotchilik, kommunikativ, tashkilotchilik, gnostik", "o‘quvchi faoliyatini tashkil etish va boshqarish"],
+    correctAnswer: "Konstruktiv, tadqiqotchilik, kommunikativ, tashkilotchilik, gnostik"
+  },
+  {
+    question: "Pedagogikada jazolash usuli qanday amalga oshiriladi?",
+    options: ["Tushuntirish, tanbeh berish, ogohlantirish, qattiq ogohlantirish, uyaltirish.", "Haqorat qilib.", "Tanbeh berib", "Kaltaklab, urib, haqorat qilib."],
+    correctAnswer: "Tushuntirish, tanbeh berish, ogohlantirish, qattiq ogohlantirish, uyaltirish."
+  },
+  {
+    question: "Shaxs kamolotiga qanday omillar ta’sir etadi?",
+    options: ["biologik omil, ijtimoiy omil va tarbiya ta’sir etadi.", "odamlarning munosabati.", "bola shaxsining rivojlanishiga muhit va tarbiya kabi omillar.", "shaxsning kamol topishida ijtimoiy va biologik omillar ta’sir etadi."],
+    correctAnswer: "biologik omil, ijtimoiy omil va tarbiya ta’sir etadi."
+  },
+  {
+    question: "“Pedagogika bola tarbiyasining fani demakdir”. Ta’rif kim tomonidan berilgan?",
+    options: ["H.H.niyoziy", "Ishoqxon Ibrat", "Abduqodir Shakuriy", "Abdulla Avloniy"],
+    correctAnswer: "Abdulla Avloniy"
+  },
+  {
+    question: "Pedagogning umumiy madaniyati nimalardan iborat?",
+    options: ["Ijtimoiy madaniyat", "Bilimi, ishonchi, qobiliyati va xulqi", "Kasbiy ahamiyatli madaniyat", "Kasbiy faoliyatda yetukligi"],
+    correctAnswer: "Bilimi, ishonchi, qobiliyati va xulqi"
+  },
+  {
+    question: "STEAM” dasturida “E” qisartmasida qaysi fan mazmuni aks etgan +muhandislik",
+    options: ["san'at", "muhandislik", "Etimologiya", "mehnat"],
+    correctAnswer: "muhandislik"
+  },
+  {
+    question: "Qaysi davlat bogchalarida bolalarni 8 kishilik xanlarga bo’lib ta’lim beradilar. +Yaponiya",
+    options: ["Germaniya", "Yaponiya", "Xitoy", "Koreya"],
+    correctAnswer: "Yaponiya"
+  },
+  {
+    question: "Nuqtalar o‘rniga mos javobni qoying. ............... ya’ni elementar o‘qish va yozishga o‘rgatish bolalarga savod o‘rgatish pedagogikadagina emas balki ijtimoiy hayotda ham juda jiddiy qo‘yilgan holatdir",
+    options: ["Nutqni o‘stirish metodikasi", "Savod o‘rgatish metodikasi", "Imlo metodikasi", "O‘qitish metodikasi"],
+    correctAnswer: "Savod o‘rgatish metodikasi"
+  },
+  {
+    question: "Nutq e’tikasi bu…",
+    options: ["fikrni ravon ifodalash", "juda ham jiddiy so‘zlarni qamrab oladi.", "mustaqil gaplar.", "sodda va ravon so‘zlardan foydalana olish."],
+    correctAnswer: "sodda va ravon so‘zlardan foydalana olish."
+  },
+  {
+    question: "Iqtisod deb pul va Mol kabi ne'matlarning qadrini bilmakka aytilur.Quydagi gapga kim tarif bergan.",
+    options: ["Alisher Navoiy", "Amir Temur", "Abdurauf Fitrat", "Abdulla Avloniy"],
+    correctAnswer: "Abdulla Avloniy"
+  },
+  {
+    question: "Qonun hujjatlari asosida maktabdagi ta’lim jarayonini tartibga soluvchi hujjat nima deb ataladi?",
+    options: ["Maktabning ichki tartib-qoidalari", "Ta’lim dasturi", "O‘quv rejasi", "O‘qituvchilarga oid ko‘rsatmalar"],
+    correctAnswer: "O‘quv rejasi"
+  },
+  {
+    question: "Noan'anaviy darsning afzalliklaridan biri nima?",
+    options: ["Darsning an'anaviy shakllarini saqlash", "O‘qituvchi o‘z bilimini o‘quvchilarga faqat nazariy tarzda etkazadi", "O‘quvchilarni passiv holatda qoldirish", "O‘quvchilarning ijodiy va tanqidiy fikrlash qobiliyatlarini rivojlantirish"],
+    correctAnswer: "O‘quvchilarning ijodiy va tanqidiy fikrlash qobiliyatlarini rivojlantirish"
+  },
+  {
+    question: "Mashg‘ulotlarga qo‘yiladigan maqsadlar qaysilar?",
+    options: ["tarbiyaviy, didaktik, muloqot", "tarbiyaviy, didaktik, ijtimoiy-g‘oyaviy", "ijtimoiy-g‘oyaviy, aksiologik, didaktik", "ta’limiy, tarbiyaviy, rivojlantiruvchi"],
+    correctAnswer: "ta’limiy, tarbiyaviy, rivojlantiruvchi"
+  },
+  {
+    question: "Nutq texnikasi nima",
+    options: ["Intonatsiya, oxang", "Pauza, urg’u, ovoz", "nafas olish, ovoz diksiya", "nafas olish, qayta xikoyalash"],
+    correctAnswer: "nafas olish, ovoz diksiya"
+  },
+  {
+    question: "Empatiya deganda nimani tushunasiz?",
+    options: ["Xotira obrazlarini solishtirish", "Boshqa odamlarning psixik holatlarini tushunish va ularga hamdardlik qilish", "O’qituvchining o’z ishini rejalashtiraolishidir.", "Kishining ta’lim beraolish qobiliyatidir."],
+    correctAnswer: "Boshqa odamlarning psixik holatlarini tushunish va ularga hamdardlik qilish"
+  },
+  {
+    question: "Pantomimika bu …",
+    options: ["Yuz muskullari", "Oyoqlar holati, harakati", "Yuz ifodasi va harakatlari", "Oyoqlar, gаvdа, qo‘l orqali fikrni ifodalash"],
+    correctAnswer: "Oyoqlar, gаvdа, qo‘l orqali fikrni ifodalash"
+  },
+  {
+    question: "Didaktik qobiliyatga to‘g’ri ta'rifni toping.",
+    options: ["qisqa daqiqalarda auditoriya (sinf) holatini idrok qila olish fazilati.", "oson yo‘l bilan murakkab bilimlarni o‘quvchilarga tushuntira olish", "barcha fanlar yuzasidan muayyan bilimga ega bo‘lishlik.", "sinf guruhini uyushtirish va boshqarish iste'dodi"],
+    correctAnswer: "oson yo‘l bilan murakkab bilimlarni o‘quvchilarga tushuntira olish"
+  },
+  {
+    question: "Muammoning asosiy to`rt jihatini yoritishga xizmat qilib, unga ko`ra talabalar mavzuning mazmuniga mos muammolarni atroflicha o`rganish orqali mohiyatini yoritish, ularni keltirib chiqaruvchi omillarni izlash, hal qilish imkoniyatlariga egaqanday....",
+    options: ["muammo", "nima uchun", "muloqot", "“SWOT-tahlil”"],
+    correctAnswer: "“SWOT-tahlil”"
+  },
+  {
+    question: "Uzluksiz ta’lim turlari necha bosqichni o‘z ichiga oladi",
+    options: ["9", "8", "6", "7"],
+    correctAnswer: "7"
+  },
+  {
+    question: "Tayanch kompetensiyalar necha turga bo‘linishini aniqlang",
+    options: ["5 ta", "7 ta", "4 ta", "6 ta"],
+    correctAnswer: "6 ta"
+  },
+  {
+    question: "Nima uchun maktabga bolalarni 7 yoshdan olinadi?",
+    options: ["7 yoshda Chap miyya yarimsharlarida bilish tuyg'ulari ochiladi", "O'ng miyya yarimsharlarida bilish tuyg'ulari ochiladi", "o'qish ishtiyoqi shu yoshda shakllanadi", "Aqliy rivojlanish paydo bo'ladi"],
+    correctAnswer: "7 yoshda Chap miyya yarimsharlarida bilish tuyg'ulari ochiladi"
+  },
+  {
+    question: "Fanning mohiyatini ochib beruvchi eng muhim asosiy tushuncha bu...",
+    options: ["Rivojlanish", "Ta’lim", "Tarbiya", "Kategoriya"],
+    correctAnswer: "Kategoriya"
+  },
+  {
+    question: "Noan'anaviy darsning asosiy maqsadi nima?",
+    options: ["O‘quvchilarni an'anaviy metodlar bilan ta’lim berish", "O‘quvchilarga faqat nazariy bilimlarni yetkazish", "O‘qituvchining faqat ma'ruzalari orqali bilim berish", "O‘quvchilarga o‘z fikrlarini erkin ifoda etish imkonini yaratish"],
+    correctAnswer: "O‘quvchilarga o‘z fikrlarini erkin ifoda etish imkonini yaratish"
+  },
+  {
+    question: "Ta’lim turlari ketma ketligi 1) professional ta’lim; 2) maktabdan tashqari ; 3) umumiy o‘rta va o‘rta maxsus t; 4) oliy ta’limdan keyingi  5) kadrlarni qayta tayyorlash va ularning malakasini oshirish; 6) maktabgacha ta’lim va tarbiya; 7) oliy ta’lim.",
+    options: ["1, 4, 5, 7, 3, 2", "6, 2, 3, 5, 7, 4", "1, 2, 3, 5, 4, 7, 6", "6, 3, 1, 7, 4, 5, 2"],
+    correctAnswer: "6, 3, 1, 7, 4, 5, 2"
+  },
+  {
+    question: "Ilk bolalalik qaysi yosh davrlarini o’z ichiga oladi",
+    options: ["1 yoshdan 3 yoshgacha", "1 yoshdan 2 yoshgacha", "2yoshdan 5 besh yoshgacha", "3 yoshdan 4 yoshgacha"],
+    correctAnswer: "1 yoshdan 3 yoshgacha"
+  },
+  {
+    question: "Pedagogik adabiyotlar va maktab amaliyotida o‘quvchilar o‘quv faoliyatini tashkil etishning qanday asosiy shakli qabul qilingan?",
+    options: ["tabaqalashgan, individual, ommaviy", "ommaviy, guruhli, individua", "integratsiyalashgan, yakka, guruhiy", "yakka-guruhiy, ommaviy, individual"],
+    correctAnswer: "ommaviy, guruhli, individua"
+  },
+  {
+    question: "PISA tadqiqotida 2022-yilda qaysi soha asosiy soha sifatida belgilandi?",
+    options: ["kreativ fikrlash", "o‘qish savodxonligi", "matematika", "tabiiy fanlar"],
+    correctAnswer: "matematika"
+  },
+  {
+    question: "”Pedagog oldida bolalarga so‘zlardagi tovushlarni sof, toza talaffuz qilish ularda ifodali nutqni tarbiyalash vazifalari turadi\" ushbu so‘zlar muallifi kim?",
+    options: ["L.V.SHerva", "F.A.Soxin", "M.Sh.Popova", "O.I.Soloveva"],
+    correctAnswer: "O.I.Soloveva"
+  },
+  {
+    question: "Abu Ali Ibn Sinoning ta’lim-tarbiya haqidagi fikrlari.",
+    options: ["Bolaga jamoada ta’lim berish afzalligi.", "Tarbiya bu najot.", "Tarbiya yagona jarayon.", "6 yoshdan bolani muallimga topshirish."],
+    correctAnswer: "Bolaga jamoada ta’lim berish afzalligi."
+  },
+  {
+    question: "Ta’lim olish shaklidan qat’iy nazar bitiruvchilar erishishlari kerak bo‘lgan ta’lim darajasini belgilovchi asosiy hujjat bu...",
+    options: ["STEAM", "PISA", "PIRLS", "DTS"],
+    correctAnswer: "DTS"
+  },
+  {
+    question: "STEAM” dasturida “A” qisartmasida qaysi fan mazmuni aks etgan",
+    options: ["matematika", "san'at", "texnologiya", "tabiiy fanlar"],
+    correctAnswer: "san'at"
+  },
+  {
+    question: "Ta’lim olish huquqi “Ta’lim tog‘risida”gi qonunning nechanchi moddasida keltirilgan?",
+    options: ["5 modasida", "7 modasida", "55 modasida", "23 modasida"],
+    correctAnswer: "5 modasida"
+  },
+  {
+    question: "Pedagogik muloqot uslublari to’g’ri keltirilgan qatorni toping",
+    options: ["Avtoritar, Demokratik", "Liberal, Demokratik, Trening", "Demokratik, Intelektual.", "Avtoritar, Liberal, Demokratik"],
+    correctAnswer: "Avtoritar, Liberal, Demokratik"
+  },
+  {
+    question: "Pedagogik jarayonda shaxslararo munosabatlarning keskinlashuvi natijasi sifatida yuzaga keluvchi muammoli jarayon-bu...",
+    options: ["pedagogik munozara", "pedagogik usul", "pedagogik odob", "pedagogik konflikt"],
+    correctAnswer: "pedagogik konflikt"
+  },
+  {
+    question: "Diksiya nima?",
+    options: ["Tovush rangdorligi, yorqinligi, uning yumshoqligi va alohidaligi.", "So‘zlarni aniq, ravshan talaffuz etish, so‘zlash usuli.", "Tovush hajmi, uning chegarasi", "So‘zlayotganda obrazga kirish, ovozni kerakli joyda pastlatish, ohista gapirish."],
+    correctAnswer: "So‘zlarni aniq, ravshan talaffuz etish, so‘zlash usuli."
+  },
+  {
+    question: "Aniq maqsad asosida kishi ongini ma’naviy axloqiy qadriyatlarni shakllantirishga qaratilgan tizimli jarayonga nima deyiladi?",
+    options: ["ijtimoiy muhit", "ma’lumot", "tarbiya", "ta’lim"],
+    correctAnswer: "tarbiya"
+  },
+  {
+    question: "Maktabga tayyorlashda bola qanday bilimlarni egallashi kerak?",
+    options: ["Faqat matematikani o‘rganish", "Faqat o‘qish va yozish", "O‘qish, yozish va hisoblash ko‘nikmalari", "Faqat tabiiy fanlar"],
+    correctAnswer: "O‘qish, yozish va hisoblash ko‘nikmalari"
+  },
+  {
+    question: "Tarbiyaning asosiy vazifasi nima?",
+    options: ["Odamlarning dunyo bilan munosabatlarining bir butun sistemasini ta'minlovchi, vosita", "Tarbiya yosh avlodni jamiyatimizda qabul qilingan odob-axloq qoidalariga mos keladigan e’tiqodini...", "Odamning jamiyat a'zosi sifatida o‘z-o‘zini anglash va tafakkurini, faoljyatining ob'yektivligini..", "Zarurat, ehtiyojlilik-qandaydir bir vosi"],
+    correctAnswer: "Tarbiya yosh avlodni jamiyatimizda qabul qilingan odob-axloq qoidalariga mos keladigan e’tiqodini..."
+  },
+  {
+    question: "Kasb so'zi qaysi so'zdan olingan bo'lib rasimiy ko'rsatilgan mashg'ulot, ixtisoslik, shaxsning mehnat faoliyati degan ma'nolarni anglatadi.",
+    options: ["Forscha", "Lotincha", "Yunoncha", "Gregcha"],
+    correctAnswer: "Lotincha"
+  },
+  {
+    question: "Nutq uslublari nechta",
+    options: ["6 ta", "5 ta", "7 ta", "4 ta"],
+    correctAnswer: "5 ta"
+  },
+  {
+    question: "Optimallashtirish deganda nimani tushunasiz?",
+    options: ["Ta’lim berib, o‘qitish nazariyasi", "Muammoli o‘qitish", "Ta’limda fanlararo o‘qitish nazariyasi", "Ko‘p sonli imkoniyatlardan eng qulayini tanlab olish  ="],
+    correctAnswer: "Ko‘p sonli imkoniyatlardan eng qulayini tanlab olish  ="
+  },
+  {
+    question: "PISA xalqaro baholash tizimi qachon birinchi marta qo'llanilgan",
+    options: ["2000-yilda", "2005-yilda", "1995-yilda", "1997- yilda"],
+    correctAnswer: "2000-yilda"
+  },
+  {
+    question: "Davlat ta’lim standartlarini bajarish O’zbekiston Respublikasining barcha ta’lim muassasalari uchun …… dir.",
+    options: ["Majburiy", "Erkin", "Ochiq", "Ixtiyoriy"],
+    correctAnswer: "Majburiy"
+  },
+  {
+    question: "4-sinf o‘quvchilarini o‘qish savodxonligini baholashdigan xalqaro baholash dasturi qaysi?",
+    options: ["PISA", "TIMSS", "PIRLS", "EGMA"],
+    correctAnswer: "PIRLS"
+  },
+  {
+    question: "Texnologiya so'zining ma'nosi",
+    options: ["Xarakat qilmoq", "Maxorat sa'nat", "Ijtimoiy munosabat", "Raqs harakat"],
+    correctAnswer: "Maxorat sa'nat"
+  },
+  {
+    question: "Boshlangich sinflarda o’rganiladigan asosiy miqdorlarni belgilang",
+    options: ["uzunlik , massa , narx , baxo, masofa , vaqt , tezlik", "masofa , narx , vaqt , tezlik", "Baxo , narx , vaqt", "uzunlik , massa, narx"],
+    correctAnswer: "uzunlik , massa , narx , baxo, masofa , vaqt , tezlik"
+  },
+  {
+    question: "Ta’limning demokratlashuvini qanday izohlaysiz?",
+    options: ["Ta’limda shaxsga nisbatan hurmat", "Ta’lim – tarbiya uslublarining erkin tanlanishi", "Ta’limda erkinlik", "Ta’lim – tarbiya uslublarini tanlashda o‘quv yurtlarining mustaqilligi"],
+    correctAnswer: "Ta’limda erkinlik"
+  },
+  {
+    question: "Og‘zaki ta’lim metodlari qaysilar?",
+    options: ["Hikoya, suhbat, mashq", "Hikoya, suhbat, ma’ruza", "Ma’ruza, seminar, laboratoriya ishi", "Hikoya, mashq"],
+    correctAnswer: "Hikoya, suhbat, ma’ruza"
+  },
+  {
+    question: "Pedagogik takt nima?",
+    options: ["har bir ta’lim oluvchi va jamoaning faolligini pedagogik jihatdan ta'minlash uchun zarur bo‘lgan ...", "pedagogning yutuqlariga kafolat beradigan aniq ishlab chiqilgan va qat'iy ilmiy loyihalashtirilg...", "har bir ta’lim oluvchiga va jamoaga pedagogik ta’sir o‘tkazishni samarali qo‘llash uchun zarur ...", "o‘qituvchi kasbiy mahoratining asosi bo‘lib, o‘quvchilarga barcha demokratik talablar asosida ...."],
+    correctAnswer: "o‘qituvchi kasbiy mahoratining asosi bo‘lib, o‘quvchilarga barcha demokratik talablar asosida ...."
+  },
+  {
+    question: "Ta’lim to‘g‘risidagi Qonunga necha marotaba o‘zgartirish kiritilgan",
+    options: ["2 marotaba", "1 marotaba", "4 marotaba", "3 marotaba"],
+    correctAnswer: "3 marotaba"
+  },
+  {
+    question: "Yan Amos Komenskiyning qaysi asarida bolani dastlab oilada tarbiyalash va rivojlantirish gʻoyalari bugungi kunda ham o‘z kuchini yo‘qotmagan?",
+    options: ["”Bolalar dunyosi\"", "\"Onalar maktabi”", "”Ona tili\"", "\"Buyuk didaktika”"],
+    correctAnswer: "\"Onalar maktabi”"
+  },
+  {
+    question: "Umumiy o‘rta va o‘rta maxsus ta’lim muassasalari reytingini aniqlash chora-tadbirlari to‘g‘risida O‘zbekiston Respublikasi Vazirlar Mahkamasining, 345-sonli qarori qachon kuchga kirgan",
     options: ["04.06.2021", "03.06.2021", "23.09.2020", "09.12.1985"],
     correctAnswer: "04.06.2021"
   },
   {
-    question: ".....bu o'quvchilar tomonidan mazkur fanning muayyan bob yoki bo'limlarining o'zlashtirilganini tekshirish. Nuqtalar o'rnini to'ldiring",
-    options: ["oraliq nazorat", "yakuniy", "joriy", "tashkiliy"],
-    correctAnswer: "oraliq nazorat"
+    question: "O‘zbekiston 2024-yilga qadar qanday xalqaro baholash dasturlarida ishtirok etdi?",
+    options: ["STEAM, STEM, PISA, PIRLS", "PISA, STEAM, PIRLS, ICILS", "ICILS, TIMSS, EGRA, TALIS", "PISA, PIRLS, TIMSS, TALIS"],
+    correctAnswer: "PISA, PIRLS, TIMSS, TALIS"
   },
   {
-    question: "Optimallashtirish deganda nimani tushunasiz?",
-    options: [
-      "Ko'p sonli imkoniyatlardan eng qulayini tanlab olish",
-      "Ta'limda fanlararo o'qitish nazariyasi",
-      "Ta'lim berib, o'qitish nazariyasi",
-      "Muammoli o'qitish"
-    ],
-    correctAnswer: "Ko'p sonli imkoniyatlardan eng qulayini tanlab olish"
+    question: "STEAM dasturining mazmuni qaysi qatorda to`g`ri ko`rsatilgan",
+    options: ["matematika musiqa tabiiy fanlar muhandislik san`at fanlari uyg`unligi", "matematika musiqa muhandislik san`at texnologiya fanlari uyg`unligi", "matematika tabiiy fanlar muhandislik san`at texnologiya fanlari uyg`unligi", "matematika musiqa tabiiy fanlar muhandislik fanlari uyg`unligi"],
+    correctAnswer: "matematika tabiiy fanlar muhandislik san`at texnologiya fanlari uyg`unligi"
   },
   {
-    question: "Pedagogik takt nima?",
-    options: [
-      "o'qituvchi kasbiy mahoratining asosi bo'lib, o'quvchilarga barcha demokratik talablar asosida pedagogik ta'sir o'tkazish, muloqotni insonparvarlik tuyg'ulari asosida o'rnatish o'lchovi, o'quvchilarda mustaqil fikr yuritishni hamda ongli intizomni tarkib toptirish ko'nikmalarini hosil qilish shaklidir.",
-      "har bir ta'lim oluvchi va jamoaning faolligini pedagogik jihatdan ta'minlash uchun zarur bo'lgan malaka va ko'nikmalar.",
-      "har bir ta'lim oluvchiga va jamoaga pedagogik ta'sir o'tkazishni samarali qo'llash uchun zarur bo'lgan malaka va ko'nikmalar majmuasi",
-      "pedagogning yutuqlariga kafolat beradigan aniq ishlab chiqilgan va qat'iy ilmiy loyihalashtirilgan pedagogik harakat."
-    ],
-    correctAnswer: "o'qituvchi kasbiy mahoratining asosi bo'lib, o'quvchilarga barcha demokratik talablar asosida pedagogik ta'sir o'tkazish, muloqotni insonparvarlik tuyg'ulari asosida o'rnatish o'lchovi, o'quvchilarda mustaqil fikr yuritishni hamda ongli intizomni tarkib toptirish ko'nikmalarini hosil qilish shaklidir."
+    question: "Nechanchi yildan boshlab besh ballik baholar raqamlarda ya’ni, 1,2,3,4,5 raqamlarda ifoda etish joriy qilingan",
+    options: ["1950 yildan", "1990 yildan", "622 yildan", "1944-yildan"],
+    correctAnswer: "1944-yildan"
   },
   {
-    question: "Pedagogning kommunikativ madaniyati deganda...",
-    options: [
-      "pedagogning o'quvchilar va atrofdagilar bilan qisqa muddatda muloqot o'rnatishga bo'lgan doimiy intilishi.",
-      "pedagogning dunyoga, pedagogik voqelikka va pedagogik jarayonga bo'lgan intellektual va hissiy munosabati.",
-      "pedagogik jarayonni bilish, uni tashkil eta olish.",
-      "o'quvchi va jamoaning faolligini pedagogik jihatdan ta'minlash uchun zarur bo'lgan malaka va ko'nikmalar"
-    ],
-    correctAnswer: "pedagogning o'quvchilar va atrofdagilar bilan qisqa muddatda muloqot o'rnatishga bo'lgan doimiy intilishi."
+    question: "” Takrorlash bilim onasidir “ushbu ibora qaysi pedagogi olimning fikriga mansub",
+    options: ["Shakuriy", "Xamza", "Kamenskiy", "Ushinskiy"],
+    correctAnswer: "Ushinskiy"
   },
   {
-    question: "Diksiya nima?",
-    options: [
-      "So'zlarni aniq, ravshan talaffuz etish, so'zlash usuli.",
-      "Tovush hajmi, uning chegarasi",
-      "Tovush rangdorligi, yorqinligi, uning yumshoqligi va alohidaligi.",
-      "So'zlayotganda obrazga kirish, ovozni kerakli joyda pastlatish, ohista gapirish."
-    ],
-    correctAnswer: "So'zlarni aniq, ravshan talaffuz etish, so'zlash usuli."
-  },
-  {
-    question: "Pantomimika bu ...",
-    options: [
-      "Oyoqlar, gavda, qo'l orqali fikrni ifodalash",
-      "Yuz ifodasi va harakatlari",
-      "Oyoqlar holati, harakati",
-      "Yuz muskullari"
-    ],
-    correctAnswer: "Oyoqlar, gavda, qo'l orqali fikrni ifodalash"
-  },
-  {
-    question: "O'qituvchining o'quvchilarni boshqarish uslublari berilgan javobni toping.",
-    options: [
-      "avtoritar uslub, demokratik uslub, liberal uslub.",
-      "demokratik uslub, liberal uslub, muloqot -- masofa uslubi.",
-      "demokratik uslub, avtoritar uslub, hazil -- mutoyiba uslubi.",
-      "avtoritar uslub, liberal uslub, muloqot - qo'rqitish uslubi."
-    ],
-    correctAnswer: "avtoritar uslub, demokratik uslub, liberal uslub."
-  },
-  {
-    question: "Pedagogik adabiyotlar va maktab amaliyotida o'quvchilar o'quv faoliyatini tashkil etishning qanday asosiy shakli qabul qilingan?",
-    options: [
-      "ommaviy, guruhli, individual",
-      "tabaqalashgan, individual, ommaviy",
-      "yakka-guruhiy, ommaviy, individual",
-      "integratsiyalashgan, yakka, guruhiy"
-    ],
-    correctAnswer: "ommaviy, guruhli, individual"
-  },
-  {
-    question: "Oliy ta'lim nechta bosqichdan iborat?",
-    options: ["2", "4", "3", "5"],
-    correctAnswer: "3"
-  },
-  {
-    question: "Umumiy o'rta va o'rta maxsus ta'lim bosqichida o'qish muddati necha yil",
-    options: ["11 yil", "4 yil", "9yil", "7 yil"],
-    correctAnswer: "11 yil"
-  },
-  {
-    question: "Aniq maqsad asosida kishi ongini ma'naviy axloqiy qadriyatlarni shakllantirishga qaratilgan tizimli jarayonga nima deyiladi?",
-    options: ["ta'lim", "tarbiya", "ma'lumot", "ijtimoiy muhit"],
-    correctAnswer: "tarbiya"
-  },
-  {
-    question: "Umumiy o'rta va o'rta maxsus ta'lim bosqichi hamda oliy ta'lim bosqichlarining oralig'ida qanday nomdagi ta'lim turini olish mumkin?",
-    options: [
-      "maktabgacha ta'lim",
-      "oliy ta'limdan keyingi ta'lim",
-      "boshlang'ich ta'lim",
-      "professional ta'lim"
-    ],
-    correctAnswer: "professional ta'lim"
-  },
-  {
-    question: "Aniq maqsad asosida kishi ongini ma'naviy axloqiy qadriyatlarni shakllantirishga qaratilgan tizimli jarayonga nima deyiladi?",
-    options: ["ta'lim", "tarbiya", "ma'lumot", "ijtimoiy muhit"],
-    correctAnswer: "tarbiya"
-  },
-  {
-    question: "Umumiy o'rta va o'rta maxsus ta'lim bosqichi hamda oliy ta'lim bosqichlarining oralig'ida qanday nomdagi ta'lim turini olish mumkin?",
-    options: [
-      "maktabgacha ta'lim",
-      "oliy ta'limdan keyingi ta'lim",
-      "boshlang'ich ta'lim",
-      "professional ta'lim"
-    ],
-    correctAnswer: "professional ta'lim"
-  },
-  {
-    question: "Jismoniy va aqliy sensor yoki ruhiy nuqsonlari bo'lgan shuningdek uzoq vaqt davolanishda bo'lgan bolalar ta'lim tashkilotlarida qanday shaklda ta'lim olish huquqiga ega",
-    options: ["eksternat", "masofaviy", "inklyuziv", "jamoaviy"],
-    correctAnswer: "inklyuziv"
-  },
-  {
-    question: "Uzluksiz ta'lim turlari necha bosqichni o'z ichiga oladi",
-    options: ["7", "8", "9", "6"],
-    correctAnswer: "7"
-  },
-  {
-    question: "Ta'lim tizimidagi har bir o'quv fanining mazmuni va o'tilish tartibi, o'quvchilar tomonidan o'zlashtirilishi lozim bo'lgan bilim hamda ko'nikmalar hajmini belgilab beradigan rasmiy hujjat qaysi",
-    options: ["o'quv dasturi", "darslik", "dastur", "mualliflik o'quv dasturlari"],
-    correctAnswer: "o'quv dasturi"
-  },
-  {
-    question: "STEAM dasturining mazmuni qaysi qatorda to'g'ri ko'rsatilgan",
-    options: [
-      "matematika tabiiy fanlar muhandislik san'at texnologiya fanlari uyg'unligi",
-      "matematika musiqa tabiiy fanlar muhandislik san'at fanlari uyg'unligi",
-      "matematika musiqa tabiiy fanlar muhandislik fanlari uyg'unligi",
-      "matematika musiqa muhandislik san'at texnologiya fanlari uyg'unligi"
-    ],
-    correctAnswer: "matematika tabiiy fanlar muhandislik san'at texnologiya fanlari uyg'unligi"
-  },
-  {
-    question: "Ta'lim turlarini ketma-ketlik bilan qo'yib chiqing: 1) professional ta'lim; 2) maktabdan tashqari ta'lim; 3) umumiy o'rta va o'rta maxsus ta'lim; 4) oliy ta'limdan keyingi ta'lim; 5) kadrlarni qayta tayyorlash va ularning malakasini oshirish; 6) maktabgacha ta'lim va tarbiya; 7) oliy ta'lim.",
-    options: [
-      "6, 3, 1, 7, 4, 5, 2",
-      "1, 2, 3, 5, 4, 7, 6",
-      "6, 2, 3, 5, 7, 4",
-      "1, 4, 5, 7, 3, 2"
-    ],
-    correctAnswer: "6, 3, 1, 7, 4, 5, 2"
-  },
-  {
-    question: "Yetim bolalarni va ota-onasining yoki boshqa qonuniy vakillarining qaramog'idan mahrum bo'lgan bolalarni o'qitish va ularning to'liq ta'minoti kimning zimmasida bo'ladi",
-    options: [
-      "Homiylik hisobidan",
-      "Ota onalar tomonidan",
-      "O'zbekiston Respublikasi Davlat byudjeti mablag'lari hisobidan",
-      "Tashkilot hisobidan"
-    ],
-    correctAnswer: "O'zbekiston Respublikasi Davlat byudjeti mablag'lari hisobidan"
-  },
-  {
-    question: "2020-yil 23-sentabrda qabul qilingan O'zbekiston Respublikasi ta'lim to'g'risidagi qonuni necha bob va necha moddadan iborat",
-    options: [
-      "11 ta bob, 75 ta modda",
-      "5 bob 34 modda",
-      "11 bob 74 modda",
-      "8 bob 75 modda"
-    ],
-    correctAnswer: "11 bob 74 modda"
-  },
-  {
-    question: "O'quv yilining davomiyligi 1-sinflar uchun necha hafta",
-    options: ["37 hafta", "33 hafta", "35 hafta", "36 hafta"],
+    question: "O‘quv yilining davomiyligi 1-sinflar uchun necha hafta",
+    options: ["36 hafta", "33 hafta", "35 hafta", "37 hafta"],
     correctAnswer: "33 hafta"
   },
   {
-    question: "Ta'lim olish shaklidan qat'iy nazar bitiruvchilar erishishlari kerak bo'lgan ta'lim darajasini belgilovchi asosiy hujjat bu...",
-    options: ["DTS", "STEAM", "PIRLS", "PISA"],
-    correctAnswer: "DTS"
+    question: "Fransuz tilidan tarjima qiliganda “5 qator” ma’nosini bildiruvchi usul",
+    options: ["Insert", "Aqliy hujum", "Sinkveyn", "Klaster"],
+    correctAnswer: "Sinkveyn"
   },
   {
-    question: "Ta'lim to'g'risidagi Qonunga necha marotaba o'zgartirish kiritilgan",
-    options: ["4 marotaba", "2 marotaba", "1 marotaba", "3 marotaba"],
-    correctAnswer: "4 marotaba"
+    question: "O‘zbekiston 2022-yilda o‘tkazilgan PISA xalqaro baholash dasturining matematika sohasi bo‘yicha necha ball to‘plagan?",
+    options: ["336", "364", "600", "575"],
+    correctAnswer: "364"
   },
   {
-    question: "Qachon 'Professional ta'lim tizimini yanada takomillashtirish to'g'risida'gi farmon qabul qilindi",
-    options: [
-      "2020y 23 sentyabr",
-      "2021 y 23 oktyabr",
-      "2019-yil, 6-sentyabr",
-      "1997 y 29 avgust"
-    ],
-    correctAnswer: "2019-yil, 6-sentyabr"
+    question: "An’anaviy yondashuvning asosiy xususiyati nimada?",
+    options: ["gapirib berish, tushuntirish, talaba esa bu axborotni xotirada saqlaydi", "o’zaro ta’sirlar", "nazorat turlari (joriy, oraliq, yakuniy)", "ijodiy yondashuv"],
+    correctAnswer: "gapirib berish, tushuntirish, talaba esa bu axborotni xotirada saqlaydi"
   },
   {
-    question: "Tayanch kompetensiyalar necha turga bo'linishini aniqlang",
-    options: ["6 ta", "5 ta", "4 ta", "7 ta"],
+    question: "”Pedagog”so’zining  ma’nosi nima?",
+    options: ["xunar o’rgatuvchi", "O’rgatuvchi", "bola yetaklovchi", "Bilim beruvchi"],
+    correctAnswer: "bola yetaklovchi"
+  },
+  {
+    question: "STEAM dasturi qaysi fanlarni o’z ichiga olgan",
+    options: ["muhandislik ,ona tili", "Tabiiy fanlar, matematika, sanat, texnologiya, muhandislik", "tabiat, matematika, san’at musiqa, chizmachilik", "Geogarafiya,musiqa"],
+    correctAnswer: "Tabiiy fanlar, matematika, sanat, texnologiya, muhandislik"
+  },
+  {
+    question: "O‘zbekiston Respublikasining “Ta’lim to‘g‘risida”gi qonuniga muvofiq kimlar pedagogik faoliyat bilan shug‘ullanish huquqiga egalar?",
+    options: ["kasbiy bilim, ko‘nikma va malaka, shuningdek, ta’lim muassasalarida ishlash tajribasiga ega shaxsla", "faoliyat jarayonida ta’lim oluvchilarning yosh va psixologik xususiyatlarini biladigan shaxslar", "oliy pedagogik ma’lumot hamda 5 yillik pedagogik stajga ega shaxslar", "tegishli ma’lumoti, kasbiy tayyorgarligi bor va yuksak axloqiy fazilatlarga ega bo‘lgan shaxslar"],
+    correctAnswer: "tegishli ma’lumoti, kasbiy tayyorgarligi bor va yuksak axloqiy fazilatlarga ega bo‘lgan shaxslar"
+  },
+  {
+    question: "O‘zbekiston 2022-yilda o‘tkazilgan PISA xalqaro baholash dasturining matematika sohasi bo‘yicha nechanchi o‘rinni egallagan?",
+    options: ["85", "80", "72", "30"],
+    correctAnswer: "72"
+  },
+  {
+    question: "Kompetensiya so‘zining lug‘aviy ma’nosi",
+    options: ["tashkil etaman", "bajaraman, to‘g‘rilayman", "uyushtiraman", "loyiqman, munosibman"],
+    correctAnswer: "loyiqman, munosibman"
+  },
+  {
+    question: "2020-yil 23-sentabrda qabul qilingan O‘zbekiston Respublikasi ta’lim to‘g‘risidagi qonuni necha bob va necha moddadan iborat",
+    options: ["11 bob 74 modda", "5 bob 34 modda", "11 ta bob, 75 ta modda", "8 bob 75 modda"],
+    correctAnswer: "11 ta bob, 75 ta modda"
+  },
+  {
+    question: "Noverbal nutq turlari to’g’ri keltirilgan qatorni toping?",
+    options: ["Mimika, pantomimika nutq, signifikatsiya, daktilogik nutq, Morze alifbosi", "Og’zaki va yozma nutq.", "Mimika, fantomimika, og’zaki nutq.", "So’z mimika aks sado axborot"],
+    correctAnswer: "Mimika, pantomimika nutq, signifikatsiya, daktilogik nutq, Morze alifbosi"
+  },
+  {
+    question: "Didaktika – bu:",
+    options: ["O‘quv tillarini tashkil etishning formalarini takomillashtirish.", "Ta’lim nazariyasi.", "Ta’lim qonuniyatlari, prinsiplarini va mohiyatini tadqiq etadi.", "Ilmiy fan bo‘lib, ta’limning nazariy asoslarini o‘rgatadi."],
+    correctAnswer: "Ta’lim nazariyasi."
+  },
+  {
+    question: "STEAM” dasturida “S” qisartmasida qaysi fan mazmuni aks etgan",
+    options: ["texnologiya", "matematika", "tabiiy fanlar", "san'at"],
+    correctAnswer: "tabiiy fanlar"
+  },
+  {
+    question: "O‘qituvchining o‘quvchilarni boshqarish uslublari",
+    options: ["avtoritar uslub, demokratik uslub, liberal uslub.", "avtoritar uslub, liberal uslub, muloqot - qo‘rqitish uslubi", "demokratik uslub, liberal uslub, muloqot – masofa uslubi.", "demokratik uslub, avtoritar uslub, hazil – mutoyiba uslubi."],
+    correctAnswer: "avtoritar uslub, demokratik uslub, liberal uslub."
+  },
+  {
+    question: "“Klaster “so‘zining ma’nosi",
+    options: ["yangilik", "o‘ziga xoslik", "alohida", "bog‘lam"],
+    correctAnswer: "bog‘lam"
+  },
+  {
+    question: "«Texnologiya» so‘zi haqida tushuncha?",
+    options: ["«texne» - mahorat, san’at, «logos» - tushuncha ta’limot", "«texne» - mehnat, san’at, «logos» - tushuncha bilim", "«texne» - qobiliyat, san’at, «logos» - tushuncha ta’lim", "«texne» - san’at, «logos» – tushuncha o‘qitish"],
+    correctAnswer: "«texne» - mahorat, san’at, «logos» - tushuncha ta’limot"
+  },
+  {
+    question: "davlat ta’lim standartlari nima",
+    options: ["umumiy o‘rta, o‘rta maxsus, kasb-hunar va oliy ta’lim mazmuniga hamda sifatiga qo‘yiladigan ...", "o‘quv jadvalining tarkibiy elementlarini aks ettiruvchi manba, shakl va metodlari to‘g‘risida", "ta’lim jarayonining samarali tashkil etish yo‘llari, shakl va metodlari to‘g‘r", "o‘quv yuklamlari hajmini aniqlashga xizmat qiladigan, shakl va metodlari to‘g‘risida mezonlar...."],
+    correctAnswer: "umumiy o‘rta, o‘rta maxsus, kasb-hunar va oliy ta’lim mazmuniga hamda sifatiga qo‘yiladigan ..."
+  },
+  {
+    question: "Ta`lim tizimidagi har bir o`quv fanining mazmuni va o`tilish tartibi, o`quvchilar tomonidan o`zlashtirilishi lozim bo`lgan bilim hamda ko`nikmalar hajmini belgilab beradigan rasmiy hujjat qaysi",
+    options: ["dastur", "o`quv dasturi", "mualliflik o`quv dasturlari", "darslik"],
+    correctAnswer: "o`quv dasturi"
+  },
+  {
+    question: "Qaysi so‘zlarda urg‘u yordamida ma’noni farqlash mumkin. 1.~surma; 2.~mexanik; 3.~yo‘llar; 4.~yangi; 5.~bog‘cha",
+    options: ["1, 2, 3, 4, 5", "1, 3, 4, 5", "3, 4, 5", "1, 3, 5"],
+    correctAnswer: "1, 3, 4, 5"
+  },
+  {
+    question: ". Nisbiy so’zli gap  qaysi qatorda berilgan?",
+    options: ["Intizom buzildimi ishda unum bo’lmaydi.", "Gox yomg’ir yog’adi, gox quyosh chiqadi.", "Qoyaga qancha yaqin yursang, xavf shuncha kam.", "Yo siz keling, yo men boray."],
+    correctAnswer: "Qoyaga qancha yaqin yursang, xavf shuncha kam."
+  },
+  {
+    question: "Qaysi jarangli undoshlar sirg‘aluvchilarga mansub emas.",
+    options: ["v, z", "k, t", "b, n", "j, g‘"],
+    correctAnswer: "b, n"
+  },
+  {
+    question: "Qaysi  javobda  qo’shma gap berilgan.",
+    options: ["Azimboy xalqning sabr-kosasini  to’ldiradigan zulm o’tkazdi", "Azimboy shunday zulm o’tkazdiki, oqibatda xalqning sabr kosasi to’ldi.", "Onasi qiziga ham,  o’g’liga ham ishonadi.", "Botirjon ham, Raximjon ham a’lochi."],
+    correctAnswer: "Azimboy shunday zulm o’tkazdiki, oqibatda xalqning sabr kosasi to’ldi."
+  },
+  {
+    question: "Qaysi javobda morfemalarga bo’linmaydigan so’z berilgan.",
+    options: ["uzuq", "buyruq", "huquq", "yutuq"],
+    correctAnswer: "huquq"
+  },
+  {
+    question: "Qaysi javobda sof modal so’zlar berilgan.",
+    options: ["shubhasiz, to’g’ri, o’z-o’zidan", "umuman, balki, ehtimol", "avvalo, afsuski, albatta", "aftidan, chamasi, taxminan"],
+    correctAnswer: "avvalo, afsuski, albatta"
+  },
+  {
+    question: "Quyida berilganlardan ham bog’lovchi, ham yuklama vazifasida qo’llanuvchi so’zni aniqlang.",
+    options: ["ham", "deb", "balki", "bilan"],
+    correctAnswer: "ham"
+  },
+  {
+    question: "Sodda tub otlarni toping.",
+    options: ["qirqim, o’rim", "yutuq, buyruq", "chopiq, tortiq", "beshik, o’rik"],
+    correctAnswer: "beshik, o’rik"
+  },
+  {
+    question: "So’zlarni va gaplarni teng va tobe bog’lash uchun xizmat qiluvchi so’zlar qanday nomlanadi.",
+    options: ["bog’lovchi", "ko’makchi", "yuklama", "olmosh"],
+    correctAnswer: "bog’lovchi"
+  },
+  {
+    question: "Qaysi javobda sof ko’makchilar berilgan.",
+    options: ["ost, ust, yon", "bo’ylab, qarab, atab", "kabi, uzra, tufayli", "avval, keyin, so’ng"],
+    correctAnswer: "avval, keyin, so’ng"
+  },
+  {
+    question: "Samoning zangorisimon sahnida to’lishmagan qandaydir beshakl oy xira, rangsiz yaltiraydi. Gapda qo’llangan yasama so’zlar vazifasini toping. 1) aniqlovchi   2) hol   3) to’ldiruvchi   4) kesim",
+    options: ["2,3,4", "1,2,4", "1,2,3", "1,3,4"],
+    correctAnswer: "1,3,4"
+  },
+  {
+    question: "Harakat nomi bilan ifodalangan ega qaysi qatorda berilgan?",
+    options: ["Oyni etak bilan yopib bo’lmaydi.", "Ilmli ming yashar, ilmsiz bir yashar", "A’lo o’qish – asosiy maqsadim.", "Ko’chat ekish  oyligi baxorda o’tkaziladi."],
+    correctAnswer: "A’lo o’qish – asosiy maqsadim."
+  },
+  {
+    question: "---t--- va ---h--- tovushlari qaysi xususiyatlariga ko‘ra bir guruhga mansub bo‘ladi.",
+    options: ["portlovchi yoki sirg‘aluvchiligiga ko‘ra", "jarangli va jarangsizligiga ko‘ra", "lab yoki tish undoshlariga oidligiga ko‘ra", "tilning qayerida paydo bo‘lishiga ko‘ra"],
+    correctAnswer: "jarangli va jarangsizligiga ko‘ra"
+  },
+  {
+    question: "Birin-ketin sodir bo’ladigan ish-harakatlarni bildiruvchi, biror narsaning tavsifini  beruvchi qo’shma gaplar yozuvda  …  bilan ajratiladi.",
+    options: ["Nuqtali vergul", "Tire", "Ikki  nuqta", "Vergul"],
+    correctAnswer: "Vergul"
+  },
+  {
+    question: "Har ikki qismi ot turkumiga mansub so’zlar bilan ifodalangan bitishuvli so’z birikmasi berilgan javobni aniqlang.",
+    options: ["kimyoviy jarayon", "nordon anor", "quyosh nuri", "tilla soat"],
+    correctAnswer: "tilla soat"
+  },
+  {
+    question: "Qaysi gapda asosida fonetik o’zgarish sodir bo’lgan yasama fe’l(lar) qo’llangan.",
+    options: ["Yuragim hayajondan gupullab ura boshladi.", "Ichkarida chaqaloq yig’ladi, beshikning g’ichirlagani ishitildi.", "Usta temirni cho’g’ga solib bolg’alaydi, cho’zadi, yassilaydi, yana olov", "Gapirganda ovozi xuddi ichidan chiqqanday guldurab, jaranglab eshitiladi."],
+    correctAnswer: "Ichkarida chaqaloq yig’ladi, beshikning g’ichirlagani ishitildi."
+  },
+  {
+    question: "Mashina uchun ehtiyot qismlar birikmasidagi hokim so’zni aniqlang.",
+    options: ["mashina uchun", "qismlar", "ehtiyot qismlar", "ehtiyot"],
+    correctAnswer: "ehtiyot qismlar"
+  },
+  {
+    question: "Baqqol amaki pakana, yuzi katta, peshonasi keng, soqoli siyrak, burni puchuq, iyagi kalta odam edi. Mazkur gapning necha o’rnida sifat qo’llangan.",
+    options: ["6 ta", "4 ta", "3 ta", "5 ta"],
     correctAnswer: "6 ta"
   },
   {
-    question: "Umumiy o'rta ta'lim nechanchi sinflarni o'z ichiga oladi",
-    options: ["1-9 sinflarni", "1-11-sinflarni", "1-8 sinflarni", "5-9 sinflarni"],
-    correctAnswer: "1-11-sinflarni"
+    question: "Jonivorlarni chaqirish va haydash, yurgizish va to’xtatish uchun qo’llanadigan so’zlar qanday nomlanadi.",
+    options: ["taqlid so’zlar", "yuklamalar", "modal so’zlar", "undov so’zlar"],
+    correctAnswer: "undov so’zlar"
   },
   {
-    question: "Standart so'zining ma'nosi nima",
-    options: ["me'yor, namuna, andoza", "shakl me'yo", "muhr tamg'a", "tafovut andoza"],
-    correctAnswer: "me'yor, namuna, andoza"
+    question: "Qaysi qatorda boshqaruv munosabatli fe’lli so’z birikmasi bor?",
+    options: ["qiyinchilikni yenggan, kitobni o’qigan", "tezda gapirmoq, dehqonchasiga ishlamoq", "maqtanganning uyiga, kerilganning to’yiga", "oqar suv, qizargan olma"],
+    correctAnswer: "tezda gapirmoq, dehqonchasiga ishlamoq"
   },
   {
-    question: "O'quvchilar haftaning 3 kunida kollejda nazariy bilim oladi, 3 kunida korxonaning o'zida, biriktirilgan usta, master rahbarligida ish o'rnida amaliyot o'taydi. Bu qaysi davlatda",
-    options: ["Amerikada", "Fransiyada", "Germaniyada", "Koreyada"],
-    correctAnswer: "Germaniyada"
+    question: "O’timli fe’llar berilgan javobni toping.",
+    options: ["kulmoq, yig’lamoq", "o’qimoq, yozmoq", "o’tirmoq, turmoq", "yurmoq, yugurmoq"],
+    correctAnswer: "o’qimoq, yozmoq"
   },
   {
-    question: "Ta'lim to'grisidagi qonunda 'Dual ta'lim' nechanchi moddada ko'rsatilgan?",
-    options: ["29 modda", "17 modda", "21 modda", "65 modda"],
-    correctAnswer: "17 modda"
+    question: "Qo’shma gap qismlarini bog’lovchi vositalar to’liq ko’rsatilgan qatorni belgilang.",
+    options: ["Teng  bog’lovchilar,  ergashtiruvchi bog’lovchilar", "Nisbiy so’zlar, oxang", "Teng bog’lovchilar, ergashtiruvchi bog’lovchilar, nisbiy so’zlar, bog’lovchi yuklamalar, ohang.", "Bog’lovchi yuklamalar"],
+    correctAnswer: "Teng bog’lovchilar, ergashtiruvchi bog’lovchilar, nisbiy so’zlar, bog’lovchi yuklamalar, ohang."
   },
   {
-    question: "Qonun hujjatlari asosida maktabdagi ta'lim jarayonini tartibga soluvchi hujjat nima deb ataladi?",
-    options: [
-      "Ta'lim dasturi",
-      "O'quv rejasi",
-      "O'qituvchilarga oid ko'rsatmalar",
-      "Maktabning ichki tartib-qoidalari"
-    ],
-    correctAnswer: "O'quv rejasi"
+    question: "Qaysi gapda ravish qo’llanmagan.",
+    options: ["Orqasiga qarasa, uzoqdan bir ho’kiz uni to’xtovsiz chaqirib kelyapti.", "Ikki oshna kechki salqin bilan piyoda yo’lga tushishdi.", "Keksa kishilar katta hayotiy tajribaga ega bo’ladilar.", "Abdishukur bu yerdan tezda chiqib ketish payiga tushdi."],
+    correctAnswer: "Keksa kishilar katta hayotiy tajribaga ega bo’ladilar."
   },
   {
-    question: "Maktabda ta'lim sifatini ta'minlash uchun mas'ul bo'lgan tashkilot qanday nomlanadi?",
-    options: [
-      "Maktab kengashi",
-      "Ta'lim inspeksiyasi",
-      "Ta'lim tizimini nazorat qilish qo'mitasi",
-      "Maktab direktori"
-    ],
-    correctAnswer: "Ta'lim inspeksiyasi"
+    question: "Faqat ergashtiruvchi bog’lovchilardan iborat  qatorni aniqlang.",
+    options: ["–mi, -yu, -ku, -da", "sari, -dek, -gacha, toki", "–kim, agar, chunki, basharti, shuning uchun", "shuning uchun, va, lekin"],
+    correctAnswer: "–kim, agar, chunki, basharti, shuning uchun"
   },
   {
-    question: "O'quv dasturi va o'quv rejalari orasidagi farq nima?",
-    options: [
-      "O'quv dasturi uzoq muddatli maqsadlarni ko'zlaydi, o'quv reja esa qisqa muddatli",
-      "O'quv dasturi faqat maktab ichidagi faoliyatni o'z ichiga oladi",
-      "O'quv reja faqat ma'ruzalar va darslar bilan cheklangan",
-      "O'quv dasturi faqat darsliklardan iborat"
-    ],
-    correctAnswer: "O'quv dasturi uzoq muddatli maqsadlarni ko'zlaydi, o'quv reja esa qisqa muddatli"
+    question: "So’zlovchi, tinglovchi va o’zgaga ishora qiladigan olmosh turini toping.",
+    options: ["so’roq", "ko’rsatish", "belgilash", "kishilik"],
+    correctAnswer: "kishilik"
+  },
+  {
+    question: "Qaysi qatorda berilgan so’z birikmalarini gapga aylantirish mumkin?",
+    options: ["qiziqarli mashg’ulot, oydin kecha, maqola o’qimoq", "qattiq sovuq, shirin qovun, chiroyli gul", "samarali ishlamoq, ko’chat o’tqazish, barqaror tinchlik", "berilgan topshiriq, o’qishli asar, g’azal yodlamoq"],
+    correctAnswer: "qattiq sovuq, shirin qovun, chiroyli gul"
+  },
+  {
+    question: "Osmon go’zal oyi, quyoshi bilan, Inson go’zal mardlik, bardoshi bilan. Fazilati, odobi, xulqi bilan, Chin xislati – noyob qalb mulki bilan. Ushbu gapda nechta ot so’z turkumiga mansub so’zlar mavju=",
+    options: ["11 ta", "12 ta", "14 ta", "13 ta"],
+    correctAnswer: "12 ta"
+  },
+  {
+    question: "Qaysi so‘z tarkibida portlovchi undosh mavju=",
+    options: ["foizsiz", "sababsiz", "yuzsiz", "suvsiz"],
+    correctAnswer: "sababsiz"
+  },
+  {
+    question: "Zidlov bog’lovchili  gap  berilgan qatorni aniqlang.",
+    options: ["G’ildiraklar ovozsiz shirillaydi va chang ko’tariladi.", "O’ktam mevalarni saralaydi, xidlaydi, biroq egisi kelmaydi.", "Goh Kimsan akamga  ko’z  solaman, goh oyimga  qarayman. =", "Nazarimda, u negadir  jilmayayotganga  o’xshaydi."],
+    correctAnswer: "O’ktam mevalarni saralaydi, xidlaydi, biroq egisi kelmaydi."
+  },
+  {
+    question: "Qaysi gapda nisbiy sifat qo’llangan. + =  =",
+    options: ["Uning jussasi kichkina bo’lsa ham, yuzlari jiddiy, boqishlari o’tkir, ovozi esa jarangdor", "U oltmishlarga borib qolgan bo’lsa ham, yoshlardek ikki yuzi qip-qizil, serg’ayrat va tavakkalc,,,,", "Temur yuksak insoniylikka ega bo’l", "Hovlimizga ko’cha eshikdan kirishda kichkina, g’ishtin uycha bor."],
+    correctAnswer: "Hovlimizga ko’cha eshikdan kirishda kichkina, g’ishtin uycha bor."
+  },
+  {
+    question: "Bo’lishsizlik olmoshlari haqida aytilgan qaysi fikr to’g’ri emas.",
+    options: ["Bo’lishsizlik olmoshlari ko’plik qo’shimchasi bilan qo’llanmaydi.", "Hech so’zini bir, narsa, vaqt, jon, kishi, kimsa, banda kabi so’zlar bilan qo’llash natijasida .....", "So’roq olmoshlari oldidan hech so’zining qo’llanishi natijasida bo’lishsizlik olmoshlari hosil...", "Bo’lishsizlik olmoshlari qatnashgan gapning kesimi tasdiq shaklida bo’ladi."],
+    correctAnswer: "Bo’lishsizlik olmoshlari qatnashgan gapning kesimi tasdiq shaklida bo’ladi."
+  },
+  {
+    question: "Qaysi jumlada gap urg‘usi ---muzeyga--- so‘ziga tushgan.",
+    options: ["O‘qituvchimiz bizni muzeyga dam olish kuni olib boradi.", "Muzeyga bizni dam olish kuni o‘qituvchimiz olib boradi.", "Bizni dam olish kuni muzeyga o‘qituvchimiz olib boradi.", "Dam olish kuni o‘qituvchimiz bizni muzeyga olib boradi."],
+    correctAnswer: "Dam olish kuni o‘qituvchimiz bizni muzeyga olib boradi."
+  },
+  {
+    question: "Ravish yasovchi shakldosh(omonim) qo’shimchalar berilgan javobni aniqlang.",
+    options: ["–ona, -siga", "–lab, -larcha", "chasiga, -layin", "–lay, -ligicha"],
+    correctAnswer: "–lab, -larcha"
+  },
+  {
+    question: "O’rin ravishlari qayd etilgan javobni belgilang.",
+    options: ["ichra, uzra, ora", "ichki, tashqi, sirtqi", "ko’cha, bog’, guzar", "ichkari, tashqari, olg’a"],
+    correctAnswer: "ichkari, tashqari, olg’a"
+  },
+  {
+    question: "Ma’lumki, odatdagi tartib bo’yicha so’zning ma’noli qismlari asos+so’z yasovchi+lug’aviy shakl yasovchi+sintaktik shakl yasovchi shaklida o’rinlashadi. Qaysi javobda morfemalari ushbu tartib asosida joylashgan so’z berilgan.",
+    options: ["hamkasblarimga", "isitmalamoq", "isitkichlarni", "anglamadi"],
+    correctAnswer: "anglamadi"
+  },
+  {
+    question: "Nisbiy so’zli gapni aniqlang.",
+    options: ["Astrobod xavosi qiziq: gox yomg’ir yogadi, gox quyosh chiqadi", "Nima  eksang, shuni  o’rasan", "Intizom  buzildimi, ishda  unum bo’lmaydi.", "Farzand  guldir, ona bir bo’ston"],
+    correctAnswer: "Nima  eksang, shuni  o’rasan"
+  },
+  {
+    question: "To’pdan ajratilgan shaxs, narsa, belgi kabilarni bildirgan olmoshlar qanday ataladi.",
+    options: ["belgilash olmoshlari", "bo’lishsizlik olmoshlari", "ko’rsatish olmoshlari", "o’zlik olmoshi"],
+    correctAnswer: "belgilash olmoshlari"
+  },
+  {
+    question: "Qaysi gapda 2 ta fe’lli, 1 ta otli so’z birikmasi qatnashgan?",
+    options: ["Zargarov sahrodagi ishlarning miqyosini yaxshi tasvirlab berdi", "Tog’ qishloqlaridan birini kuchli sel bosibdi", "Hasan tezda  hunarmandchilik sirlarini o’rganib oldi", "Humo qushi odamlarga baxt keltirar ekan"],
+    correctAnswer: "Hasan tezda  hunarmandchilik sirlarini o’rganib oldi"
+  },
+  {
+    question: "Og‘zaki nutqda qaysi so‘z tarkibidagi portlovchi tovush ba’zan sirg‘aluvchi tovush tarzida talaffuz qilinadi.",
+    options: ["boribdi", "maktab", "xohish", "taqsim"],
+    correctAnswer: "taqsim"
+  },
+  {
+    question: "Jarangsiz undoshlar ishtirok etmagan yasama so‘zni toping.",
+    options: ["gulsiz", "bejirim", "yolg‘ondakam", "lolazor"],
+    correctAnswer: "lolazor"
+  },
+  {
+    question: "Gumon, ishonch, quvonch, tasdiq kabi ma’nolar qanday so’zlar orqali ifodalanadi.",
+    options: ["modal so’zlar", "ko’makchi", "bog’lovchi", "yuklama"],
+    correctAnswer: "modal so’zlar"
+  },
+  {
+    question: "Teng bog’lovchilar berilgan qatorni toping.",
+    options: ["Va, ham, ammo, lekin.", "Ammo, biroq, balki, agar", "yoki, zeroki", "Sababli, natijada, va, lekin."],
+    correctAnswer: "Va, ham, ammo, lekin."
+  },
+  {
+    question: "Ega tobe gapli qo’shma gapni toping.",
+    options: ["Kimki bardosh bersa, kurashsa, u baxtga etadi.", "Hali kamchiliklarimiz ko’p, bundan ko’z yumib bo’lmaydi.", "Qachon so’rasangiz,  darrov javob beradi.", "Yutug’imiz shundaki, xar bir ishni o’z vaqtida bajardik."],
+    correctAnswer: "Kimki bardosh bersa, kurashsa, u baxtga etadi."
+  },
+  {
+    question: "Aniqlovchili   so’z birikmasini toping.",
+    options: ["Uchta uquvchi, tunuka tom, istiqlol odimlari, ukasini ko’rish.", "Uyga qaytmoq, qishloqda yashamoq.", "Kitobni o’qimoq, ukasiga bermoq.", "Huquqiy  bilim, oltin soat, katta bino"],
+    correctAnswer: "Huquqiy  bilim, oltin soat, katta bino"
+  },
+  {
+    question: "–zor, -loq, -goh kabilar qanday qo’shimchalar sanaladi.",
+    options: ["o’rin-joy oti yasovchi", "faoliyat-jarayon oti yasovchi", "narsa oti yasovchi", "shaxs oti yasovchi"],
+    correctAnswer: "o’rin-joy oti yasovchi"
+  },
+  {
+    question: "Berilgan gapda tushirilgan tinish belgilarni qo’ying.   Faqat bitta iltimos bir bayt o’qiyman shuni yaxshilab eshiting.",
+    options: ["Nuqtali vergul", "Ikki nuqta", "Ikki nuqta va vergul", "Tire"],
+    correctAnswer: "Ikki nuqta"
+  },
+  {
+    question: "Sen yig’layver, go’zal bo’lasan, Dard chekaver husning ortadi. Senga yarashmaydi tabassum, Qiyofangga og’ir botadi. Ushbu gapda ot so’z turkumiga mansub nechta so’z qatnashgan.",
+    options: ["3 ta", "5 ta", "4 ta", "6 ta"],
+    correctAnswer: "4 ta"
+  },
+  {
+    question: "Tutuq belgisi qaysi qatorda unlining undoshdan ajratib talaffuz etilishini talab qiladi.",
+    options: ["a’zo", "san’at", "ma’no", "ra’no"],
+    correctAnswer: "san’at"
+  },
+  {
+    question: "---ayir--- so‘ziga quyidagi qaysi qo‘shimchalar qo‘shilsa tovush tushishi vujudga keladi.",
+    options: ["2,3,4,5", "2,4,5", "1,2,4,5", "1,2,4"],
+    correctAnswer: "1,2,4,5"
+  },
+  {
+    question: "Qaysi javobda tub so’z berilgan.",
+    options: ["tulki", "ko’chki", "tepki", "turtki"],
+    correctAnswer: "tulki"
+  },
+  {
+    question: "Kesim tobe gapli qo’shma gapni toping.",
+    options: ["Qachon so’rasangiz, darrov javob beradi.", "Kim testni bir daqiqada  echsa,  5 ball oladi.", "Eshitdimki, kecha kelibsiz.", "Yaxshi  odatingiz shuki, barvaqt turasiz."],
+    correctAnswer: "Yaxshi  odatingiz shuki, barvaqt turasiz."
+  },
+  {
+    question: "Qaysi nisbat qo’shimchalari bir fe’lga birin-ketin bir necha marotaba qo’shilishi mumkin.",
+    options: ["orttirma nisbat", "birgalik nisbat", "majhul nisbat", "o’zlik nisbat"],
+    correctAnswer: "orttirma nisbat"
+  },
+  {
+    question: "Qaysi gapda otlashgan sifat(lar) qo’llanmagan.",
+    options: ["Yaxshidan bog’ qoladi, yomondan – dog’.", "Ilg’orlarga mukofot topshirildi.", "Yoshlar olovga yaqinroq, keksalar esa uzoqroq o’tirishdi", "Sinfimizda a’lochi o’quvchilar ko’p."],
+    correctAnswer: "Sinfimizda a’lochi o’quvchilar ko’p."
+  },
+  {
+    question: "Qaysi fe’l fe’lning barcha nisbat shakllarida ham qo’llana oladi.",
+    options: ["so’ramoq", "yodlamoq", "o’qimoq", "kiymoq"],
+    correctAnswer: "kiymoq"
+  },
+  {
+    question: "Teng bog’lovchilarga nimalar kiradi?",
+    options: ["Biriktiruv, zidlov, ayiruv bog’lovchilari.", "Nisbiy so’zlar", "Ergashtiruv boglovchilari", "Bog’lovchi yuklamalar"],
+    correctAnswer: "Biriktiruv, zidlov, ayiruv bog’lovchilari."
+  },
+  {
+    question: "Maqsad tobe  gapli qo’shma gapni toping.",
+    options: ["Sinfimizda xamma axil, inoq.", "Baxtim borki, ko’zimga har narsa go’zal", "Ukam  o’qisin  deb, «Oygul bilan Baxtiyor» kitobchasini oldim.", "O’rtoqlarim kelishdi deb, ko’chaga chiqdim."],
+    correctAnswer: "Ukam  o’qisin  deb, «Oygul bilan Baxtiyor» kitobchasini oldim."
+  },
+  {
+    question: "Qaysi gapda butun miqdorning qismini ifodalovchi son qo’llangan. 1) Bolalar eshaklarga yem berib, o’zlari ham oz-ozdan yem yeb olishguncha yarim soatcha vaqt o’tdi.   2) O’zbekiston Respublikasi maydonining qariyb beshdan to’rt qismi tekisliklarda....",
+    options: ["1,3,4", "1,2,3", "1,2,4", "1,2,3,4"],
+    correctAnswer: "1,2,3,4"
+  },
+  {
+    question: "Qaysi gapda balki so’zi bog’lovchi vazifasida qo’llanmagan.",
+    options: ["Mevani gullata bilishgina emas, balki undan mo’l va shirin hosil yetkaza bilish san’atdir.", "Taraqqiyot tasodif emas, balki zaruratdir.", "nafaqat kattalarga, balki kichiklarga ham shunday muomalada bo’lar edi.", "Hayronman, balki, siz haqdirsiz."],
+    correctAnswer: "Hayronman, balki, siz haqdirsiz."
+  },
+  {
+    question: "Qo’shma gapni aniqlang.",
+    options: ["Botirjon xam, Xakimjon xam  a’lochi", "Sinf raxbarimiz qizlarga ham, yigitlarga ham ishonardi.", "Azimboy  xalqning sabr-kosasini to’ldiradigan zulm o’tkazdi.", "Azimboy shunday zulm o’tkazdiki, oqibatda xalqning sabr-kosasi to’ldi."],
+    correctAnswer: "Azimboy shunday zulm o’tkazdiki, oqibatda xalqning sabr-kosasi to’ldi."
+  },
+  {
+    question: "Yonma-yon kelgan tovushlarning o‘rin almashishi tilshunoslikda qanday ataladi.",
+    options: ["assimilatsiya", "tovush almashishi", "dissimilatsiya", "metateza"],
+    correctAnswer: "metateza"
+  },
+  {
+    question: "Qaysi gapda ikki usulda yasalgan ikki yasama sifat qo’llangan.",
+    options: ["Mehnatsevar, zahmatkash insonlar odamlarning ko’rkidir.", "Sofdil va jonkuyar odamlar bilan bu dunyo oboddir.", "Nodon, kaltafahm odamdan yaxshi gap chiqmaydi.", "Oldimizda mevali va mevasiz daraxtlari ko’p bo’lgan o’rmon."],
+    correctAnswer: "Mehnatsevar, zahmatkash insonlar odamlarning ko’rkidir."
+  },
+  {
+    question: "Ochiq bo‘g‘indan birida faqat til undoshi berilgan so‘zni toping.",
+    options: ["bahona", "mamnun", "vafodor", "faqat"],
+    correctAnswer: "bahona"
+  },
+  {
+    question: "Qaysi gapda olmoq fe’li qo’shma fe’l tarkibida qo’llangan.",
+    options: ["Kasalligi tufayli o’n yildan beri ukol olib kelmoqd", "Shoikrom ukasidan xabar oldi.", "Kecha Sharifadan xat oldik.", "Ma’ruf toshni o’n marta ko’tara oldi."],
+    correctAnswer: "Kasalligi tufayli o’n yildan beri ukol olib kelmoqd"
+  },
+  {
+    question: "Portlovchi undoshlar yonma-yon kelgan so‘zni toping.",
+    options: ["hamfikr", "qing‘ir", "iqtisod", "nashriyot"],
+    correctAnswer: "iqtisod"
+  },
+  {
+    question: "Do’mbirachi qadimiy qozoq hayotidan dostonlar kuylamoqda= Ushbu gapda nechta so’z yasovchi qo’shimcha qo’llangan.",
+    options: ["1 ta", "2 ta", "3 ta", "4 ta"],
+    correctAnswer: "3 ta"
+  },
+  {
+    question: "O’xshatish, inkor, ayiruv, kuchaytirish kabi ma’nolar qanday so’zlar orqali ifodalanadi.",
+    options: ["bog’lovchi", "modal so’zlar", "ko’makchi", "yuklama"],
+    correctAnswer: "yuklama"
+  },
+  {
+    question: "Faqat jarangsiz undoshlar qatnashgan so‘zlar qatorini toping.",
+    options: ["daromad, jamoat, hushyor", "muhabbat, vafo, sadoqat", "taxta, soat, sukut, toqat", "tosh, shikoyat, kitob, mulk"],
+    correctAnswer: "taxta, soat, sukut, toqat"
+  },
+  {
+    question: "Metateza hodisasi qaysi qatordagi so‘zda kuzatiladi. + = =",
+    options: ["tuzsiz-tussiz", "yurakka-yurakga", "tuproq-turpoq", "zarar-zaral"],
+    correctAnswer: "tuproq-turpoq"
+  },
+  {
+    question: "Qaysi javobda ot va sifat yasovchi shakldosh(omonim) qo’shimchalar juftligi berilmagan.",
+    options: ["ko’rik–chirik", "qalamdon–qadrdon", "ekin–erkin", "aravakash–mehnatkash"],
+    correctAnswer: "aravakash–mehnatkash"
+  },
+  {
+    question: "Qanday fe’llar holat fe’llari sanaladi. 1) shaxs va narsalarning jismoniy faoliyati natijasida yuz bergan harakatni ifodalovchi fe’llar;  2) shaxslarning ichki kechinmalarini ifodalovchi fe’llar; 3) narsalarning bir holatdan ikkinchi holat....",
+    options: ["1,3", "2,3", "1,2,3", "1,2"],
+    correctAnswer: "2,3"
+  },
+  {
+    question: "Urg‘u ma’no farqlash vazifasini bajargan so‘zlarni belgilang.    1)~hozir; 2)~qurilma; 3)~yo‘llar; 4)~ko‘chirma; 5)~yangi",
+    options: ["1, 2, 3, 4, 5", "1, 3, 4, 5", "1, 3, 4", "2, 4"],
+    correctAnswer: "1, 2, 3, 4, 5"
+  },
+  {
+    question: "Bajaruvchining o’z ustida amalga oshadigan harakat-holatini ifodalaydigan fe’l nisbati qanday ataladi.",
+    options: ["o’zlik nisbat", "birgalik nisbat", "majhul nisbat", "aniq nisbat"],
+    correctAnswer: "o’zlik nisbat"
+  },
+  {
+    question: "Qaysi javobda tovush o‘zgarishlari yuz bergan?    1.~ulug‘; 2.~taroq; 3.~tirnoq; 4.~bilak; 5.~yurak; 6.~buyrak",
+    options: ["4, 3, 6", "1, 2, 4", "2, 3, 5", "2, 3,"],
+    correctAnswer: "2, 3,"
+  },
+  {
+    question: "Qaysi so‘zdagi til oldi undoshi og‘zaki nutqda boshqa til oldi undoshi sifatida talaffuz qilinadi.",
+    options: ["to‘qson", "uchta", "tubsiz", "tanob"],
+    correctAnswer: "uchta"
+  },
+  {
+    question: "O’lchov so’z(numerativ)lar haqida bildirilgan qaysi fikr to’g’ri emas.",
+    options: ["O’zidan oldingi sanoq son bilan bitta so’roqqa javob bo’lsa-da, bitta sintaktik vazifa bajarmaydi.", "Ayrim o’lchov so’zlar alohida olinganda narsa(predmet) ma", "Otning va fe’lning o’lchovini ifodalaydi.", "O’lchov so’zlar sanoq son bilan o’lchanayotgan narsaning orasida qo’llanadi."],
+    correctAnswer: "Otning va fe’lning o’lchovini ifodalaydi."
+  },
+  {
+    question: "Qaysi javobda so‘z ko‘chirish qoidasi to‘g‘ri ko‘rsatilmagan.",
+    options: ["tran-sport", "mat-ba-a", "mu-do-faa", "si-ngil"],
+    correctAnswer: "mat-ba-a"
+  },
+  {
+    question: "Qaysi gapda son otlashmagan.",
+    options: ["Ikkala jamoa ham musobaqaga jiddiy tayyorgarlik ko’rgan ekan.", "Ikkinchisi ham uyg’onib ketdi, shekilli, qo’shilishib yig’lashga tushdi.", "Shunday qilib, to’rtovlari ham piyoda yo’lga chiqishibdi.", "Oltovlon ola bo’lsa, og’zidagin oldirar."],
+    correctAnswer: "Ikkala jamoa ham musobaqaga jiddiy tayyorgarlik ko’rgan ekan."
+  },
+  {
+    question: "Bir turdagi shaxs va narsalarning umumiy otini yoki ulardan birining nomini ifodalashiga ko’ra otlar qanday turlarga bo’linadi.",
+    options: ["sanaladigan va sanalmaydigan otlar", "yakka va to’da otlar", "atoqli va turdosh otlar", "aniq va mavhum otlar"],
+    correctAnswer: "atoqli va turdosh otlar"
+  },
+  {
+    question: "Qaysi qatordagi  gapda ega olmosh bilan ifodalangan?",
+    options: ["Iste’dodli adib ko’p nasriy asarlar yozdi.", "Undan yoqimli va shirin xid kelardi.", "U biz bilan ketishi lozim", "Ularning munozarasi yangi buyruq kelishi bilan yakunlandi."],
+    correctAnswer: "U biz bilan ketishi lozim"
+  },
+  {
+    question: "O’zbek tili  qaysi til oilasiga mansub?",
+    options: ["Oltoy tillar oilasi", "Xind – evropa tillari oilasi.", "Som-xom  tillar oilasi", "Fin – ugor tillar oilasi"],
+    correctAnswer: "Oltoy tillar oilasi"
+  },
+  {
+    question: "Qaysi kelishik shaklidagi so’zlar to’ldiruvchi vazifasida qo’llanadi.",
+    options: ["jo’nalish", "tushum", "qaratqich", "o’rin-payt"],
+    correctAnswer: "tushum"
+  },
+  {
+    question: "Qaysi javobda tarkibi asos+ot yasovchi+ot yasovchi shaklida bo’lgan yasama ot berilgan.",
+    options: ["suvoqchilik", "temirchilik", "terimchilik", "dehqonchilik"],
+    correctAnswer: "temirchilik"
+  },
+  {
+    question: "Morfem tarkibi asos + so’z yasovchi + lug’aviy shakl yasovchi + sintaktik shakl yasovchi qolipidagi so’zni toping.",
+    options: ["ipakchilikdan", "sizlamoq", "tokzorlarda", "turmushimizni"],
+    correctAnswer: "tokzorlarda"
+  },
+  {
+    question: "Qaysi gapda olmoshning ma’nosiga ko’ra uch turi qo’llangan.",
+    options: ["Ichkaridan kimlardir chiqib, u turgan tomonga kelaverdi.", "Siz hayotda qanday insonlarga havas qilasiz.", "Qayerda bo’shliq paydo bo’lsa, uni kimdir to’ldirishga harakat qiladi.    =", "Xayolchan g’udranib, o’z-o’zini koyidi."],
+    correctAnswer: "Qayerda bo’shliq paydo bo’lsa, uni kimdir to’ldirishga harakat qiladi.    ="
+  },
+  {
+    question: "~qiyna; 2.~tuzum; 3.~yuvundi; 4.~uyum; 5.~unum; 6.~bo‘yoq",
+    options: ["1, 2, 3, 4, 5, 6", "1, 4, 5, 6", "1, 2, 4, 6", "2, 4, 6"],
+    correctAnswer: "1, 4, 5, 6"
+  },
+  {
+    question: "Berilgan jarangli  undoshlardan qaysilari sirg‘aluvchilarga mansu=",
+    options: ["r, z", "f, s", "j, b", "k, q"],
+    correctAnswer: "r, z"
+  },
+  {
+    question: "---f--- undoshi til undoshlarining qaysi turiga mansu=",
+    options: ["til oldi undosh", "lab-tish undoshi", "chuqur til orqa undoshi", "sayoz til oldi undoshi"],
+    correctAnswer: "lab-tish undoshi"
+  },
+  {
+    question: "Yasama mavhum ot qatnashgan gapni toping.",
+    options: ["Toshkentlik mehmonga Registon juda yoqdi.", "Hasad – yurakning zanglashi.", "Aziz shaharda qib qaytdi.", "Kezib-kezib topganlarim sog’inch bo’ldi."],
+    correctAnswer: "Kezib-kezib topganlarim sog’inch bo’ldi."
+  },
+  {
+    question: "Qaysi qo’shimcha yordamida umumlashtirish, kuchaytirish, hurmat kabi uslubiy ma’nolarni ifodalash mumkin.",
+    options: ["–lar", "–cha", "–gina", "–xon"],
+    correctAnswer: "–lar"
+  },
+  {
+    question: "Belgisiz qaratqich aniqlovchili so’z  birikmalari qaysi javobda berilgan?",
+    options: ["g’ayrat bilan ishlamoq", "Shaffof suv, nafis gullar", "navbahor kezlari, oydin kechalar", "Oy shu’lasi, institut binosi"],
+    correctAnswer: "Oy shu’lasi, institut binosi"
+  },
+  {
+    question: "Moslashuvli so’z birikmasi berilgan javobni toping.",
+    options: ["tarix darsi", "rasm daftari", "o’rik sharbati", "kitob do’koni"],
+    correctAnswer: "o’rik sharbati"
+  },
+  {
+    question: "Og‘zaki nutqning tovush tizimini yozma nutqda qanday berilishini o‘rganuvchi tilshunoslik bo‘limi qanday nomlanadi.",
+    options: ["orfografiya", "grafika", "fonetika", "orfoepiya"],
+    correctAnswer: "orfografiya"
+  },
+  {
+    question: "Quyida berilgan yasama fe’llarning nechtasi tarkibida tovush o’zgarishi.. qona,ata, sana, yasha, qiyna, o’yna, o’rna, kengay, pasay, susay, ulg’ay, sarg’ay, gulla, yig’la, angla, egalla, yashar, ko’kar, oqar, qizar, uvullla, akilla, likilla, shovulla",
+    options: ["19 ta", "15 ta", "13 ta", "17 ta"],
+    correctAnswer: "15 ta"
+  },
+  {
+    question: "Uyushiq bo’lakli  gap berilgan qatorni  aniqlang.",
+    options: ["Saida goh afsuslanib, goh kuyunib, goh kulib gapirib berdi.", "Birni birov beradi, ko’pni mexnat.", "Butun zamin larzaga keldi.", "Tashqaridan allakimning ovozi eshitildi."],
+    correctAnswer: "Saida goh afsuslanib, goh kuyunib, goh kulib gapirib berdi."
+  },
+  {
+    question: "Tobe gap tarkibida keladigan bog’lovchilar qaysi qatorda?",
+    options: ["Agar, agarda, chunki, go’yo, bamisoli, zero, deb, toki, zotan.", "Shuning uchun, shu bois, oqibatda, -ki, -kim.", "Agar, chunki, shuning uchun.", "Shu bois, natijada,  chunki, agar, de="],
+    correctAnswer: "Agar, agarda, chunki, go’yo, bamisoli, zero, deb, toki, zotan."
+  },
+  {
+    question: "Qaysi javobda alohida olingan so’zlar berilgan.",
+    options: ["hamda, uchun, nahot", "shoyad, obbo, gumbur    =", "men, shu, yalpi", "daftar, eski, beshta"],
+    correctAnswer: "shoyad, obbo, gumbur    ="
+  },
+  {
+    question: "So‘z tarkibidagi tovushlarning ajratib yoki cho‘ziqroq talaffuz qilinishini ko‘rsatuvchi ishora qanday ataladi.",
+    options: ["so‘z urg‘usi", "tutuq belgisi", "vergul", "urg‘u"],
+    correctAnswer: "tutuq belgisi"
+  },
+  {
+    question: "Teng bog’lovchili qo’shma gapni aniqlang.",
+    options: ["Mingboshi uchun Miryoqubdan boshqa  chin ko’ngildan  kuyadigan odam  yo’qligini u yaxshi bilardi.", "Ma’rifatli jamiyatda sog’lom aql-idrok, sog’lom fikr va adolat  ustivorlik qiladi.", "Azimboy shunday zulm  o’tkazdiki, xalqning sabr kosasi to’ldi.", "G’ildiraklar ovozsiz shirillaydi va chang ko’tariladi."],
+    correctAnswer: "G’ildiraklar ovozsiz shirillaydi va chang ko’tariladi."
+  },
+  {
+    question: "Qaysi jarangli undosh o‘z jarangsiz jufti bilan birga sirg‘aluvchi tovushlarga mansub bo‘ladi.",
+    options: ["b", "z", "d", "k"],
+    correctAnswer: "z"
+  },
+  {
+    question: "Tushirib qoldirilgan bog’lovchini nuqtalar o’rniga qo’ying:     … shu ko’rganlarini hikoya qilib bersa, ular ishonmasliklari mumkin.",
+    options: ["Garchi.", "Modomiki", "Agar", "Balki"],
+    correctAnswer: "Agar"
+  },
+  {
+    question: "Qaysi gapda fe’lning otga xoslangan shakli qo’llangan.",
+    options: ["Shu payt boshimiz ustida chaqmoq chaqdi.", "Chiroyli yozishni o’rgan.", "Singilcham quymoqni juda yaxshi ko’radi.", "Bolalar qorbo’ron o’ynashmoqd=    ="],
+    correctAnswer: "Chiroyli yozishni o’rgan."
+  },
+  {
+    question: "Muzaffarning lo’ppi yuzidagi achinish alomati xushnud tabassum bilan almashdi. Ushbu gapda otli so’z birikmalari soni nechta?",
+    options: ["6 ta", "5 ta", "7 ta", "4 ta"],
+    correctAnswer: "4 ta"
+  },
+  {
+    question: "Qaysi gapda buyruq-xitobni ifodalovchi undov so’z qo’llangan.",
+    options: ["Iya, bularni nima qilasan?", "Qo’y, yig’lama ey baxshi.", "Men yetim o’sganman, oh u yetimlik.", "O! Ho’kiz yo’q, og’il ko’cha tomondan teshilgan."],
+    correctAnswer: "Qo’y, yig’lama ey baxshi."
+  },
+  {
+    question: "Kelishik qo’shimchalari yordamida birikkan so’z birikmalari qaysi javobda berilgan?",
+    options: ["Moviy osmon, Zuxro yulduz", "a’lochi o’quvchilar, kitobsevarlar uyushmasi.", "Tog’ cho’qqisi, kitob o’qimoq", "yoqimli  kuy, dala yumushlari"],
+    correctAnswer: "Tog’ cho’qqisi, kitob o’qimoq"
+  },
+  {
+    question: "---b--- va ---k--- tovushlari qaysi xususiyatlariga ko‘ra bir guruhga mansub bo‘ladi.",
+    options: ["lab yoki tish undoshlariga oidligiga ko‘ra", "portlovchi yoki sirg‘aluvchiligiga ko‘ra", "jarangli yoki jarangsizligiga ko‘ra", "tilning qayerida paydo bo‘lishiga ko‘ra"],
+    correctAnswer: "portlovchi yoki sirg‘aluvchiligiga ko‘ra"
+  },
+  {
+    question: "Qanday so’zlar gapdagi boshqa so’zlardan vergul bilan ajratib yoziladi.",
+    options: ["bog’lovchi", "yuklama     =", "modal so’zlar", "taqlid so’zlar"],
+    correctAnswer: "modal so’zlar"
+  },
+  {
+    question: "Qaysi gapda so’zlarni va gaplarni bir-biriga bog’lash uchun xizmat qilmaydigan yordamchi so’z qo’llangan.",
+    options: ["Yurt farovonligi uchun qayg’uradi.", "Andishali bo’l, biroq shijoatsiz bo’lm=", "O’shanda dadam ham frontda edilar.", "Bu yerda na ofat, na kulfat, na g’am."],
+    correctAnswer: "O’shanda dadam ham frontda edilar."
+  },
+  {
+    question: "Qaysi qatorda ko’makchi vositasida bog’langan boshqaruvli otli so’z birikmasi bor?",
+    options: ["qunt bilan tinglamoq", "eng oliy baxt", "kitob haqida suhbat", "hafta ichida"],
+    correctAnswer: "qunt bilan tinglamoq"
+  },
+  {
+    question: "Qaysi so‘z talaffuzida jarangsiz tovush o‘zidan keyingi jarangli tovushni o‘ziga moslashtiradi.",
+    options: ["ketdi", "maqsad", "o‘qibdi", "zarur"],
+    correctAnswer: "ketdi"
+  },
+  {
+    question: "Qanday olmoshlar egalik qo’shimchalari bilan turlanmaydi.",
+    options: ["so’roq", "o’zlik", "bo’lishsizlik", "kishilik"],
+    correctAnswer: "bo’lishsizlik"
+  },
+  {
+    question: "So’zlarga va gaplarga qo’shimcha ma’no yuklash uchun xizmat qiluvchi yordamchilar qanday nomlanadi",
+    options: ["yuklama", "bog’lovchi", "ko’makchi"],
+    correctAnswer: "yuklama"
+  },
+  {
+    question: "Urg‘usi oxirgi bo‘g‘inga tushmagan so‘zlar qatorini toping.",
+    options: ["bog‘lar, olma, novcha", "qishloqcha, yigitcha, uycha", "yangicha, qishgacha, o‘zgacha", "qazilma, qotishma, burama"],
+    correctAnswer: "qazilma, qotishma, burama"
+  },
+  {
+    question: "–ov, -ala, -ovlon qo’shimchalari yordamida sonning qaysi ma’no turi hosil qilinadi.",
+    options: ["chama son", "taqsim son", "jamlovchi son", "tartib son"],
+    correctAnswer: "jamlovchi son"
+  },
+  {
+    question: "Istiqlol keldi o’zligimizni angladik. Tinish belgini to’g’ri qo’ying.",
+    options: ["Ikki nuqta", "Vergul", "Nuqta", "Tire"],
+    correctAnswer: "Tire"
+  },
+  {
+    question: "Olimlar haddan ziyod saodatga intilish saodatni qo’lga kiritishga to’sqinlik qilishini aytganlar. Ushbu gapda nechta so’z yasovchi qo’shimcha mavju=",
+    options: ["4 ta", "3 ta", "2 ta", "1 ta"],
+    correctAnswer: "3 ta"
+  },
+  {
+    question: "Yigirmata so‘zida urg‘u qaysi bo‘g‘inga qo‘yilgan.",
+    options: ["1 ga", "2 ga", "3 ga", "4 ga"],
+    correctAnswer: "3 ga"
+  },
+  {
+    question: "So’zlarga va gaplarga qo’shimcha ma’no yuklash uchun xizmat qiluvchi yordamchilar qanday nomlanadi.",
+    options: ["yuklama", "modal so’z", "ko’makchi", "bog’lovchi"],
+    correctAnswer: "yuklama"
+  },
+  {
+    question: "Qo’shma gap berilgan  javobni toping.",
+    options: ["Kun botib,  qorong’ulik cho’kdi", "Biz kitobni o’qib, muxokama qildik.", "Atrof yorishdi, biz yo’lga otlandik", "Men ishdan charchab keldim va miriqib dam oldim"],
+    correctAnswer: "Atrof yorishdi, biz yo’lga otlandik"
+  },
+  {
+    question: "Quyida berilgan gapda nechta so’z mavjud? Tebranib yonayotgan sham zo’r mo’jizaday hammaning diqqatini jalb qilgandi.",
+    options: ["8 ta", "9 ta", "6 ta", "7 ta"],
+    correctAnswer: "8 ta"
+  },
+  {
+    question: "Qaysi gapda hol vazifasida qo’llangan holatga taqlid so’z berilgan.",
+    options: ["Osmonda yombi oltinday yaraqlagan oy, yakkam-dukkam milt-milt yulduzlar uyg’oq edi.", "Dupur-dupur ot keldi, Ko’chaga qarang, kim keldi.", "Omon g’azabi oshib, dag’-dag’ qaltiray boshladi.", "To’rtta savag’ich bilan tap-tap urib, par singari qilib titibdi.    ="],
+    correctAnswer: "Omon g’azabi oshib, dag’-dag’ qaltiray boshladi."
+  },
+  {
+    question: "Qaysi javobda zid ma’noli qo’shimchalar berilmagan.",
+    options: ["no-/-li", "bo-/be-", "-li/-siz", "ser-/-mand"],
+    correctAnswer: "ser-/-mand"
+  },
+  {
+    question: "Kishilik olmoshi va o’zlik olmoshi birga qo’llansa, qanday uslubiy ma’no ifodalanadi.",
+    options: ["kinoya", "hurmat", "ta’kid", "inkor"],
+    correctAnswer: "ta’kid"
+  },
+  {
+    question: "Malika opaning ikkala o‘g‘li shaharda o‘qib, ulg‘ayib yana bag‘riga qaytdi.    Berilgan gap tarkibidagi necha so‘zda tovush tushishi hodisasi mavju=",
+    options: ["4 so‘zda", "3 so‘zda", "2 so‘zda", "1 so‘zda"],
+    correctAnswer: "4 so‘zda"
+  },
+  {
+    question: "To’ldiruvchili so’z birikmalarini aniqlang.",
+    options: ["Kitobni o’qimoq, ukasiga bermoq, onasi uchun olmoq.", "Uchta  o’quvchi, tunuka tom, istiqlol  odimlari", "Xududiy bo’lim, oltin soat, maktab bog’i.", "Uyga qaytmoq, qishloqda yashamoq."],
+    correctAnswer: "Kitobni o’qimoq, ukasiga bermoq, onasi uchun olmoq."
+  },
+  {
+    question: "Xatosi o’ziga ayon bo’lgach, gapira olmay g’uldirab javob berdi. Berilgan gapdagi yasama so’zlar miqdorini aniqlang.",
+    options: ["2 ta", "4 ta", "3 ta", "5 ta"],
+    correctAnswer: "4 ta"
+  },
+  {
+    question: "Shu sevinch ikkovlariga ham kuch-g’ayrat, dadillik baxsh etgandek bo’ldi. Gapda qo’llangan yasama mavhum otlar miqdorini aniqlang.",
+    options: ["1 ta", "4 ta", "3 ta", "2 ta"],
+    correctAnswer: "2 ta"
+  },
+  {
+    question: "Osmon ko’m-ko’k, havo esa toza, sof; go’yo uni dengiz shamoli supurgan, dengiz to’lqinlari yuvgan. Yuqoridagi gap turini aniqlang.",
+    options: ["Bog’langan qo’shma gap", "Murakkab sodda gap", "Murakkab qo’shma gap", "Teng  bog’lovchili qo’shma gap"],
+    correctAnswer: "Murakkab qo’shma gap"
+  },
+  {
+    question: "Qaysi yasama so‘z tarkibida sirg‘aluvchi tovush mavju=",
+    options: ["shoshilmoq", "ulg‘aymoq", "kechikmoq", "changimoq"],
+    correctAnswer: "ulg‘aymoq"
+  },
+  {
+    question: "Ayiruv bog’lovchi yordamida bog’langan qo’shma gaplarni toping.",
+    options: ["Jaxolat  zo’r keldimi, taraqqiyot bo’lmaydi.", "Inson yaralibdiki, xamisha olamni  anglashga intiladi. =", "Inson esa olamaro olamdir.", "Ba’zan oftob xam charaqlayveradi, jala xam quyaveradi."],
+    correctAnswer: "Ba’zan oftob xam charaqlayveradi, jala xam quyaveradi."
+  },
+  {
+    question: "Qaysi gapda aniqlovchi vazifasida qo’llangan tovushga taqlid so’z berilgan.",
+    options: ["Boshidagi toj yal-yal yonarmish", "Vujudini tutgan qalt-qalt titroqni bosib hazilomuz qichqirdi.", "Yetti qaroqchi yulduzi tik kelganda g’o’ng’ir-g’o’ng’ir ovozdan uyg’onib ketdim.", "Allakim ship-ship qadam bosib, ayvon labiga kelayotganday bo’lardi."],
+    correctAnswer: "Yetti qaroqchi yulduzi tik kelganda g’o’ng’ir-g’o’ng’ir ovozdan uyg’onib ketdim."
+  },
+  {
+    question: "Yam-yashil--- so‘zida nechta unli va nechta undosh tovush bor.",
+    options: ["3 ta unli, 5 ta undosh", "3 ta unli, 3 ta undosh", "5 ta unli, 5 ta undosh", "4 ta unli, 4 ta undosh"],
+    correctAnswer: "3 ta unli, 5 ta undosh"
+  },
+  {
+    question: "Sonning qaysi turi chiqish kelishigi qo’shimchasi bilan qo’llanib, fikrning ahamiyatlilik darajasini ifodalaydigan modal so’z vazifasida qo’llanadi.",
+    options: ["chama son", "jamlovchi son", "tartib son", "dona son"],
+    correctAnswer: "tartib son"
+  },
+  {
+    question: "Qaysi gapda kelishik qo’shimchasini qo’llash bilan bog’liq xatoga yo’l qo’yilgan.",
+    options: ["Bilimdon o’zining bilimi tufayli ofatlardan omon qoladi.", "O’zining qadrini bilmagan o’zganing qadrini ne bilsin?", "Sohibqironni bunyodkorlik sohasidagi xizmatlaridan el-u yurt minnatdor", "Kechasi Saidiyning hujrasiga Kozimbek bilan muxbir A’zamjon keldi."],
+    correctAnswer: "Sohibqironni bunyodkorlik sohasidagi xizmatlaridan el-u yurt minnatdor"
+  },
+  {
+    question: "Qaysi javobda ot, sifat, fe’l yasovchi shakldosh(omonim) qo’shimchalar qayd etilgan.",
+    options: ["–ma, -qi, -la", "–ay, -oq, -cha", "–ar, -gi, -k", "–ik, -iq, -a"],
+    correctAnswer: "–ik, -iq, -a"
+  },
+  {
+    question: "Turli gap bo’laklari vazifasida kelish uchun xoslangan fe’l shakllari bu…",
+    options: ["vazifa shakllari", "nisbat shakllari", "munosabat shakllari", "bo’lishsizlik shakllari"],
+    correctAnswer: "vazifa shakllari"
+  },
+  {
+    question: "Dangasa bahona izlaydi, chunki mehnat unga yoqmaydi. Berilgan gapning turini aniqlang.",
+    options: ["Maqsad tobe  gapli qo’shma gap.", "Sabab tobe gapli qo’shma gap.", "Teng bog’lovchili qo’shma gap.", "Oxang yordamida bog’langan qo’shma gap."],
+    correctAnswer: "Sabab tobe gapli qo’shma gap."
+  },
+  {
+    question: "–imtir qo’shimchasi yordamida qaysi sifatlarning ozaytirma darajasini hosil qilish mumkin?  1) oq  2) qora  3) sariq  4) qizil  5) ko’k  6) yashil",
+    options: ["1,2,5", "1,2,3,4,5", "1,3,4,5", "1,2,5,6"],
+    correctAnswer: "1,2,5"
+  },
+  {
+    question: "Shaxs, narsa, belgi, harakat kabilarni jamlab ifodalaydigan olmosh qaysi gapda qo’llangan.",
+    options: ["Har kim ekkanini o’radi.", "Kim shaxmat to’garagiga qatnashadi.", "Shorahim ko’z yoshidan hech nimani ko’rmay allanimalar deb g’udrandi.", "Bog’imizda uzumning hamma xilidan bor."],
+    correctAnswer: "Bog’imizda uzumning hamma xilidan bor."
+  },
+  {
+    question: "Rotalarni zudlik bilan o‘rnidan ko‘chirish haqida og‘zaki buyruq berildi.    Berilgan gap tarkibidagi necha so‘zda tovush tushishi hodisasi mavju=",
+    options: ["3 so‘zda", "1 so‘zda", "4 so‘zda", "2 so‘zda"],
+    correctAnswer: "3 so‘zda"
+  },
+  {
+    question: "Biriktiruv bog’lovchili qo’shma gapni toping.",
+    options: ["Nodonlik va xurofot  xukmron bo’ldimi, jaxolat avj oladi.", "G’ildiraklar ovozsiz shirillaydi va chang  ko’tariladi.", "Gox yuradi,  gox to’xtab dam oladi.", "O’ktam xovlida  yurib ro’zg’origa razm soldi."],
+    correctAnswer: "G’ildiraklar ovozsiz shirillaydi va chang  ko’tariladi."
+  },
+  {
+    question: "Bo’gin ko’chirish qoidasi buzilmagan qatorni toping.",
+    options: ["de-ngiz", "den-giz", "kong-ress", "ing-liz"],
+    correctAnswer: "de-ngiz"
+  },
+  {
+    question: "Qaysi gapda modal so’z qo’llangan.",
+    options: ["To’g’ri, yo’llarda mashaqqatlar ko’p.", "Bo’ron bo’lish ehtimoli bor, qizim.", "Istamning chamasi to’g’ri chiqdi.", "Uning “ko’cha bolasi” ekanligini aftidan bilib olish qiyin emas edi."],
+    correctAnswer: "To’g’ri, yo’llarda mashaqqatlar ko’p."
+  },
+  {
+    question: "Lab undoshlari ishtirok etgan yasama so‘zni toping.",
+    options: ["oshiq", "ommabop", "gulzor", "savlat"],
+    correctAnswer: "ommabop"
+  },
+  {
+    question: "Til oldi unlilar berilgan javobni toping.",
+    options: ["o, a, u", "o, a", "a, e, i", "o, a, i"],
+    correctAnswer: "a, e, i"
+  },
+  {
+    question: "Berilgan qo’shma gapning turini aniqlang. Oqsoqol o’tirdi, kotib unga choy uzatdi va o’zi Xolmurod bergan qog’ozni  o’qimoqchi bo’ldi.",
+    options: ["Murakkab  qo’shma gap", "Bog’langan qo’shma gap", "Teng bog’lovchili qo’shma gap", "Sodda  gap"],
+    correctAnswer: "Murakkab  qo’shma gap"
+  },
+  {
+    question: "Qaysi gapda moslashuv va boshqaruv aloqasi mavjud?",
+    options: ["Biz rostgo’ylik va halollikni hamisha ulug’laymiz.", "O’zingni er bilsang,o’zgani sher bil.", "Yillar mana shu xilda osoyishta o’tar edi.", "Umidsizlik uyin buzsang, umidingga yetarsan."],
+    correctAnswer: "Umidsizlik uyin buzsang, umidingga yetarsan."
+  },
+  {
+    question: "Qaysi qatorda lab undoshlari berilgan.",
+    options: ["j, k", "h, ng", "b, m", "x, g"],
+    correctAnswer: "b, m"
+  },
+  {
+    question: "Qaysi qatordagi so‘zlarning ma’nosi urg‘u yordamida farqlanadi.",
+    options: ["bolada, qo‘lla, axil", "bog‘lar, ishlar, qishloqcha", "burun, gajim, uylar", "xiyla, ariya, belcha, beshala"],
+    correctAnswer: "bog‘lar, ishlar, qishloqcha"
+  },
+  {
+    question: "Qaysi javobda ravishdosh shakllari berilmagan.",
+    options: ["–ib(-=, -a(-y)", "–gan, -ar", "gani, -gancha", "–gach, -guncha"],
+    correctAnswer: "–gan, -ar"
+  },
+  {
+    question: "Qaysi so‘zdagi til oldi undoshi og‘zaki nutqda lab-lab undoshi sifatida talaffuz qilinadi.",
+    options: ["borib", "shanba", "taqsim", "ichdim"],
+    correctAnswer: "shanba"
   }
 ];
 
