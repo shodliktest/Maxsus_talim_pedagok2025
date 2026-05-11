@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Davlat Imtixoniga Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== LOGIN SCREEN ===== -->
+  <div id="loginScreen">
+    <div class="login-box">
+      <div class="lock-icon"></div>
+      <h2>Xush kelibsiz!</h2>
+      <p>Testni boshlash uchun kirish ma'lumotlarini kiriting</p>
+
+      <div class="input-group">
+        <input type="text" id="username" placeholder=" " autocomplete="off">
+        <label for="username">Login</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="password" placeholder=" " autocomplete="off">
+        <label for="password">Parol</label>
+      </div>
+
+      <button id="loginBtn">
+        <span id="btnText">Kirish</span>
+      </button>
+
+      <div class="error-message" id="errorMessage">
+        ❌ Login yoki parol noto'g'ri!
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div id="mainContent">
+    <div id="timer" class="timer-fixed">00:00</div>
+
+    <div class="container">
+
+      <!-- Header card -->
+      <div class="header-card">
+        <h4> NAMANGAN SOCIAL ADAPTATION OF CHILDREN UZ </h4>
+      </div>
+
+      <!-- Quiz area -->
+      <div id="quiz-container"></div>
+
+      <!-- Buttons -->
+      <div class="navigation-buttons">
+        <button id="nextBtn">➜ Keyingi Savol</button>
+        <a href="dastur01.html" class="contact-btn">💬 Biz bilan bog'lanish</a>
+      </div>
+
+
+      <div id="results" class="results-inline" style="display:none">
+        <span id="summaryResults">Urinish: 0 &nbsp;|&nbsp; To'g'ri: 0 &nbsp;|&nbsp; Foiz: 0%</span>
+      </div>
+
+      <footer>
+        <p>&copy; 2025 &mdash; Veb-sahifa muallifi: <strong>SHodlik (Otavaliyev_M)</strong>. Barcha huquqlar himoyalangan.</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ===== MODAL ===== -->
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-icon">🎯</span>
+      <h2 id="modalTitle">20 ta savoldan natija</h2>
+      <div class="modal-stats">
+        <div class="stat-item">
+          <div class="stat-value" id="modalCorrect">0</div>
+          <div class="stat-label">To'g'ri</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="modalWrong">0</div>
+          <div class="stat-label">Noto'g'ri</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="modalPercent">0%</div>
+          <div class="stat-label">Foiz</div>
+        </div>
+      </div>
+      <div id="modalVerdict" class="modal-verdict"></div>
+      <button id="continueBtn" class="continue-btn">Davom etish →</button>
+    </div>
+  </div>
+
+  <script src="script04.js"></script>
+
+</body>
+</html>
