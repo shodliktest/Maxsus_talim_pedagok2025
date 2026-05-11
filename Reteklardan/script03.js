@@ -6,7 +6,8 @@ const VALID_CREDENTIALS = {
 };
 
 // ===== YANGI: SAVOLLAR TARIXINI SAQLASH KALITI =====
-const QUESTION_POOL_KEY = 'quizmishsuzhzhzhsbsbsnsnsnndarkerbot_remaining_indices';
+const QUESTION_POOL_KEY = 'qjjjjuiiikkkz1hhg1jnvhh2mishsuzhzhzhsbsbsnsnsnndarkerbot_remaining_indices';
+const STATS_KEY = 'quizmarkerbot_stats';
 
 // ===== TEST SAVOLLARI (BU YERGA 450 TA SAVOLINGIZNI TASHLAISZ) =====
 const questionsData = [
@@ -637,6 +638,14 @@ function shuffleArray(array) {
 
 // ===== YANGI: SAVOLLAR HAVZASI (POOL) FUNKSIYALARI =====
 function initQuestionPool() {
+    // Statistikani tiklash
+    const savedStats = localStorage.getItem(STATS_KEY);
+    if (savedStats) {
+        const stats = JSON.parse(savedStats);
+        totalAttempts = stats.totalAttempts || 0;
+        correctCount = stats.correctCount || 0;
+    }
+
     const savedPool = localStorage.getItem(QUESTION_POOL_KEY);
     
     if (savedPool) {
@@ -648,9 +657,6 @@ function initQuestionPool() {
         // Indekslar ro'yxatini tuzamiz [0, 1, 2, ... 449]
         availableQuestionIndices = Array.from(questionsData.keys());
         
-        // Ularni yaxshilab aralashtiramiz
-        shuffleArray(availableQuestionIndices);
-        
         // Xotiraga saqlaymiz
         savePoolProgress();
     }
@@ -658,6 +664,7 @@ function initQuestionPool() {
 
 function savePoolProgress() {
     localStorage.setItem(QUESTION_POOL_KEY, JSON.stringify(availableQuestionIndices));
+    localStorage.setItem(STATS_KEY, JSON.stringify({ totalAttempts, correctCount }));
 }
 
 function updateResults() {
@@ -736,36 +743,31 @@ function loadQuestion() {
             blockTotalCount++;
 
             if (selectedValue === q.correctAnswer) {
-                // To'g'ri javob
                 label.classList.add('selected-correct');
                 correctCount++;
                 blockCorrectCount++;
 
                 let feedbackDiv = questionBlock.querySelector('.feedback');
                 if (feedbackDiv) feedbackDiv.remove();
-                
                 feedbackDiv = document.createElement('div');
                 feedbackDiv.classList.add('feedback', 'correct');
-                feedbackDiv.textContent = 'To\'g\'ri!';
+                feedbackDiv.textContent = '✅ To\'g\'ri!';
                 questionBlock.appendChild(feedbackDiv);
             } else {
-                // Noto'g'ri javob
                 label.classList.add('selected-wrong');
-                
-                // To'g'ri javobni ko'rsatish
+
+                // To'g'ri javobni topib ko'k fon bilan belgilash
                 allLabels.forEach(lbl => {
-                    const radio = document.getElementById(lbl.htmlFor);
-                    if (radio && radio.value === q.correctAnswer) {
-                        lbl.classList.add('show-correct');
+                    if (lbl.textContent === q.correctAnswer) {
+                        lbl.classList.add('selected-correct');
                     }
                 });
 
                 let feedbackDiv = questionBlock.querySelector('.feedback');
                 if (feedbackDiv) feedbackDiv.remove();
-                
                 feedbackDiv = document.createElement('div');
                 feedbackDiv.classList.add('feedback', 'incorrect');
-                feedbackDiv.textContent = `Noto\'g\'ri. To'g'ri javob: "${q.correctAnswer}"`;
+                feedbackDiv.textContent = '❌ Xato!';
                 questionBlock.appendChild(feedbackDiv);
             }
 
