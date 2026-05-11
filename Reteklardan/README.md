@@ -1,0 +1,1 @@
+# Maxsus_talim_pedagok2025
